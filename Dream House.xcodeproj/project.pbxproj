@@ -42,6 +42,7 @@
 		C9700D68262CBAEB0045A5AE /* ChatListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */; };
 		C9700D70262CBD430045A5AE /* ChatListVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D6F262CBD430045A5AE /* ChatListVc.swift */; };
 		C9700D75262CC0F60045A5AE /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D74262CC0F60045A5AE /* ChatVC.swift */; };
+		C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D7C262CC30A0045A5AE /* SearchVc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableCell.swift; sourceTree = "<group>"; };
 		C9700D6F262CBD430045A5AE /* ChatListVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVc.swift; sourceTree = "<group>"; };
 		C9700D74262CC0F60045A5AE /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		C9700D7C262CC30A0045A5AE /* SearchVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 		C96A0DDE2618EA30001435E6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9700D7C262CC30A0045A5AE /* SearchVc.swift */,
 				C9700D74262CC0F60045A5AE /* ChatVC.swift */,
 				C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */,
 				C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */,
@@ -399,6 +402,7 @@
 			files = (
 				C9700D75262CC0F60045A5AE /* ChatVC.swift in Sources */,
 				C9700D3B262CA62B0045A5AE /* LaunchScreen.swift in Sources */,
+				C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */,
 				C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */,
 				C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */,
 				C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */,
