@@ -525,10 +525,10 @@
             </objects>
             <point key="canvasLocation" x="3955" y="62"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat List Vc-->
         <scene sceneID="BRl-AZ-rr4">
             <objects>
-                <viewController id="06i-SQ-Cto" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatListVc" id="06i-SQ-Cto" customClass="ChatListVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlN-fv-2y5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -571,7 +571,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cellBackView" destination="oF3-3m-bxe" id="LhX-Zp-Aqb"/>
                                             <outlet property="userNamelabel" destination="ih0-D2-UwG" id="YQy-P2-uhl"/>
                                         </connections>
                                     </tableViewCell>
