@@ -9,7 +9,8 @@ import UIKit
 
 class SearchVc: UIViewController{
 
-
+    @IBOutlet var searchTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

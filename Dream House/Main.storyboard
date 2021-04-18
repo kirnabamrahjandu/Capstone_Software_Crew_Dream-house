@@ -744,6 +744,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Gz-Ni-7R1"/>
+                    <connections>
+                        <outlet property="searchTableView" destination="z5c-xP-Afa" id="UGl-CH-45U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYk-7Q-uNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
