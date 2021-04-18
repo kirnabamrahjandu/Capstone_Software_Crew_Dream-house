@@ -518,7 +518,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Pl-JW-r0g"/>
                     <connections>
-                        <outlet property="favouriteCollectionView" destination="Gla-wC-6q8" id="c2e-AQ-fsP"/>
+                        <outlet property="wishListCollectionView" destination="Gla-wC-6q8" id="WGw-ro-dV4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZX-nn-a51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
