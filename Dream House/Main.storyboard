@@ -525,10 +525,10 @@
             </objects>
             <point key="canvasLocation" x="3955" y="62"/>
         </scene>
-        <!--View Controller-->
+        <!--ChatVC-->
         <scene sceneID="BRl-AZ-rr4">
             <objects>
-                <viewController id="06i-SQ-Cto" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatVC" id="06i-SQ-Cto" customClass="ChatVC" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlN-fv-2y5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

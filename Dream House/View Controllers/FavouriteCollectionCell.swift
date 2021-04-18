@@ -2,7 +2,7 @@
 //  FavouriteCollectionCell.swift
 //  Dream House
 //
-//  Created by Prince Kumar on 09/04/21.
+//  Created by DreamHouseTeam Kumar on 09/04/21.
 //
 
 import UIKit

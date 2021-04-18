@@ -2,7 +2,7 @@
 //  LaunchScreen.swift
 //  Dream House
 //
-//  Created by Prince Kumar on 04/04/21.
+//  Created by DreamHouseTeam Kumar on 04/04/21.
 //
 
 import UIKit
