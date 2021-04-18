@@ -571,6 +571,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="chatBackView" destination="oF3-3m-bxe" id="lqF-F3-iD6"/>
+                                            <outlet property="receiverNameLabel" destination="ih0-D2-UwG" id="efE-ed-P5l"/>
                                             <outlet property="userNamelabel" destination="ih0-D2-UwG" id="YQy-P2-uhl"/>
                                         </connections>
                                     </tableViewCell>
@@ -587,6 +589,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6ia-gR-X4a"/>
+                    <connections>
+                        <outlet property="chatListTable" destination="c7Y-hB-SLW" id="OWD-OE-hNC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAk-5J-CMS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
