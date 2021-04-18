@@ -496,12 +496,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="cellBackView" destination="Xmh-Ig-U5p" id="M5R-cL-TTi"/>
-                                            <outlet property="favouriteBtn" destination="TYK-Ye-kWN" id="Lad-fh-VLm"/>
-                                            <outlet property="houseImage" destination="c7i-1l-PcP" id="be3-jn-5d1"/>
-                                            <outlet property="locationAddressLabel" destination="J21-dh-VNT" id="CKm-Pt-d7N"/>
-                                            <outlet property="moneyPerMonthLabel" destination="MCf-gY-PSZ" id="R9g-s1-hp8"/>
-                                            <outlet property="ownerNameLabel" destination="66W-Zs-NKU" id="qWd-EI-r2u"/>
+                                            <outlet property="cellBackView1" destination="Xmh-Ig-U5p" id="6yf-BS-bhL"/>
+                                            <outlet property="favouriteBtn1" destination="TYK-Ye-kWN" id="8Lb-qX-1Ev"/>
+                                            <outlet property="houseImage1" destination="c7i-1l-PcP" id="c9t-tk-EuL"/>
+                                            <outlet property="locationAddressLabel1" destination="J21-dh-VNT" id="C4P-gp-Ogz"/>
+                                            <outlet property="moneyPerMonthLabel1" destination="MCf-gY-PSZ" id="yjA-Dq-h0l"/>
+                                            <outlet property="ownerNameLabel1" destination="66W-Zs-NKU" id="4YK-W7-yF8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
