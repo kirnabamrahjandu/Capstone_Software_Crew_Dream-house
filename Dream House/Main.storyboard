@@ -571,8 +571,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backView" destination="oF3-3m-bxe" id="9HH-9A-BcG"/>
                                             <outlet property="chatBackView" destination="oF3-3m-bxe" id="lqF-F3-iD6"/>
-                                            <outlet property="receiverNameLabel" destination="ih0-D2-UwG" id="efE-ed-P5l"/>
+                                            <outlet property="receiverNameLabel" destination="ih0-D2-UwG" id="5OX-zz-4Wb"/>
                                             <outlet property="userNamelabel" destination="ih0-D2-UwG" id="YQy-P2-uhl"/>
                                         </connections>
                                     </tableViewCell>
