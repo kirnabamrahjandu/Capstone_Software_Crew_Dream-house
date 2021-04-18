@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -408,10 +409,127 @@
             </objects>
             <point key="canvasLocation" x="3013" y="61"/>
         </scene>
+        <!--Favourites Vc-->
+        <scene sceneID="hDO-jS-ba6">
+            <objects>
+                <viewController storyboardIdentifier="FavouritesVc" id="bho-2z-b7B" customClass="FavouritesVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vlk-zX-M3C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-wC-6q8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="56X-jg-ZMF">
+                                    <size key="itemSize" width="267" height="265"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavouriteCollectionCell" id="EF0-Eo-nap" customClass="FavouriteCollectionCell" customModule="Dream_House" customModuleProvider="target">
+                                        <rect key="frame" x="73.5" y="0.0" width="267" height="265"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Oy-8H-73B">
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="265"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmh-Ig-U5p">
+                                                    <rect key="frame" x="10" y="10" width="247" height="245"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c7i-1l-PcP">
+                                                            <rect key="frame" x="10" y="10" width="227" height="130"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="130" id="Vs2-zP-h7b"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-Ye-kWN">
+                                                            <rect key="frame" x="202" y="20" width="25" height="25"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" image="favourite"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66W-Zs-NKU">
+                                                            <rect key="frame" x="10" y="150" width="227" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J21-dh-VNT">
+                                                            <rect key="frame" x="10" y="177.5" width="227" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 150 / Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCf-gY-PSZ">
+                                                            <rect key="frame" x="10" y="202.5" width="227" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstItem="66W-Zs-NKU" firstAttribute="leading" secondItem="c7i-1l-PcP" secondAttribute="leading" id="202-bl-Frn"/>
+                                                        <constraint firstItem="J21-dh-VNT" firstAttribute="top" secondItem="66W-Zs-NKU" secondAttribute="bottom" constant="5" id="25q-Ca-wlI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="c7i-1l-PcP" secondAttribute="trailing" constant="10" id="2WQ-HN-auT"/>
+                                                        <constraint firstAttribute="height" constant="120" id="BCx-Dd-KN2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="MCf-gY-PSZ" secondAttribute="bottom" constant="10" id="Bdx-Oq-yWo"/>
+                                                        <constraint firstItem="J21-dh-VNT" firstAttribute="trailing" secondItem="66W-Zs-NKU" secondAttribute="trailing" id="IjI-Er-gci"/>
+                                                        <constraint firstItem="MCf-gY-PSZ" firstAttribute="leading" secondItem="J21-dh-VNT" secondAttribute="leading" id="JGH-Jy-HvM"/>
+                                                        <constraint firstItem="66W-Zs-NKU" firstAttribute="top" secondItem="c7i-1l-PcP" secondAttribute="bottom" constant="10" id="K57-Q7-bhu"/>
+                                                        <constraint firstItem="c7i-1l-PcP" firstAttribute="leading" secondItem="Xmh-Ig-U5p" secondAttribute="leading" constant="10" id="OfA-JV-GMp"/>
+                                                        <constraint firstItem="MCf-gY-PSZ" firstAttribute="top" secondItem="J21-dh-VNT" secondAttribute="bottom" constant="5" id="YFF-wy-WZg"/>
+                                                        <constraint firstItem="MCf-gY-PSZ" firstAttribute="trailing" secondItem="J21-dh-VNT" secondAttribute="trailing" id="aDU-pA-VMy"/>
+                                                        <constraint firstItem="J21-dh-VNT" firstAttribute="leading" secondItem="66W-Zs-NKU" secondAttribute="leading" id="aaQ-Iu-vpN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TYK-Ye-kWN" secondAttribute="trailing" constant="20" id="dsv-us-a2B"/>
+                                                        <constraint firstItem="66W-Zs-NKU" firstAttribute="trailing" secondItem="c7i-1l-PcP" secondAttribute="trailing" id="fBs-HW-4bV"/>
+                                                        <constraint firstItem="TYK-Ye-kWN" firstAttribute="top" secondItem="Xmh-Ig-U5p" secondAttribute="top" constant="20" id="pPG-IY-FPz"/>
+                                                        <constraint firstItem="c7i-1l-PcP" firstAttribute="top" secondItem="Xmh-Ig-U5p" secondAttribute="top" constant="10" id="pyE-sZ-Css"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Xmh-Ig-U5p" secondAttribute="trailing" constant="10" id="B6M-WO-d47"/>
+                                                <constraint firstItem="Xmh-Ig-U5p" firstAttribute="leading" secondItem="9Oy-8H-73B" secondAttribute="leading" constant="10" id="IUS-VI-9ve"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xmh-Ig-U5p" secondAttribute="bottom" constant="10" id="jlh-cy-xeP"/>
+                                                <constraint firstItem="Xmh-Ig-U5p" firstAttribute="top" secondItem="9Oy-8H-73B" secondAttribute="top" constant="10" id="kGc-NU-Ve5"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellBackView" destination="Xmh-Ig-U5p" id="M5R-cL-TTi"/>
+                                            <outlet property="favouriteBtn" destination="TYK-Ye-kWN" id="Lad-fh-VLm"/>
+                                            <outlet property="houseImage" destination="c7i-1l-PcP" id="be3-jn-5d1"/>
+                                            <outlet property="locationAddressLabel" destination="J21-dh-VNT" id="CKm-Pt-d7N"/>
+                                            <outlet property="moneyPerMonthLabel" destination="MCf-gY-PSZ" id="R9g-s1-hp8"/>
+                                            <outlet property="ownerNameLabel" destination="66W-Zs-NKU" id="qWd-EI-r2u"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uxx-xj-UJ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gla-wC-6q8" secondAttribute="trailing" id="1uv-UP-sED"/>
+                            <constraint firstItem="Gla-wC-6q8" firstAttribute="top" secondItem="uxx-xj-UJ2" secondAttribute="top" id="Via-GZ-zpd"/>
+                            <constraint firstItem="Gla-wC-6q8" firstAttribute="leading" secondItem="uxx-xj-UJ2" secondAttribute="leading" id="gMS-Qs-IHM"/>
+                            <constraint firstItem="uxx-xj-UJ2" firstAttribute="bottom" secondItem="Gla-wC-6q8" secondAttribute="bottom" id="uwP-X0-MDH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Pl-JW-r0g"/>
+                    <connections>
+                        <outlet property="favouriteCollectionView" destination="Gla-wC-6q8" id="c2e-AQ-fsP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZX-nn-a51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3955" y="62"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dreamIcon" width="439" height="352"/>
         <image name="dummy" width="225" height="225"/>
+        <image name="favourite" width="25" height="25"/>
         <namedColor name="Theme Color">
             <color red="0.0" green="0.47058823529411764" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -423,6 +541,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
