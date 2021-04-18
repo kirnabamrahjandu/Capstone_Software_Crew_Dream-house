@@ -525,6 +525,74 @@
             </objects>
             <point key="canvasLocation" x="3955" y="62"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="BRl-AZ-rr4">
+            <objects>
+                <viewController id="06i-SQ-Cto" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FlN-fv-2y5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7Y-hB-SLW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatListTableCell" rowHeight="80" id="ff3-dv-nb3" customClass="ChatListTableCell" customModule="Dream_House" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ff3-dv-nb3" id="LK6-FQ-2hG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oF3-3m-bxe">
+                                                    <rect key="frame" x="10" y="10" width="394" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receiver Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-D2-UwG">
+                                                            <rect key="frame" x="5" y="5" width="384" height="50"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="ih0-D2-UwG" secondAttribute="bottom" constant="5" id="24O-Y4-SP0"/>
+                                                        <constraint firstItem="ih0-D2-UwG" firstAttribute="leading" secondItem="oF3-3m-bxe" secondAttribute="leading" constant="5" id="GxM-31-BuJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ih0-D2-UwG" secondAttribute="trailing" constant="5" id="MAo-TH-x5G"/>
+                                                        <constraint firstItem="ih0-D2-UwG" firstAttribute="top" secondItem="oF3-3m-bxe" secondAttribute="top" constant="5" id="ZxA-dt-FrT"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="oF3-3m-bxe" secondAttribute="trailing" constant="10" id="Alt-eP-7Y7"/>
+                                                <constraint firstItem="oF3-3m-bxe" firstAttribute="top" secondItem="LK6-FQ-2hG" secondAttribute="top" constant="10" id="HOo-CC-ySG"/>
+                                                <constraint firstAttribute="bottom" secondItem="oF3-3m-bxe" secondAttribute="bottom" constant="10" id="Z49-ZS-b6V"/>
+                                                <constraint firstItem="oF3-3m-bxe" firstAttribute="leading" secondItem="LK6-FQ-2hG" secondAttribute="leading" constant="10" id="ZZb-25-hN8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellBackView" destination="oF3-3m-bxe" id="LhX-Zp-Aqb"/>
+                                            <outlet property="userNamelabel" destination="ih0-D2-UwG" id="YQy-P2-uhl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eJC-j9-7aV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c7Y-hB-SLW" firstAttribute="top" secondItem="eJC-j9-7aV" secondAttribute="top" id="3zt-hp-Ib8"/>
+                            <constraint firstItem="c7Y-hB-SLW" firstAttribute="leading" secondItem="eJC-j9-7aV" secondAttribute="leading" id="Lzd-ky-Rlk"/>
+                            <constraint firstItem="eJC-j9-7aV" firstAttribute="trailing" secondItem="c7Y-hB-SLW" secondAttribute="trailing" id="a7g-Bd-jw9"/>
+                            <constraint firstItem="eJC-j9-7aV" firstAttribute="bottom" secondItem="c7Y-hB-SLW" secondAttribute="bottom" id="v0G-1M-YVh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ia-gR-X4a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAk-5J-CMS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5143" y="61"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dreamIcon" width="439" height="352"/>
