@@ -20,10 +20,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Launch Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LaunchScreen" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="141" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome Vc-->
         <scene sceneID="qgI-r5-uz4">
             <objects>
-                <viewController id="qme-We-Lcy" sceneMemberID="viewController">
+                <viewController id="qme-We-Lcy" customClass="WelcomeVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1lr-7B-hXx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1072" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Vc-->
         <scene sceneID="LIZ-pa-rIb">
             <objects>
-                <viewController id="n8q-xn-37L" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVc" id="n8q-xn-37L" customClass="LoginVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zg6-G4-l9B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
