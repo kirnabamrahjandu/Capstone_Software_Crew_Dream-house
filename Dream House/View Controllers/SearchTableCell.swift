@@ -9,10 +9,9 @@ import UIKit
 
 class SearchTableCell: UITableViewCell {
 
-    @IBOutlet var historyLabel: UILabel!
     
-    @IBOutlet var historyImage: UIImageView!
-    
+    @IBOutlet var searchHistoryLabel: UILabel!
+    @IBOutlet var seachIMageIcon: UIImageView!
     
     
     
