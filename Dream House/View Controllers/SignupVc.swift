@@ -57,6 +57,19 @@ class SignupVc: UIViewController, UIImagePickerControllerDelegate & UINavigation
     }
     
     
+    @objc func openGallery(){
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
+    }
  
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+           
+           self.userProfileImage.image = image
+           
+           dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
