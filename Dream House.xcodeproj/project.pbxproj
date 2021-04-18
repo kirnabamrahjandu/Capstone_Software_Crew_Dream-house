@@ -43,6 +43,7 @@
 		C9700D70262CBD430045A5AE /* ChatListVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D6F262CBD430045A5AE /* ChatListVc.swift */; };
 		C9700D75262CC0F60045A5AE /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D74262CC0F60045A5AE /* ChatVC.swift */; };
 		C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D7C262CC30A0045A5AE /* SearchVc.swift */; };
+		C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		C9700D6F262CBD430045A5AE /* ChatListVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVc.swift; sourceTree = "<group>"; };
 		C9700D74262CC0F60045A5AE /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C9700D7C262CC30A0045A5AE /* SearchVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVc.swift; sourceTree = "<group>"; };
+		C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		C96A0DDE2618EA30001435E6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */,
 				C9700D7C262CC30A0045A5AE /* SearchVc.swift */,
 				C9700D74262CC0F60045A5AE /* ChatVC.swift */,
 				C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */,
@@ -410,6 +413,7 @@
 				C9700D54262CB8420045A5AE /* FavouriteCollectionCell.swift in Sources */,
 				C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */,
 				C9700D68262CBAEB0045A5AE /* ChatListTableCell.swift in Sources */,
+				C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */,
 				C9700D70262CBD430045A5AE /* ChatListVc.swift in Sources */,
 				C9700D4F262CB6DD0045A5AE /* FavouritesVc.swift in Sources */,
 				C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */,
