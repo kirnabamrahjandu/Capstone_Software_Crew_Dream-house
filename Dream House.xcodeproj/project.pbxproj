@@ -38,6 +38,7 @@
 		C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D44262CA7BF0045A5AE /* LoginVc.swift */; };
 		C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D49262CA8210045A5AE /* SignupVc.swift */; };
 		C9700D4F262CB6DD0045A5AE /* FavouritesVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */; };
+		C9700D54262CB8420045A5AE /* FavouriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		C9700D44262CA7BF0045A5AE /* LoginVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVc.swift; sourceTree = "<group>"; };
 		C9700D49262CA8210045A5AE /* SignupVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVc.swift; sourceTree = "<group>"; };
 		C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesVc.swift; sourceTree = "<group>"; };
+		C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
 				C9700D3F262CA6350045A5AE /* WelcomeVc.swift */,
 				C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */,
+				C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */,
 				C9700D49262CA8210045A5AE /* SignupVc.swift */,
 			);
 			path = "View Controllers";
@@ -390,6 +393,7 @@
 				C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */,
 				C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */,
 				C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */,
+				C9700D54262CB8420045A5AE /* FavouriteCollectionCell.swift in Sources */,
 				C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */,
 				C9700D4F262CB6DD0045A5AE /* FavouritesVc.swift in Sources */,
 				C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */,
