@@ -359,6 +359,12 @@
                             <constraint firstItem="j9i-ul-21v" firstAttribute="top" secondItem="TYm-Ll-rC5" secondAttribute="bottom" constant="50" id="vwW-Ef-jJa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="XF4-Q4-KKB" id="Ubn-N8-0v7"/>
+                        <outlet property="passwordTF" destination="TYm-Ll-rC5" id="CEy-wK-oBl"/>
+                        <outlet property="signupAction" destination="j9i-ul-21v" id="0yc-gG-gje"/>
+                        <outlet property="usernameTF" destination="UF1-ew-4Ra" id="rxC-8t-vFW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrr-LT-PTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
