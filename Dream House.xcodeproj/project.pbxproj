@@ -44,6 +44,7 @@
 		C9700D75262CC0F60045A5AE /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D74262CC0F60045A5AE /* ChatVC.swift */; };
 		C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D7C262CC30A0045A5AE /* SearchVc.swift */; };
 		C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */; };
+		C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		C9700D74262CC0F60045A5AE /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C9700D7C262CC30A0045A5AE /* SearchVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVc.swift; sourceTree = "<group>"; };
 		C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
+		C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseRoomVc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */,
 				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
 				C9700D3F262CA6350045A5AE /* WelcomeVc.swift */,
+				C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */,
 				C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */,
 				C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */,
 				C9700D49262CA8210045A5AE /* SignupVc.swift */,
@@ -407,6 +410,7 @@
 				C9700D3B262CA62B0045A5AE /* LaunchScreen.swift in Sources */,
 				C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */,
 				C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */,
+				C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */,
 				C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */,
 				C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */,
 				C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */,
