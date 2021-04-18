@@ -719,6 +719,8 @@
                                         <connections>
                                             <outlet property="historyImage" destination="vPh-VF-sqC" id="Z9H-IB-j73"/>
                                             <outlet property="historyLabel" destination="7Vu-Zm-gRG" id="oAc-oa-SIx"/>
+                                            <outlet property="seachIMageIcon" destination="vPh-VF-sqC" id="Gck-04-DKu"/>
+                                            <outlet property="searchHistoryLabel" destination="7Vu-Zm-gRG" id="8vg-vr-8Fy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
