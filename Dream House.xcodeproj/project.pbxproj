@@ -36,6 +36,7 @@
 		C9700D3B262CA62B0045A5AE /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */; };
 		C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D3F262CA6350045A5AE /* WelcomeVc.swift */; };
 		C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D44262CA7BF0045A5AE /* LoginVc.swift */; };
+		C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D49262CA8210045A5AE /* SignupVc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		C9700D3F262CA6350045A5AE /* WelcomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVc.swift; sourceTree = "<group>"; };
 		C9700D44262CA7BF0045A5AE /* LoginVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVc.swift; sourceTree = "<group>"; };
+		C9700D49262CA8210045A5AE /* SignupVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */,
 				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
 				C9700D3F262CA6350045A5AE /* WelcomeVc.swift */,
+				C9700D49262CA8210045A5AE /* SignupVc.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			files = (
 				C9700D3B262CA62B0045A5AE /* LaunchScreen.swift in Sources */,
 				C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */,
+				C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */,
 				C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */,
 				C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */,
 				C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */,

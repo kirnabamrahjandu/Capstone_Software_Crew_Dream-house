@@ -271,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="2066.666666666667" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup Vc-->
         <scene sceneID="TUV-57-pbU">
             <objects>
-                <viewController id="S4u-P8-Inf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVc" id="S4u-P8-Inf" customClass="SignupVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Eq-2b-Kk9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
