@@ -19,24 +19,13 @@ class FavouritesVc: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        favouriteCollectionView.delegate = self
-        favouriteCollectionView.dataSource = self
-        menuIcon()
-        self.favouriteCollectionView.reloadData()
+        wishListCollectionView.delegate = self
+        wishListCollectionView.dataSource = self
+        self.wishListCollectionView.reloadData()
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "Favourites"
     }
     
-    func menuIcon(){
-        let navBarPlusButton = UIBarButtonItem(image: UIImage(named:  "menu"),  style: .plain, target: self, action: #selector(tabNavigations))
-        navigationItem.leftBarButtonItem = navBarPlusButton
-    }
-    
-    @objc func tabNavigations(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuVc") as! MenuVc
-        vc.ref = self
-        self.transitionVc(vc: vc, duration: 0.1, type: .fromLeft)
-    }
 
 
 }
@@ -54,7 +43,7 @@ extension FavouritesVc : UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.favouriteCollectionView.frame.width / 2 - 10 , height: self.favouriteCollectionView.frame.height / 3)
+        return CGSize(width: self.wishListCollectionView.frame.width / 2 - 10 , height: self.wishListCollectionView.frame.height / 3)
     }
     
     
