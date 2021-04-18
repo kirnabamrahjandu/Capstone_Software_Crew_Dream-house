@@ -32,13 +32,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dream House" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsd-93-eks">
-                                <rect key="frame" x="20" y="94" width="374" height="49"/>
+                                <rect key="frame" x="20" y="94" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are here to provide house to everyone's expectations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPb-Bq-K3L">
-                                <rect key="frame" x="20" y="334.5" width="374" height="56"/>
+                                <rect key="frame" x="20" y="339" width="374" height="47"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -269,7 +269,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyN-0v-QyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="70"/>
+            <point key="canvasLocation" x="2066.666666666667" y="69.642857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TUV-57-pbU">
+            <objects>
+                <viewController id="S4u-P8-Inf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Eq-2b-Kk9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dreamIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-P4-Oaf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGNUP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byS-O4-Pst">
+                                <rect key="frame" x="20" y="94" width="374" height="34"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UF1-ew-4Ra">
+                                <rect key="frame" x="30" y="168" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XF4-Q4-KKB">
+                                <rect key="frame" x="30" y="252" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYm-Ll-rC5">
+                                <rect key="frame" x="30" y="336" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9i-ul-21v">
+                                <rect key="frame" x="30" y="420" width="354" height="60"/>
+                                <color key="backgroundColor" name="Theme Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Pvu-Fa-4UZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VxN-Wg-z3m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XF4-Q4-KKB" firstAttribute="trailing" secondItem="UF1-ew-4Ra" secondAttribute="trailing" id="0RU-fX-I3B"/>
+                            <constraint firstItem="TYm-Ll-rC5" firstAttribute="leading" secondItem="XF4-Q4-KKB" secondAttribute="leading" id="2Pp-yc-lVg"/>
+                            <constraint firstAttribute="trailing" secondItem="byS-O4-Pst" secondAttribute="trailing" constant="20" id="3YD-it-FOx"/>
+                            <constraint firstItem="XF4-Q4-KKB" firstAttribute="leading" secondItem="UF1-ew-4Ra" secondAttribute="leading" id="6Av-xs-Oyf"/>
+                            <constraint firstItem="byS-O4-Pst" firstAttribute="top" secondItem="VxN-Wg-z3m" secondAttribute="top" constant="50" id="7Sl-nq-QuP"/>
+                            <constraint firstItem="Vah-P4-Oaf" firstAttribute="top" secondItem="VxN-Wg-z3m" secondAttribute="top" id="7av-ww-hAa"/>
+                            <constraint firstItem="j9i-ul-21v" firstAttribute="trailing" secondItem="TYm-Ll-rC5" secondAttribute="trailing" id="Fqh-7d-uT1"/>
+                            <constraint firstItem="byS-O4-Pst" firstAttribute="leading" secondItem="VxN-Wg-z3m" secondAttribute="leading" constant="20" id="GF8-pv-CMG"/>
+                            <constraint firstItem="TYm-Ll-rC5" firstAttribute="top" secondItem="XF4-Q4-KKB" secondAttribute="bottom" constant="50" id="HOy-Cj-JM5"/>
+                            <constraint firstItem="Vah-P4-Oaf" firstAttribute="leading" secondItem="9Eq-2b-Kk9" secondAttribute="leading" id="P0q-hi-i68"/>
+                            <constraint firstItem="VxN-Wg-z3m" firstAttribute="trailing" secondItem="Vah-P4-Oaf" secondAttribute="trailing" id="bws-dG-bGp"/>
+                            <constraint firstItem="XF4-Q4-KKB" firstAttribute="top" secondItem="UF1-ew-4Ra" secondAttribute="bottom" constant="50" id="i0C-ck-xAJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Vah-P4-Oaf" secondAttribute="bottom" id="iHp-6h-gWM"/>
+                            <constraint firstItem="j9i-ul-21v" firstAttribute="leading" secondItem="TYm-Ll-rC5" secondAttribute="leading" id="khq-bs-Vru"/>
+                            <constraint firstItem="TYm-Ll-rC5" firstAttribute="trailing" secondItem="XF4-Q4-KKB" secondAttribute="trailing" id="rBq-52-cVi"/>
+                            <constraint firstItem="VxN-Wg-z3m" firstAttribute="trailing" secondItem="UF1-ew-4Ra" secondAttribute="trailing" constant="30" id="sOt-3R-gXr"/>
+                            <constraint firstItem="UF1-ew-4Ra" firstAttribute="leading" secondItem="VxN-Wg-z3m" secondAttribute="leading" constant="30" id="u4k-nD-Kf9"/>
+                            <constraint firstItem="UF1-ew-4Ra" firstAttribute="top" secondItem="byS-O4-Pst" secondAttribute="bottom" constant="40" id="vLM-K0-8Vo"/>
+                            <constraint firstItem="j9i-ul-21v" firstAttribute="top" secondItem="TYm-Ll-rC5" secondAttribute="bottom" constant="50" id="vwW-Ef-jJa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vrr-LT-PTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2965" y="70"/>
         </scene>
     </scenes>
     <resources>

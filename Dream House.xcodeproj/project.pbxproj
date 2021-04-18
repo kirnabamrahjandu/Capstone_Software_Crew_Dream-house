@@ -10,7 +10,6 @@
 		C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */; };
 		C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */; };
 		C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAF2618AB8E001435E6 /* ViewController.swift */; };
-		C96A0DB32618AB8E001435E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DB12618AB8E001435E6 /* Main.storyboard */; };
 		C96A0DB52618AB91001435E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DB42618AB91001435E6 /* Assets.xcassets */; };
 		C96A0DB82618AB91001435E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */; };
 		C96A0DC32618AB91001435E6 /* Dream_HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DC22618AB91001435E6 /* Dream_HouseTests.swift */; };
@@ -33,6 +32,7 @@
 		C96A0E022618EA56001435E6 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF02618EA56001435E6 /* Poppins-Light.ttf */; };
 		C96A0E032618EA56001435E6 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF12618EA56001435E6 /* Poppins-ExtraBold.ttf */; };
 		C96A0E042618EA56001435E6 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF22618EA56001435E6 /* Poppins-SemiBoldItalic.ttf */; };
+		C9700CF1262CA1990045A5AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9700CF0262CA1990045A5AE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C96A0DAF2618AB8E001435E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C96A0DB22618AB8E001435E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C96A0DB42618AB91001435E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96A0DB72618AB91001435E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C96A0DB92618AB91001435E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		C96A0DF02618EA56001435E6 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "Dream House/Poppins Font/Poppins-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		C96A0DF12618EA56001435E6 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "Dream House/Poppins Font/Poppins-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
 		C96A0DF22618EA56001435E6 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "Dream House/Poppins Font/Poppins-SemiBoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C9700CF0262CA1990045A5AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 				C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */,
 				C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */,
 				C96A0DAF2618AB8E001435E6 /* ViewController.swift */,
-				C96A0DB12618AB8E001435E6 /* Main.storyboard */,
+				C9700CF0262CA1990045A5AE /* Main.storyboard */,
 				C96A0DB42618AB91001435E6 /* Assets.xcassets */,
 				C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */,
 				C96A0DB92618AB91001435E6 /* Info.plist */,
@@ -330,6 +330,7 @@
 				C96A0DFD2618EA56001435E6 /* Poppins-Medium.ttf in Resources */,
 				C96A0DF62618EA56001435E6 /* Poppins-BlackItalic.ttf in Resources */,
 				C96A0DFC2618EA56001435E6 /* Poppins-BoldItalic.ttf in Resources */,
+				C9700CF1262CA1990045A5AE /* Main.storyboard in Resources */,
 				C96A0DFE2618EA56001435E6 /* Poppins-MediumItalic.ttf in Resources */,
 				C96A0DF32618EA56001435E6 /* Poppins-SemiBold.ttf in Resources */,
 				C96A0DF42618EA56001435E6 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -345,7 +346,6 @@
 				C96A0E042618EA56001435E6 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				C96A0E012618EA56001435E6 /* Poppins-ThinItalic.ttf in Resources */,
 				C96A0DF82618EA56001435E6 /* Poppins-LightItalic.ttf in Resources */,
-				C96A0DB32618AB8E001435E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,14 +408,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C96A0DB12618AB8E001435E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C96A0DB22618AB8E001435E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
