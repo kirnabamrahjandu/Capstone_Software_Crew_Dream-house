@@ -10,8 +10,8 @@ import Firebase
 
 class FavouritesVc: UIViewController {
     
-    @IBOutlet var favouriteCollectionView: UICollectionView!
         
+    @IBOutlet var wishListCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,48 +41,3 @@ class FavouritesVc: UIViewController {
 
 }
 
-extension FavouritesVc : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fvtModel.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavouriteCollectionCell", for: indexPath) as! FavouriteCollectionCell
-        cell.cellBackView.layer.cornerRadius = 8
-        cell.ownerNameLabel.text = fvtModel[indexPath.row].ownerName ?? "not found"
-        cell.moneyPerMonthLabel.text = "$" + (fvtModel[indexPath.row].rent ?? "") + " / Month"
-        cell.cellBackView.layer.cornerRadius = 10
-        cell.favouriteBtn.addTarget(self, action: #selector(removeFav(sender:)), for: .touchUpInside)
-        cell.favouriteBtn.tag = indexPath.row
-         let postedImage = fvtThumbnail[indexPath.row]
-                    let url = URL(string: postedImage)
-                    URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
-                        if error != nil {
-                            print(error!)
-                        return
-                        }
-                        DispatchQueue.main.async {
-                            cell.houseImage?.image = UIImage(data: data!)
-                        }
-                        }).resume()
-     
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.favouriteCollectionView.frame.width / 2 - 10 , height: self.favouriteCollectionView.frame.height / 3)
-    }
-    
-    
-    @objc func removeFav(sender: UIButton){
-        UIButton.animate(withDuration: 1) {
-            fvtModel.remove(at: sender.tag)
-            fvtThumbnail.remove(at: sender.tag)
-            self.favouriteCollectionView.reloadData()
-        }
-
-    }
-    
-    
-}
