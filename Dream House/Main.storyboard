@@ -173,6 +173,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBrnAction:" destination="n8q-xn-37L" eventType="touchDragInside" id="LwR-I1-RDq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-xL-xPW">
                                 <rect key="frame" x="249" y="311" width="125" height="32"/>
@@ -181,6 +184,9 @@
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordAction:" destination="n8q-xn-37L" eventType="touchDragInside" id="fgW-xm-kVO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO5-Rq-n2T">
                                 <rect key="frame" x="116.5" y="456" width="189.5" height="22.5"/>
@@ -192,6 +198,9 @@
                                 <rect key="frame" x="316" y="451" width="58" height="33"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signupAction:" destination="n8q-xn-37L" eventType="touchUpInside" id="nCL-vk-cMW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ki-Nc-Hj9">
                                 <rect key="frame" x="197" y="538.5" width="30" height="30"/>
@@ -227,6 +236,9 @@
                                     <constraint firstAttribute="width" constant="100" id="Y9Y-sU-NdI"/>
                                 </constraints>
                                 <state key="normal" title="GOOGLE"/>
+                                <connections>
+                                    <action selector="googleLoginAction:" destination="n8q-xn-37L" eventType="touchUpInside" id="eqF-aR-DTT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="scp-kh-sZ3"/>
@@ -266,6 +278,14 @@
                             <constraint firstItem="FSa-Si-7iG" firstAttribute="top" secondItem="zg6-G4-l9B" secondAttribute="top" id="xyR-Zd-Wae"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="jqr-6A-Y9q" id="Xl1-Fh-EIX"/>
+                        <outlet property="forgotPasswordBtn" destination="P0R-xL-xPW" id="DNS-ZK-RlQ"/>
+                        <outlet property="googleLoginBtn" destination="Oza-lJ-2uV" id="twv-K8-2bD"/>
+                        <outlet property="loginBtn" destination="zt0-89-GDk" id="l61-z0-C5g"/>
+                        <outlet property="passwordTF" destination="uuo-cg-Gqk" id="m2c-v1-Tl8"/>
+                        <outlet property="signupBtn" destination="XUD-rX-PI7" id="TC4-ud-Flc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyN-0v-QyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
