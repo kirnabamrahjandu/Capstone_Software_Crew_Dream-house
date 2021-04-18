@@ -1041,19 +1041,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressTF" destination="tBv-Tj-HCU" id="fig-dZ-c1z"/>
-                        <outlet property="contactNumber" destination="555-QV-iKj" id="5bY-UJ-E2D"/>
-                        <outlet property="houseNoTF" destination="OnR-1H-cGD" id="34F-tI-bZN"/>
-                        <outlet property="imagesCollectionView" destination="wvG-pY-C75" id="v5L-GO-Cog"/>
-                        <outlet property="locationBtn" destination="2gA-ac-hwY" id="T8e-ca-1nE"/>
-                        <outlet property="locationToBusStandTF" destination="RvH-R2-s4Y" id="EXB-Zj-uLu"/>
-                        <outlet property="numberOfFloors" destination="9rn-kR-jWn" id="NbD-aI-367"/>
-                        <outlet property="numberOfRooms" destination="tlA-pN-cW1" id="iaT-Gn-wbl"/>
-                        <outlet property="postBtn" destination="YFL-WJ-s8L" id="KBn-2B-HAK"/>
-                        <outlet property="rentLabel" destination="avh-NS-0qg" id="8IF-qU-k3k"/>
-                        <outlet property="segmentBtn" destination="fxJ-uK-zNl" id="uh9-Un-ur4"/>
-                        <outlet property="selectImageBtn" destination="3EZ-Jg-v6P" id="Yj7-Ve-UUc"/>
-                        <outlet property="selectVideoBtn" destination="5DV-Ne-08U" id="ZSZ-R8-Srz"/>
                         <outlet property="skipBtn" destination="aYA-Mb-irX" id="gDM-Qt-tuM"/>
                     </connections>
                 </viewController>
