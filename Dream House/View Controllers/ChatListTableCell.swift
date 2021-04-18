@@ -9,8 +9,8 @@ import UIKit
 
 class ChatListTableCell: UITableViewCell {
     
-    @IBOutlet var chatBackView: UIView!
-    @IBOutlet var receiverNameLabel: UILabel!
+    @IBOutlet var backView: UIView!
+    @IBOutlet var receiverNamLabel: UILabel!
     
     
     override func awakeFromNib() {
