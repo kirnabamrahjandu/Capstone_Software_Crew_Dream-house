@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */; };
+		C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */; };
+		C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAF2618AB8E001435E6 /* ViewController.swift */; };
+		C96A0DB32618AB8E001435E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DB12618AB8E001435E6 /* Main.storyboard */; };
+		C96A0DB52618AB91001435E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DB42618AB91001435E6 /* Assets.xcassets */; };
+		C96A0DB82618AB91001435E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */; };
+		C96A0DC32618AB91001435E6 /* Dream_HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DC22618AB91001435E6 /* Dream_HouseTests.swift */; };
+		C96A0DCE2618AB91001435E6 /* Dream_HouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DCD2618AB91001435E6 /* Dream_HouseUITests.swift */; };
+		C96A0DF32618EA56001435E6 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE12618EA56001435E6 /* Poppins-SemiBold.ttf */; };
+		C96A0DF42618EA56001435E6 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE22618EA56001435E6 /* Poppins-ExtraLightItalic.ttf */; };
+		C96A0DF52618EA56001435E6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE32618EA56001435E6 /* Poppins-Regular.ttf */; };
+		C96A0DF62618EA56001435E6 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE42618EA56001435E6 /* Poppins-BlackItalic.ttf */; };
+		C96A0DF72618EA56001435E6 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE52618EA56001435E6 /* Poppins-Thin.ttf */; };
+		C96A0DF82618EA56001435E6 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE62618EA56001435E6 /* Poppins-LightItalic.ttf */; };
+		C96A0DF92618EA56001435E6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE72618EA56001435E6 /* Poppins-Bold.ttf */; };
+		C96A0DFA2618EA56001435E6 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE82618EA56001435E6 /* Poppins-ExtraLight.ttf */; };
+		C96A0DFB2618EA56001435E6 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DE92618EA56001435E6 /* Poppins-Italic.ttf */; };
+		C96A0DFC2618EA56001435E6 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DEA2618EA56001435E6 /* Poppins-BoldItalic.ttf */; };
+		C96A0DFD2618EA56001435E6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DEB2618EA56001435E6 /* Poppins-Medium.ttf */; };
+		C96A0DFE2618EA56001435E6 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DEC2618EA56001435E6 /* Poppins-MediumItalic.ttf */; };
+		C96A0DFF2618EA56001435E6 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DED2618EA56001435E6 /* Poppins-ExtraBoldItalic.ttf */; };
+		C96A0E002618EA56001435E6 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DEE2618EA56001435E6 /* Poppins-Black.ttf */; };
+		C96A0E012618EA56001435E6 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DEF2618EA56001435E6 /* Poppins-ThinItalic.ttf */; };
+		C96A0E022618EA56001435E6 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF02618EA56001435E6 /* Poppins-Light.ttf */; };
+		C96A0E032618EA56001435E6 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF12618EA56001435E6 /* Poppins-ExtraBold.ttf */; };
+		C96A0E042618EA56001435E6 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF22618EA56001435E6 /* Poppins-SemiBoldItalic.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C96A0DBF2618AB91001435E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C96A0DA02618AB8E001435E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96A0DA72618AB8E001435E6;
+			remoteInfo = "Dream House";
+		};
+		C96A0DCA2618AB91001435E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C96A0DA02618AB8E001435E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96A0DA72618AB8E001435E6;
+			remoteInfo = "Dream House";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C96A0DA82618AB8E001435E6 /* Dream House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dream House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C96A0DAF2618AB8E001435E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C96A0DB22618AB8E001435E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C96A0DB42618AB91001435E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C96A0DB72618AB91001435E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C96A0DB92618AB91001435E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96A0DBE2618AB91001435E6 /* Dream HouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dream HouseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96A0DC22618AB91001435E6 /* Dream_HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream_HouseTests.swift; sourceTree = "<group>"; };
+		C96A0DC42618AB91001435E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96A0DC92618AB91001435E6 /* Dream HouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dream HouseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96A0DCD2618AB91001435E6 /* Dream_HouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream_HouseUITests.swift; sourceTree = "<group>"; };
+		C96A0DCF2618AB91001435E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96A0DE12618EA56001435E6 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "Dream House/Poppins Font/Poppins-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE22618EA56001435E6 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLightItalic.ttf"; path = "Dream House/Poppins Font/Poppins-ExtraLightItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE32618EA56001435E6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "Dream House/Poppins Font/Poppins-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE42618EA56001435E6 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BlackItalic.ttf"; path = "Dream House/Poppins Font/Poppins-BlackItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE52618EA56001435E6 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "Dream House/Poppins Font/Poppins-Thin.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE62618EA56001435E6 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-LightItalic.ttf"; path = "Dream House/Poppins Font/Poppins-LightItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE72618EA56001435E6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "Dream House/Poppins Font/Poppins-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE82618EA56001435E6 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "Dream House/Poppins Font/Poppins-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DE92618EA56001435E6 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Italic.ttf"; path = "Dream House/Poppins Font/Poppins-Italic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DEA2618EA56001435E6 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BoldItalic.ttf"; path = "Dream House/Poppins Font/Poppins-BoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DEB2618EA56001435E6 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "Dream House/Poppins Font/Poppins-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DEC2618EA56001435E6 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "Dream House/Poppins Font/Poppins-MediumItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DED2618EA56001435E6 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBoldItalic.ttf"; path = "Dream House/Poppins Font/Poppins-ExtraBoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DEE2618EA56001435E6 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Black.ttf"; path = "Dream House/Poppins Font/Poppins-Black.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DEF2618EA56001435E6 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ThinItalic.ttf"; path = "Dream House/Poppins Font/Poppins-ThinItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DF02618EA56001435E6 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "Dream House/Poppins Font/Poppins-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DF12618EA56001435E6 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "Dream House/Poppins Font/Poppins-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
+		C96A0DF22618EA56001435E6 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "Dream House/Poppins Font/Poppins-SemiBoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C96A0DA52618AB8E001435E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96A0DBB2618AB91001435E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96A0DC62618AB91001435E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C96A0D9F2618AB8E001435E6 = {
+			isa = PBXGroup;
+			children = (
+				C96A0DAA2618AB8E001435E6 /* Dream House */,
+				C96A0DC12618AB91001435E6 /* Dream HouseTests */,
+				C96A0DCC2618AB91001435E6 /* Dream HouseUITests */,
+				C96A0DA92618AB8E001435E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C96A0DA92618AB8E001435E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0DA82618AB8E001435E6 /* Dream House.app */,
+				C96A0DBE2618AB91001435E6 /* Dream HouseTests.xctest */,
+				C96A0DC92618AB91001435E6 /* Dream HouseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C96A0DAA2618AB8E001435E6 /* Dream House */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0E092618EA68001435E6 /* Delegates */,
+				C96A0E082618EA5F001435E6 /* Storyboards */,
+				C96A0DDF2618EA39001435E6 /* Utility */,
+				C96A0DDE2618EA30001435E6 /* View Controllers */,
+				C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */,
+				C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */,
+				C96A0DAF2618AB8E001435E6 /* ViewController.swift */,
+				C96A0DB12618AB8E001435E6 /* Main.storyboard */,
+				C96A0DB42618AB91001435E6 /* Assets.xcassets */,
+				C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */,
+				C96A0DB92618AB91001435E6 /* Info.plist */,
+			);
+			path = "Dream House";
+			sourceTree = "<group>";
+		};
+		C96A0DC12618AB91001435E6 /* Dream HouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0DC22618AB91001435E6 /* Dream_HouseTests.swift */,
+				C96A0DC42618AB91001435E6 /* Info.plist */,
+			);
+			path = "Dream HouseTests";
+			sourceTree = "<group>";
+		};
+		C96A0DCC2618AB91001435E6 /* Dream HouseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0DCD2618AB91001435E6 /* Dream_HouseUITests.swift */,
+				C96A0DCF2618AB91001435E6 /* Info.plist */,
+			);
+			path = "Dream HouseUITests";
+			sourceTree = "<group>";
+		};
+		C96A0DDE2618EA30001435E6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C96A0DDF2618EA39001435E6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0DE02618EA44001435E6 /* Fonts */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C96A0DE02618EA44001435E6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0DEE2618EA56001435E6 /* Poppins-Black.ttf */,
+				C96A0DE42618EA56001435E6 /* Poppins-BlackItalic.ttf */,
+				C96A0DE72618EA56001435E6 /* Poppins-Bold.ttf */,
+				C96A0DEA2618EA56001435E6 /* Poppins-BoldItalic.ttf */,
+				C96A0DF12618EA56001435E6 /* Poppins-ExtraBold.ttf */,
+				C96A0DED2618EA56001435E6 /* Poppins-ExtraBoldItalic.ttf */,
+				C96A0DE82618EA56001435E6 /* Poppins-ExtraLight.ttf */,
+				C96A0DE22618EA56001435E6 /* Poppins-ExtraLightItalic.ttf */,
+				C96A0DE92618EA56001435E6 /* Poppins-Italic.ttf */,
+				C96A0DF02618EA56001435E6 /* Poppins-Light.ttf */,
+				C96A0DE62618EA56001435E6 /* Poppins-LightItalic.ttf */,
+				C96A0DEB2618EA56001435E6 /* Poppins-Medium.ttf */,
+				C96A0DEC2618EA56001435E6 /* Poppins-MediumItalic.ttf */,
+				C96A0DE32618EA56001435E6 /* Poppins-Regular.ttf */,
+				C96A0DE12618EA56001435E6 /* Poppins-SemiBold.ttf */,
+				C96A0DF22618EA56001435E6 /* Poppins-SemiBoldItalic.ttf */,
+				C96A0DE52618EA56001435E6 /* Poppins-Thin.ttf */,
+				C96A0DEF2618EA56001435E6 /* Poppins-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C96A0E082618EA5F001435E6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C96A0E092618EA68001435E6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C96A0DA72618AB8E001435E6 /* Dream House */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96A0DD22618AB91001435E6 /* Build configuration list for PBXNativeTarget "Dream House" */;
+			buildPhases = (
+				C96A0DA42618AB8E001435E6 /* Sources */,
+				C96A0DA52618AB8E001435E6 /* Frameworks */,
+				C96A0DA62618AB8E001435E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dream House";
+			productName = "Dream House";
+			productReference = C96A0DA82618AB8E001435E6 /* Dream House.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C96A0DBD2618AB91001435E6 /* Dream HouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96A0DD52618AB92001435E6 /* Build configuration list for PBXNativeTarget "Dream HouseTests" */;
+			buildPhases = (
+				C96A0DBA2618AB91001435E6 /* Sources */,
+				C96A0DBB2618AB91001435E6 /* Frameworks */,
+				C96A0DBC2618AB91001435E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C96A0DC02618AB91001435E6 /* PBXTargetDependency */,
+			);
+			name = "Dream HouseTests";
+			productName = "Dream HouseTests";
+			productReference = C96A0DBE2618AB91001435E6 /* Dream HouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C96A0DC82618AB91001435E6 /* Dream HouseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96A0DD82618AB92001435E6 /* Build configuration list for PBXNativeTarget "Dream HouseUITests" */;
+			buildPhases = (
+				C96A0DC52618AB91001435E6 /* Sources */,
+				C96A0DC62618AB91001435E6 /* Frameworks */,
+				C96A0DC72618AB91001435E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C96A0DCB2618AB91001435E6 /* PBXTargetDependency */,
+			);
+			name = "Dream HouseUITests";
+			productName = "Dream HouseUITests";
+			productReference = C96A0DC92618AB91001435E6 /* Dream HouseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C96A0DA02618AB8E001435E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					C96A0DA72618AB8E001435E6 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					C96A0DBD2618AB91001435E6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = C96A0DA72618AB8E001435E6;
+					};
+					C96A0DC82618AB91001435E6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = C96A0DA72618AB8E001435E6;
+					};
+				};
+			};
+			buildConfigurationList = C96A0DA32618AB8E001435E6 /* Build configuration list for PBXProject "Dream House" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C96A0D9F2618AB8E001435E6;
+			productRefGroup = C96A0DA92618AB8E001435E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C96A0DA72618AB8E001435E6 /* Dream House */,
+				C96A0DBD2618AB91001435E6 /* Dream HouseTests */,
+				C96A0DC82618AB91001435E6 /* Dream HouseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C96A0DA62618AB8E001435E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96A0DB82618AB91001435E6 /* LaunchScreen.storyboard in Resources */,
+				C96A0E002618EA56001435E6 /* Poppins-Black.ttf in Resources */,
+				C96A0DFD2618EA56001435E6 /* Poppins-Medium.ttf in Resources */,
+				C96A0DF62618EA56001435E6 /* Poppins-BlackItalic.ttf in Resources */,
+				C96A0DFC2618EA56001435E6 /* Poppins-BoldItalic.ttf in Resources */,
+				C96A0DFE2618EA56001435E6 /* Poppins-MediumItalic.ttf in Resources */,
+				C96A0DF32618EA56001435E6 /* Poppins-SemiBold.ttf in Resources */,
+				C96A0DF42618EA56001435E6 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				C96A0DF52618EA56001435E6 /* Poppins-Regular.ttf in Resources */,
+				C96A0DFF2618EA56001435E6 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				C96A0E022618EA56001435E6 /* Poppins-Light.ttf in Resources */,
+				C96A0DF72618EA56001435E6 /* Poppins-Thin.ttf in Resources */,
+				C96A0DFB2618EA56001435E6 /* Poppins-Italic.ttf in Resources */,
+				C96A0DB52618AB91001435E6 /* Assets.xcassets in Resources */,
+				C96A0DFA2618EA56001435E6 /* Poppins-ExtraLight.ttf in Resources */,
+				C96A0DF92618EA56001435E6 /* Poppins-Bold.ttf in Resources */,
+				C96A0E032618EA56001435E6 /* Poppins-ExtraBold.ttf in Resources */,
+				C96A0E042618EA56001435E6 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				C96A0E012618EA56001435E6 /* Poppins-ThinItalic.ttf in Resources */,
+				C96A0DF82618EA56001435E6 /* Poppins-LightItalic.ttf in Resources */,
+				C96A0DB32618AB8E001435E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96A0DBC2618AB91001435E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96A0DC72618AB91001435E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C96A0DA42618AB8E001435E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */,
+				C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */,
+				C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96A0DBA2618AB91001435E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96A0DC32618AB91001435E6 /* Dream_HouseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96A0DC52618AB91001435E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96A0DCE2618AB91001435E6 /* Dream_HouseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C96A0DC02618AB91001435E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96A0DA72618AB8E001435E6 /* Dream House */;
+			targetProxy = C96A0DBF2618AB91001435E6 /* PBXContainerItemProxy */;
+		};
+		C96A0DCB2618AB91001435E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96A0DA72618AB8E001435E6 /* Dream House */;
+			targetProxy = C96A0DCA2618AB91001435E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C96A0DB12618AB8E001435E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C96A0DB22618AB8E001435E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C96A0DB72618AB91001435E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C96A0DD02618AB91001435E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C96A0DD12618AB91001435E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C96A0DD32618AB91001435E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P8MTHFFBL;
+				INFOPLIST_FILE = "Dream House/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dream-House";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C96A0DD42618AB91001435E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P8MTHFFBL;
+				INFOPLIST_FILE = "Dream House/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dream-House";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C96A0DD62618AB92001435E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P8MTHFFBL;
+				INFOPLIST_FILE = "Dream HouseTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dream-HouseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dream House.app/Dream House";
+			};
+			name = Debug;
+		};
+		C96A0DD72618AB92001435E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P8MTHFFBL;
+				INFOPLIST_FILE = "Dream HouseTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dream-HouseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dream House.app/Dream House";
+			};
+			name = Release;
+		};
+		C96A0DD92618AB92001435E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P8MTHFFBL;
+				INFOPLIST_FILE = "Dream HouseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dream-HouseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dream House";
+			};
+			name = Debug;
+		};
+		C96A0DDA2618AB92001435E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P8MTHFFBL;
+				INFOPLIST_FILE = "Dream HouseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dream-HouseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dream House";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C96A0DA32618AB8E001435E6 /* Build configuration list for PBXProject "Dream House" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96A0DD02618AB91001435E6 /* Debug */,
+				C96A0DD12618AB91001435E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96A0DD22618AB91001435E6 /* Build configuration list for PBXNativeTarget "Dream House" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96A0DD32618AB91001435E6 /* Debug */,
+				C96A0DD42618AB91001435E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96A0DD52618AB92001435E6 /* Build configuration list for PBXNativeTarget "Dream HouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96A0DD62618AB92001435E6 /* Debug */,
+				C96A0DD72618AB92001435E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96A0DD82618AB92001435E6 /* Build configuration list for PBXNativeTarget "Dream HouseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96A0DD92618AB92001435E6 /* Debug */,
+				C96A0DDA2618AB92001435E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C96A0DA02618AB8E001435E6 /* Project object */;
+}
