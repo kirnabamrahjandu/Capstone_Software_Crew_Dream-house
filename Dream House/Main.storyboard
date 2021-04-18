@@ -525,10 +525,10 @@
             </objects>
             <point key="canvasLocation" x="3955" y="62"/>
         </scene>
-        <!--Chat List Vc-->
+        <!--View Controller-->
         <scene sceneID="BRl-AZ-rr4">
             <objects>
-                <viewController storyboardIdentifier="ChatListVc" id="06i-SQ-Cto" customClass="ChatListVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="06i-SQ-Cto" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlN-fv-2y5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,13 +596,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAk-5J-CMS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5143" y="61"/>
+            <point key="canvasLocation" x="4987" y="31"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="2fk-bj-zMv">
+            <objects>
+                <viewController storyboardIdentifier="ChatVC" title="Chat" id="Ixv-Sm-5ch" customClass="ChatVC" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B5P-tb-tmh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jio-d8-hFX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heb-5a-Hdt">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zgf-KW-Amx">
+                                        <rect key="frame" x="20" y="10" width="284" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bBz-nq-eiX"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eQ-pb-pRB">
+                                        <rect key="frame" x="324" y="10" width="70" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ZsV-7Y-B3x"/>
+                                            <constraint firstAttribute="height" constant="40" id="lc0-sp-Mos"/>
+                                            <constraint firstAttribute="width" constant="70" id="meM-x2-7PB"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="Ixv-Sm-5ch" eventType="touchUpInside" id="6ef-dk-EYU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5X5-GJ-Lo5"/>
+                                    <constraint firstItem="2eQ-pb-pRB" firstAttribute="centerY" secondItem="zgf-KW-Amx" secondAttribute="centerY" id="7ns-fl-Gfl"/>
+                                    <constraint firstItem="zgf-KW-Amx" firstAttribute="top" secondItem="heb-5a-Hdt" secondAttribute="top" constant="10" id="8DU-CW-1hC"/>
+                                    <constraint firstItem="2eQ-pb-pRB" firstAttribute="leading" secondItem="zgf-KW-Amx" secondAttribute="trailing" constant="20" id="EQp-W9-3mc"/>
+                                    <constraint firstAttribute="trailing" secondItem="2eQ-pb-pRB" secondAttribute="trailing" constant="20" id="F3A-4d-zW1"/>
+                                    <constraint firstAttribute="bottom" secondItem="zgf-KW-Amx" secondAttribute="bottom" constant="10" id="wGS-bh-IDP"/>
+                                    <constraint firstItem="zgf-KW-Amx" firstAttribute="leading" secondItem="heb-5a-Hdt" secondAttribute="leading" constant="20" id="zjp-dD-LdQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h5L-L2-XJY"/>
+                        <color key="backgroundColor" name="BrandPurple"/>
+                        <constraints>
+                            <constraint firstItem="jio-d8-hFX" firstAttribute="top" secondItem="h5L-L2-XJY" secondAttribute="top" id="6lB-Tt-l7z"/>
+                            <constraint firstItem="jio-d8-hFX" firstAttribute="trailing" secondItem="h5L-L2-XJY" secondAttribute="trailing" id="79V-J3-reB"/>
+                            <constraint firstItem="heb-5a-Hdt" firstAttribute="leading" secondItem="h5L-L2-XJY" secondAttribute="leading" id="Apo-ko-0Lz"/>
+                            <constraint firstItem="h5L-L2-XJY" firstAttribute="bottom" secondItem="heb-5a-Hdt" secondAttribute="bottom" id="Pnn-qV-cNV"/>
+                            <constraint firstItem="heb-5a-Hdt" firstAttribute="trailing" secondItem="h5L-L2-XJY" secondAttribute="trailing" id="Yin-y2-sbr"/>
+                            <constraint firstItem="jio-d8-hFX" firstAttribute="leading" secondItem="h5L-L2-XJY" secondAttribute="leading" id="dNQ-OY-CtH"/>
+                            <constraint firstItem="heb-5a-Hdt" firstAttribute="top" secondItem="jio-d8-hFX" secondAttribute="bottom" id="mON-CB-zfr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eXe-sH-Rbb"/>
+                    <connections>
+                        <outlet property="messageTextfield" destination="zgf-KW-Amx" id="YS8-cM-tKg"/>
+                        <outlet property="sendBtn" destination="2eQ-pb-pRB" id="k9b-w9-4bg"/>
+                        <outlet property="tableView" destination="jio-d8-hFX" id="Wqe-gj-ojB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QN3-wU-Hj1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12102" y="754"/>
         </scene>
     </scenes>
     <resources>
         <image name="dreamIcon" width="439" height="352"/>
         <image name="dummy" width="225" height="225"/>
         <image name="favourite" width="25" height="25"/>
+        <namedColor name="BrandPurple">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Theme Color">
             <color red="0.0" green="0.47058823529411764" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -617,6 +695,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
