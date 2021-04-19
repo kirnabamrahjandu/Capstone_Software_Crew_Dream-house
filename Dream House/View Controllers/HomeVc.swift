@@ -26,7 +26,7 @@ class HomeVc: UIViewController {
         super.viewDidLoad()
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
-
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,7 +106,8 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
                         }).resume()
      }
         cell.locationAddressLabel1.text = model[indexPath.row].locationHouse
-
+        cell.favouriteBtn1.addTarget(self, action: #selector(favouriteTapped(sender:)), for: .touchUpInside)
+        cell.favouriteBtn1.tag = indexPath.row
         return cell
     }
     
@@ -116,6 +117,21 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         return CGSize(width: (self.homeCollectionView.frame.width / 2) - (5), height: self.homeCollectionView.frame.height / 1.5)
     }
     
+    @objc func favouriteTapped(sender : UIButton){
+        UIButton.animate(withDuration: 0.2,
+                         animations: { sender.transform = CGAffineTransform(scaleX: 0.675, y: 0.66) },
+                         completion: { finish in
+                            UIButton.animate(withDuration: 0.15, animations: {
+                                sender.transform = CGAffineTransform.identity
+                            })
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+            sender.tintColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+            fvtModel.append(self.model[sender.tag])
+            let img = self.imgArray[sender.tag].first
+            fvtThumbnail.append(img ?? "")
+        }
+    }
 
 }
 
