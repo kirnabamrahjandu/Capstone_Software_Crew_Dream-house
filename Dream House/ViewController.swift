@@ -6,13 +6,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+extension UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
 
 }
 
+var username = ""
+var email = ""
+var userProfileURL = ""
+var fvtModel = [Rent]()
+var fvtThumbnail = [String]()
+var userType = ""

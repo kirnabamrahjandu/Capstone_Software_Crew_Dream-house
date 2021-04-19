@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		C9565284262E096500BE7E7B /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565283262E096500BE7E7B /* HomeVc.swift */; };
 		C9565289262E0BBF00BE7E7B /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565288262E0BBF00BE7E7B /* HomeCollectionCell.swift */; };
 		C956528E262E102200BE7E7B /* SortByVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C956528D262E102200BE7E7B /* SortByVc.swift */; };
+		C95652EC262E168500BE7E7B /* AddHouseRoomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95652EB262E168500BE7E7B /* AddHouseRoomCollectionCell.swift */; };
 		C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */; };
 		C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */; };
 		C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAF2618AB8E001435E6 /* ViewController.swift */; };
@@ -80,6 +81,7 @@
 		C9565283262E096500BE7E7B /* HomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
 		C9565288262E0BBF00BE7E7B /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		C956528D262E102200BE7E7B /* SortByVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByVc.swift; sourceTree = "<group>"; };
+		C95652EB262E168500BE7E7B /* AddHouseRoomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseRoomCollectionCell.swift; sourceTree = "<group>"; };
 		C96A0DA82618AB8E001435E6 /* Dream House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dream House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,7 +169,6 @@
 				1578941BD1936F7A9E522DA6 /* Pods-Dream HouseTests.debug.xcconfig */,
 				AAABAB4F2170B71E8CA95532 /* Pods-Dream HouseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -253,6 +254,7 @@
 				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
 				C9700D3F262CA6350045A5AE /* WelcomeVc.swift */,
 				C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */,
+				C95652EB262E168500BE7E7B /* AddHouseRoomCollectionCell.swift */,
 				C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */,
 				C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */,
 				C9700D49262CA8210045A5AE /* SignupVc.swift */,
@@ -603,6 +605,7 @@
 				C9700D75262CC0F60045A5AE /* ChatVC.swift in Sources */,
 				C9700D3B262CA62B0045A5AE /* LaunchScreen.swift in Sources */,
 				C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */,
+				C95652EC262E168500BE7E7B /* AddHouseRoomCollectionCell.swift in Sources */,
 				C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */,
 				C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */,
 				C956528E262E102200BE7E7B /* SortByVc.swift in Sources */,
