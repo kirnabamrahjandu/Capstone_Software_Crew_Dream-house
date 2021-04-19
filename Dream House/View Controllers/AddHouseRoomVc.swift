@@ -6,8 +6,11 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
+import GooglePlaces
 import AVFoundation
 import MobileCoreServices
+import FirebaseAuth
 
 class AddHouseRoomVc: UIViewController {
     
@@ -68,7 +71,7 @@ class AddHouseRoomVc: UIViewController {
     }
     
     @IBAction func postAction(_ sender: Any) {
-       
+         
             print(imageArray.count, "is slec")
             for i in 0..<imageArray.count{
                 self.uploadImage(imageArray[i]) { (urrl) in
@@ -84,13 +87,12 @@ class AddHouseRoomVc: UIViewController {
                 }
             }
             print("loop exited")
-        }
+        
 
     }
     
     @IBAction func skipAction(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarVc") as! MainTabBarVc
-        self.navigationController?.pushViewController(vc, animated: true)
+       
     }
     
     @IBAction func locationBtnAction(_ sender: Any) {
@@ -160,11 +162,9 @@ class AddHouseRoomVc: UIViewController {
                 print(err!)
                 return
             }
-            SVProgressHUD.dismiss()
+            
             let alert = UIAlertController(title: "Congratulations", message: "Yeah!, \n Your Add for \(self.roomHouse) is posted successfully. We will let you know, when someone interested in your Advertisement", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Login", style: .default, handler: {(UIAlertAction) in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarVc") as! MainTabBarVc
-                self.navigationController?.pushViewController(vc, animated: true)
             }
             )
             alert.addAction(restartAction)
@@ -174,7 +174,7 @@ class AddHouseRoomVc: UIViewController {
         })
     }
 
-
+}
 
 extension AddHouseRoomVc : UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
@@ -183,7 +183,6 @@ extension AddHouseRoomVc : UIImagePickerControllerDelegate , UINavigationControl
         if info[UIImagePickerController.InfoKey.mediaType] as! String == "public.movie"{
             self.selectVideoBtn.setTitle("Video Selected", for: .normal)
             self.selectVideoBtn.isUserInteractionEnabled = false
-            
         }
         else{
             self.imageArray.append(info[UIImagePickerController.InfoKey.editedImage] as! UIImage)
@@ -194,7 +193,6 @@ extension AddHouseRoomVc : UIImagePickerControllerDelegate , UINavigationControl
         self.dismiss(animated: true, completion: nil)
     }
 }
-
 
 
 extension AddHouseRoomVc : UICollectionViewDelegate, UICollectionViewDataSource{
@@ -217,4 +215,47 @@ extension AddHouseRoomVc : UICollectionViewDelegate, UICollectionViewDataSource{
     
 }
 
+
+extension AddHouseRoomVc :GMSAutocompleteViewControllerDelegate, GMSAutocompleteResultsViewControllerDelegate{
+    
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("original lat", place.coordinate.latitude)
+        print("original long", place.coordinate.longitude)
+//        self.latitude = Double(place.coordinate.latitude)
+//        self.langtitude = Double(place.coordinate.longitude)
+//        UserDefaults.standard.set(self.latitude, forKey: "lat")
+//        UserDefaults.standard.set(self.langtitude, forKey: "long")
+//        let location = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.langtitude)
+        
+        autoComplete.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: ", error.localizedDescription)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        autoComplete.dismiss(animated: true, completion: nil)
+    }
+    
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
+                           didAutocompleteWith place: GMSPlace) {
+        autoComplete.dismiss(animated: true, completion: nil)
+    }
+    
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
+                           didFailAutocompleteWithError error: Error){
+        print("Error: ", error.localizedDescription)
+    }
+    func viewController(_ viewController: GMSAutocompleteViewController, didSelect prediction: GMSAutocompletePrediction) -> Bool {
+        print(prediction.attributedFullText, "did selected")
+        addressTF.text = prediction.attributedFullText.string
+        
+        return true
+    }
+    
+    
+}
     
