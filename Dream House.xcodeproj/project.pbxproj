@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9565284262E096500BE7E7B /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565283262E096500BE7E7B /* HomeVc.swift */; };
 		C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */; };
 		C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */; };
 		C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAF2618AB8E001435E6 /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9565283262E096500BE7E7B /* HomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
 		C96A0DA82618AB8E001435E6 /* Dream House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dream House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */,
+				C9565283262E096500BE7E7B /* HomeVc.swift */,
 				C9700D7C262CC30A0045A5AE /* SearchVc.swift */,
 				C9700D74262CC0F60045A5AE /* ChatVC.swift */,
 				C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */,
@@ -415,6 +418,7 @@
 				C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */,
 				C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */,
 				C9700D54262CB8420045A5AE /* FavouriteCollectionCell.swift in Sources */,
+				C9565284262E096500BE7E7B /* HomeVc.swift in Sources */,
 				C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */,
 				C9700D68262CBAEB0045A5AE /* ChatListTableCell.swift in Sources */,
 				C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */,
