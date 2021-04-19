@@ -17,6 +17,7 @@ class HomeVc: UIViewController {
     
     @IBOutlet weak var searchTFBackView: UIView!
 
+    var model = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,3 +50,24 @@ class HomeVc: UIViewController {
 
 }
 
+extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as! HomeCollectionCell
+        cell.ownerNameLabel1.text = "Owner \(indexPath.row)"
+        return cell
+    }
+    
+    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (self.homeCollectionView.frame.width / 2) - (5), height: self.homeCollectionView.frame.height / 1.5)
+    }
+    
+    
+
+}
