@@ -39,7 +39,6 @@ class AddHouseRoomVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.roomHouse = "House"
-        self.postBtn.setCornerRadius()
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
         autoComplete.delegate = self

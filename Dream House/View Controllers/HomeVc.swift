@@ -5,10 +5,10 @@
 //
 
 import UIKit
-
+import Firebase
 
 class HomeVc: UIViewController {
-    
+
     @IBOutlet var houseRoomSegmentBtn: UISegmentedControl!
     
     @IBOutlet var homeCollectionView: UICollectionView!
@@ -16,25 +16,26 @@ class HomeVc: UIViewController {
     @IBOutlet var searchTF: UITextField!
     
     @IBOutlet weak var searchTFBackView: UIView!
-
+    
     var model = [String]()
+    var imgArray = [[String]]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        homeCollectionView.delegate = self
+        homeCollectionView.dataSource = self
+        searchTFBackView.layer.cornerRadius = 10
+      
        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-    
+
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-      
-    }
-    
+
     @IBAction func searchLocationAction(_ sender: Any) {
-        
     }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
@@ -43,23 +44,24 @@ class HomeVc: UIViewController {
     
     @IBAction func sortBtnAction(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SortByVc") as! SortByVc
-      
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
      }
-
     
+     
+
+
 }
 
 extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return model.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as! HomeCollectionCell
-        cell.ownerNameLabel1.text = "Owner \(indexPath.row)"
+       
         return cell
     }
     
@@ -72,3 +74,6 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
     
 
 }
+
+
+
