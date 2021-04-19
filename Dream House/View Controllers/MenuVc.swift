@@ -8,18 +8,19 @@ import UIKit
 
 class MenuVc: UIViewController {
     
+    @IBOutlet var menuTableView: UITableView!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
 
     }
     
+
+    
     @IBAction func backBtnAction(_ sender: Any) {
-        
+       
     }
     
 }
