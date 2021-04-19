@@ -8,17 +8,17 @@ import UIKit
 
 class HomeCollectionCell: UICollectionViewCell {
     
-    @IBOutlet var cellBackView: UIView!
+    @IBOutlet var cellBackView1: UIView!
     
-    @IBOutlet var ownerNameLabel: UILabel!
+    @IBOutlet var ownerNameLabel1: UILabel!
     
-    @IBOutlet var houseImage: UIImageView!
+    @IBOutlet var houseImage1: UIImageView!
    
-    @IBOutlet var locationAddressLabel: UILabel!
+    @IBOutlet var locationAddressLabel1: UILabel!
     
-    @IBOutlet var moneyPerMonthLabel: UILabel!
+    @IBOutlet var moneyPerMonthLabel1: UILabel!
     
-    @IBOutlet var favouriteBtn: UIButton!
+    @IBOutlet var favouriteBtn1: UIButton!
     
     
     
