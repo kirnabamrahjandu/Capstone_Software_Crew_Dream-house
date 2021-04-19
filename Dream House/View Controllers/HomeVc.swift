@@ -42,7 +42,10 @@ class HomeVc: UIViewController {
     }
     
     @IBAction func sortBtnAction(_ sender: Any) {
-
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SortByVc") as! SortByVc
+      
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
      }
 
     

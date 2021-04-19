@@ -33,8 +33,7 @@ extension ChatVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageCell
-      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
       
         return cell
     }
