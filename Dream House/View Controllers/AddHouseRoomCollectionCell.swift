@@ -9,5 +9,7 @@ import UIKit
 
 class AddHouseRoomCollectionCell: UICollectionViewCell {
     
-
+    @IBOutlet var cellBackView: UIView!
+    
+    @IBOutlet var advImageView: UIImageView!
 }
