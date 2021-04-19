@@ -1577,6 +1577,72 @@
             </objects>
             <point key="canvasLocation" x="2067" y="826"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lPf-pI-7HJ">
+            <objects>
+                <viewController id="BTH-Bk-8v2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IcZ-1a-mUI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dreamIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xVZ-JJ-UGZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Xq-aR-fpq">
+                                <rect key="frame" x="30" y="234" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zg-Xs-k8Y">
+                                <rect key="frame" x="30" y="298" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsP-JI-ZFN">
+                                <rect key="frame" x="30" y="362" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add profile" translatesAutoresizingMaskIntoConstraints="NO" id="Gjj-fr-a3I">
+                                <rect key="frame" x="157" y="84" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="oNy-c2-Ydf"/>
+                                    <constraint firstAttribute="width" constant="100" id="yCR-sw-fHM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KRa-4W-anD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gjj-fr-a3I" firstAttribute="top" secondItem="KRa-4W-anD" secondAttribute="top" constant="40" id="0W7-cg-Zwh"/>
+                            <constraint firstItem="KRa-4W-anD" firstAttribute="trailing" secondItem="2Xq-aR-fpq" secondAttribute="trailing" constant="30" id="3h8-O5-1p7"/>
+                            <constraint firstItem="KRa-4W-anD" firstAttribute="trailing" secondItem="5Zg-Xs-k8Y" secondAttribute="trailing" constant="30" id="3iO-4H-N9n"/>
+                            <constraint firstItem="2Xq-aR-fpq" firstAttribute="leading" secondItem="KRa-4W-anD" secondAttribute="leading" constant="30" id="5PX-ln-2Q0"/>
+                            <constraint firstItem="5Zg-Xs-k8Y" firstAttribute="top" secondItem="2Xq-aR-fpq" secondAttribute="bottom" constant="30" id="BJz-aZ-FrW"/>
+                            <constraint firstItem="KsP-JI-ZFN" firstAttribute="trailing" secondItem="5Zg-Xs-k8Y" secondAttribute="trailing" id="HYX-q3-sXu"/>
+                            <constraint firstItem="KsP-JI-ZFN" firstAttribute="leading" secondItem="5Zg-Xs-k8Y" secondAttribute="leading" id="LPE-or-PMv"/>
+                            <constraint firstItem="Gjj-fr-a3I" firstAttribute="centerX" secondItem="xVZ-JJ-UGZ" secondAttribute="centerX" id="RCl-sJ-0j8"/>
+                            <constraint firstItem="KRa-4W-anD" firstAttribute="trailing" secondItem="xVZ-JJ-UGZ" secondAttribute="trailing" id="UZr-rG-gjp"/>
+                            <constraint firstItem="5Zg-Xs-k8Y" firstAttribute="leading" secondItem="KRa-4W-anD" secondAttribute="leading" constant="30" id="VTa-An-7fN"/>
+                            <constraint firstItem="2Xq-aR-fpq" firstAttribute="top" secondItem="Gjj-fr-a3I" secondAttribute="bottom" constant="50" id="Wsx-JY-FOA"/>
+                            <constraint firstItem="KsP-JI-ZFN" firstAttribute="top" secondItem="5Zg-Xs-k8Y" secondAttribute="bottom" constant="30" id="h3H-qr-c31"/>
+                            <constraint firstItem="KRa-4W-anD" firstAttribute="bottom" secondItem="xVZ-JJ-UGZ" secondAttribute="bottom" id="hzl-RW-AlH"/>
+                            <constraint firstItem="xVZ-JJ-UGZ" firstAttribute="top" secondItem="KRa-4W-anD" secondAttribute="top" id="mlN-mR-gSk"/>
+                            <constraint firstItem="xVZ-JJ-UGZ" firstAttribute="leading" secondItem="KRa-4W-anD" secondAttribute="leading" id="s0h-qI-B3h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZhY-3P-L56"/>
+                    <connections>
+                        <outlet property="addProfileImage" destination="Gjj-fr-a3I" id="EDe-oP-HcQ"/>
+                        <outlet property="eMailTF" destination="5Zg-Xs-k8Y" id="Hun-HU-cYn"/>
+                        <outlet property="userNameTF" destination="2Xq-aR-fpq" id="ut4-Kj-rvo"/>
+                        <outlet property="userTypeTF" destination="KsP-JI-ZFN" id="Bqp-76-XLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKZ-VX-6u9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3012" y="826"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add profile" width="512" height="512"/>
