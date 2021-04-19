@@ -7,6 +7,8 @@ target 'Dream House' do
 
   # Pods for Dream House
  pod 'GoogleSignIn'
+ pod 'Firebase/Storage'
+ pod 'Firebase/Database'
  pod 'Firebase/Firestore'
   target 'Dream HouseTests' do
     inherit! :search_paths

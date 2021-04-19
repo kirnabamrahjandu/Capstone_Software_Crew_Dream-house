@@ -225,9 +225,15 @@ PODS:
   - BoringSSL-GRPC/Interface (0.0.7)
   - Firebase/CoreOnly (7.9.0):
     - FirebaseCore (= 7.9.0)
+  - Firebase/Database (7.9.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 7.9.0)
   - Firebase/Firestore (7.9.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 7.9.0)
+  - Firebase/Storage (7.9.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 7.9.0)
   - FirebaseCore (7.9.0):
     - FirebaseCoreDiagnostics (~> 7.4)
     - GoogleUtilities/Environment (~> 7.0)
@@ -237,6 +243,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
+  - FirebaseDatabase (7.9.0):
+    - FirebaseCore (~> 7.0)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (7.9.0):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
@@ -249,6 +258,9 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 2.30907.0)
+  - FirebaseStorage (7.9.0):
+    - FirebaseCore (~> 7.0)
+    - GTMSessionFetcher/Core (~> 1.4)
   - GoogleDataTransport (8.3.1):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30907.0)
@@ -302,7 +314,9 @@ PODS:
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
+  - Firebase/Database
   - Firebase/Firestore
+  - Firebase/Storage
   - GoogleSignIn
 
 SPEC REPOS:
@@ -313,7 +327,9 @@ SPEC REPOS:
     - Firebase
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - FirebaseFirestore
+    - FirebaseStorage
     - GoogleDataTransport
     - GoogleSignIn
     - GoogleUtilities
@@ -332,7 +348,9 @@ SPEC CHECKSUMS:
   Firebase: d8bd6bd34b4c7ed57bfdd056c66ff5adcdde53ab
   FirebaseCore: 0798738ad1ae0fda67e17c7b9081241c431c6859
   FirebaseCoreDiagnostics: 3d36e05da74cb8b7ce30e6594a8f201b982c725c
+  FirebaseDatabase: b62e6e05aac439fe603d7ba68a2c764ca7357a58
   FirebaseFirestore: a2de10a51530efd84f2309acbe774f498285e93a
+  FirebaseStorage: 0646be9a7552aac5703d095961081942e693967d
   GoogleDataTransport: 8b0e733ea77c9218778e5a9e34ba9508b8328939
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: e1d9ed4e544fc32a93e00e721400cbc3f377200d
@@ -344,6 +362,6 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 49c11115e3c400f6b5d7dca2f3f52df33bd55091
+PODFILE CHECKSUM: f82f0c87c11125d1a46a9219cb44b49495227a16
 
 COCOAPODS: 1.10.1

@@ -6,20 +6,27 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       
+        FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = "877724214772-k7ao5j81o3vf8j8lgfjrji16b013ajqn.apps.googleusercontent.com"
                 GIDSignIn.sharedInstance().delegate = self
         // Override point for customization after application launch.
         return true
     }
 
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("Google signin delegate called")
+    }
+    
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
