@@ -1,0 +1,6 @@
+framework module Pods_Dream_House_Dream_HouseUITests {
+  umbrella header "Pods-Dream House-Dream HouseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

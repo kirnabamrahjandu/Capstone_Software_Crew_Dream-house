@@ -7,7 +7,6 @@
 import UIKit
 
 class ChatVC: UIViewController {
-    
  
     var messages = [String]()
    
