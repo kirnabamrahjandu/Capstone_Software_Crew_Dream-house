@@ -46,8 +46,6 @@ class HomeVc: UIViewController {
      }
 
     
-
-
 }
 
 extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{

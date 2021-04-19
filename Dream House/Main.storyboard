@@ -1224,6 +1224,105 @@
             </objects>
             <point key="canvasLocation" x="141" y="827"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="FOx-E0-Z3x">
+            <objects>
+                <viewController id="0Zc-Br-Spi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8xx-bR-CzE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMt-GG-ryE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="538"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30415239729999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="0Zc-Br-Spi" eventType="touchUpInside" id="0aF-c7-0Xh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUu-jH-rEs">
+                                <rect key="frame" x="0.0" y="582" width="414" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epr-SD-64k">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <state key="normal">
+                                            <string key="title">Bus Stand Locality
+</string>
+                                            <color key="titleColor" name="Theme Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="busStandAction:" destination="0Zc-Br-Spi" eventType="touchUpInside" id="wkD-yj-rTQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pf-oF-FEH">
+                                        <rect key="frame" x="0.0" y="168" width="414" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <state key="normal">
+                                            <string key="title">Rent High to Low
+</string>
+                                            <color key="titleColor" name="Theme Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rentHigh2LowAction:" destination="0Zc-Br-Spi" eventType="touchUpInside" id="hh2-Qc-Lwj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY8-kX-Ozo">
+                                        <rect key="frame" x="0.0" y="103" width="414" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <state key="normal">
+                                            <string key="title">Rent Low to High
+</string>
+                                            <color key="titleColor" name="Theme Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rentLow2HighAction:" destination="0Zc-Br-Spi" eventType="touchUpInside" id="Ozw-62-CMK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1B-F8-xxu">
+                                        <rect key="frame" x="180" y="15" width="54" height="20"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Epr-SD-64k" secondAttribute="trailing" id="9kw-w9-hx0"/>
+                                    <constraint firstItem="6Pf-oF-FEH" firstAttribute="leading" secondItem="GUu-jH-rEs" secondAttribute="leading" id="CZr-Jd-uA0"/>
+                                    <constraint firstItem="6Pf-oF-FEH" firstAttribute="top" secondItem="jY8-kX-Ozo" secondAttribute="bottom" constant="1" id="ChV-fm-nqD"/>
+                                    <constraint firstAttribute="height" constant="230" id="E5q-9q-Dbg"/>
+                                    <constraint firstAttribute="trailing" secondItem="jY8-kX-Ozo" secondAttribute="trailing" id="H6I-oT-saa"/>
+                                    <constraint firstItem="M1B-F8-xxu" firstAttribute="top" secondItem="GUu-jH-rEs" secondAttribute="top" constant="15" id="QP7-I6-Hw6"/>
+                                    <constraint firstItem="Epr-SD-64k" firstAttribute="leading" secondItem="GUu-jH-rEs" secondAttribute="leading" id="brE-rO-TlM"/>
+                                    <constraint firstItem="jY8-kX-Ozo" firstAttribute="leading" secondItem="GUu-jH-rEs" secondAttribute="leading" id="cFy-LN-m9X"/>
+                                    <constraint firstItem="M1B-F8-xxu" firstAttribute="centerX" secondItem="GUu-jH-rEs" secondAttribute="centerX" id="dBA-O3-3GS"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Pf-oF-FEH" secondAttribute="trailing" id="n0G-e7-TtA"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Pf-oF-FEH" secondAttribute="bottom" constant="10" id="qhu-ND-YIG"/>
+                                    <constraint firstItem="Epr-SD-64k" firstAttribute="top" secondItem="M1B-F8-xxu" secondAttribute="bottom" constant="15" id="wUK-Fu-UFO"/>
+                                    <constraint firstItem="jY8-kX-Ozo" firstAttribute="top" secondItem="Epr-SD-64k" secondAttribute="bottom" constant="1" id="wch-3H-xGh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Twr-rD-24d"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Twr-rD-24d" firstAttribute="bottom" secondItem="GUu-jH-rEs" secondAttribute="bottom" constant="50" id="6Sh-cO-Tf6"/>
+                            <constraint firstItem="GUu-jH-rEs" firstAttribute="top" secondItem="kMt-GG-ryE" secondAttribute="bottom" id="82j-PG-41c"/>
+                            <constraint firstItem="Twr-rD-24d" firstAttribute="trailing" secondItem="kMt-GG-ryE" secondAttribute="trailing" id="Bio-tW-deu"/>
+                            <constraint firstItem="kMt-GG-ryE" firstAttribute="top" secondItem="Twr-rD-24d" secondAttribute="top" id="TLT-IO-1vg"/>
+                            <constraint firstItem="kMt-GG-ryE" firstAttribute="leading" secondItem="Twr-rD-24d" secondAttribute="leading" id="ggg-nw-C3N"/>
+                            <constraint firstItem="Twr-rD-24d" firstAttribute="trailing" secondItem="GUu-jH-rEs" secondAttribute="trailing" id="nCm-58-2w0"/>
+                            <constraint firstItem="GUu-jH-rEs" firstAttribute="leading" secondItem="Twr-rD-24d" secondAttribute="leading" id="ymk-PA-Wq0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AvE-fj-9d8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="826"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add profile" width="512" height="512"/>
