@@ -8,6 +8,8 @@ import UIKit
 
 class MenuTableCell: UITableViewCell {
 
+    @IBOutlet var menuOptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
