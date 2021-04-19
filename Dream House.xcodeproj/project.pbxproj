@@ -19,6 +19,7 @@
 		C9565318262E1D5800BE7E7B /* AdvHomeDetailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565317262E1D5700BE7E7B /* AdvHomeDetailCollectionCell.swift */; };
 		C956531D262E22BF00BE7E7B /* UserProfileVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C956531C262E22BF00BE7E7B /* UserProfileVc.swift */; };
 		C9565322262E23FF00BE7E7B /* MenuVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565321262E23FF00BE7E7B /* MenuVc.swift */; };
+		C9565327262E24E900BE7E7B /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565326262E24E900BE7E7B /* MenuTableCell.swift */; };
 		C96A0DAC2618AB8E001435E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */; };
 		C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */; };
 		C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A0DAF2618AB8E001435E6 /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		C9565317262E1D5700BE7E7B /* AdvHomeDetailCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvHomeDetailCollectionCell.swift; sourceTree = "<group>"; };
 		C956531C262E22BF00BE7E7B /* UserProfileVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVc.swift; sourceTree = "<group>"; };
 		C9565321262E23FF00BE7E7B /* MenuVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVc.swift; sourceTree = "<group>"; };
+		C9565326262E24E900BE7E7B /* MenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
 		C96A0DA82618AB8E001435E6 /* Dream House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dream House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				C956530D262E19B800BE7E7B /* HouseListModel.swift */,
 				C9565317262E1D5700BE7E7B /* AdvHomeDetailCollectionCell.swift */,
 				C9565321262E23FF00BE7E7B /* MenuVc.swift */,
+				C9565326262E24E900BE7E7B /* MenuTableCell.swift */,
 				C9565312262E1C5500BE7E7B /* AdvHomeDetailVc.swift */,
 				C956528D262E102200BE7E7B /* SortByVc.swift */,
 				C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */,
@@ -625,6 +628,7 @@
 				C9565322262E23FF00BE7E7B /* MenuVc.swift in Sources */,
 				C956530E262E19B800BE7E7B /* HouseListModel.swift in Sources */,
 				C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */,
+				C9565327262E24E900BE7E7B /* MenuTableCell.swift in Sources */,
 				C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */,
 				C956528E262E102200BE7E7B /* SortByVc.swift in Sources */,
 				C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */,
