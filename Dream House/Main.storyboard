@@ -1323,10 +1323,10 @@
             </objects>
             <point key="canvasLocation" x="1100" y="826"/>
         </scene>
-        <!--View Controller-->
+        <!--Adv Home Detail Vc-->
         <scene sceneID="lGb-jj-QQg">
             <objects>
-                <viewController id="Xlh-n4-h8W" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdvHomeDetailVc" id="Xlh-n4-h8W" customClass="AdvHomeDetailVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ecd-S6-bSq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
