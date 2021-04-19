@@ -1643,6 +1643,75 @@
             </objects>
             <point key="canvasLocation" x="3012" y="826"/>
         </scene>
+        <!--Menu Vc-->
+        <scene sceneID="ptA-x2-oqZ">
+            <objects>
+                <viewController storyboardIdentifier="MenuVc" id="m7N-CB-6HI" customClass="MenuVc" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYi-ib-6bw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-yd-JxU">
+                                <rect key="frame" x="290" y="98" width="124" height="764"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.28887521399999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="backBtnAction:" destination="m7N-CB-6HI" eventType="touchUpInside" id="ejP-gu-Bt6"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bpg-8M-qut">
+                                <rect key="frame" x="0.0" y="98" width="290" height="764"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuTableCell" rowHeight="63" id="LBq-8A-jCH" customClass="MenuTableCell" customModule="Dream_House" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="290" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LBq-8A-jCH" id="tAY-bB-OkX">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APc-Rr-3mh">
+                                                    <rect key="frame" x="20" y="20" width="250" height="23"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="APc-Rr-3mh" firstAttribute="leading" secondItem="tAY-bB-OkX" secondAttribute="leading" constant="20" id="Ire-Hi-pvM"/>
+                                                <constraint firstAttribute="bottom" secondItem="APc-Rr-3mh" secondAttribute="bottom" constant="20" id="Qr2-Cg-EDJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="APc-Rr-3mh" secondAttribute="trailing" constant="20" id="bVT-8s-XUQ"/>
+                                                <constraint firstItem="APc-Rr-3mh" firstAttribute="top" secondItem="tAY-bB-OkX" secondAttribute="top" constant="20" id="kpE-te-uTW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuOptionLabel" destination="APc-Rr-3mh" id="NIG-aT-H0m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oSI-yP-jl8"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JIb-yd-JxU" firstAttribute="leading" secondItem="Bpg-8M-qut" secondAttribute="trailing" id="3Ly-oX-kDb"/>
+                            <constraint firstItem="oSI-yP-jl8" firstAttribute="bottom" secondItem="JIb-yd-JxU" secondAttribute="bottom" id="6QF-Yf-9as"/>
+                            <constraint firstItem="JIb-yd-JxU" firstAttribute="top" secondItem="Bpg-8M-qut" secondAttribute="top" id="BrH-NX-ibB"/>
+                            <constraint firstItem="Bpg-8M-qut" firstAttribute="leading" secondItem="oSI-yP-jl8" secondAttribute="leading" id="DwP-CG-Xe3"/>
+                            <constraint firstAttribute="trailing" secondItem="JIb-yd-JxU" secondAttribute="trailing" id="EdF-V8-5ve"/>
+                            <constraint firstItem="Bpg-8M-qut" firstAttribute="width" secondItem="IYi-ib-6bw" secondAttribute="width" multiplier="0.7" id="LBz-Un-hjF"/>
+                            <constraint firstItem="oSI-yP-jl8" firstAttribute="bottom" secondItem="Bpg-8M-qut" secondAttribute="bottom" id="enq-Iw-Cb9"/>
+                            <constraint firstItem="Bpg-8M-qut" firstAttribute="top" secondItem="oSI-yP-jl8" secondAttribute="top" constant="54" id="fQ0-gv-XIw"/>
+                            <constraint firstAttribute="bottom" secondItem="JIb-yd-JxU" secondAttribute="bottom" id="scq-Vz-fVa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuTableView" destination="Bpg-8M-qut" id="Aa5-D2-C79"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ue6-a0-xof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3984" y="826"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add profile" width="512" height="512"/>
