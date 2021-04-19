@@ -2,7 +2,6 @@
 //  ChatListVc.swift
 //  Dream House
 //
-//  Created by DreamHouseTeam Kumar on 19/04/21.
 //
 
 import UIKit

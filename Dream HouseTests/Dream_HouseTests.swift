@@ -2,7 +2,6 @@
 //  Dream_HouseTests.swift
 //  Dream HouseTests
 //
-//  Created by DreamHouseTeam Kumar on 03/04/21.
 //
 
 import XCTest

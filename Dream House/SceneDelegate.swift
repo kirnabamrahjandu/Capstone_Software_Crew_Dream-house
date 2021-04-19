@@ -2,7 +2,6 @@
 //  SceneDelegate.swift
 //  Dream House
 //
-//  Created by DreamHouseTeam Kumar on 03/04/21.
 //
 
 import UIKit
