@@ -37,14 +37,30 @@ extension FavouritesVc : UICollectionViewDelegate, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavouriteCollectionCell", for: indexPath) as! FavouriteCollectionCell
+        cell.cellBackView1.layer.cornerRadius = 8
+        cell.ownerNameLabel1.text = fvtModel[indexPath.row].ownerName ?? "not found"
+        cell.moneyPerMonthLabel1.text = "$" + (fvtModel[indexPath.row].rent ?? "") + " / Month"
+        cell.cellBackView1.layer.cornerRadius = 10
+         let postedImage = fvtThumbnail[indexPath.row]
+                    let url = URL(string: postedImage)
+                    URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
+                        if error != nil {
+                            print(error!)
+                        return
+                        }
+                        DispatchQueue.main.async {
+                            cell.houseImage1?.image = UIImage(data: data!)
+                        }
+                        }).resume()
      
         return cell
     }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.wishListCollectionView.frame.width / 2 - 10 , height: self.wishListCollectionView.frame.height / 3)
     }
     
-    
+
     
 }
