@@ -56,7 +56,37 @@ extension MenuVc : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if userType == "provider"{
-         
+            switch indexPath.row {
+            case 0:
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddHouseRoomVc") as! AddHouseRoomVc
+                self.ref?.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.ref?.navigationController?.pushViewController(vc, animated: true)
+                
+                vc.hidesBottomBarWhenPushed = true
+                self.dismiss(animated: true, completion: nil)
+                
+            case 1:
+                self.selectIndex(index: 0)
+                
+            case 2:
+                self.selectIndex(index: 1)
+                
+            case 3:
+                self.selectIndex(index: 2)
+            
+            case 4:
+                self.selectIndex(index: 3)
+
+            case 5:
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVc") as! WelcomeVc
+                vc.hidesBottomBarWhenPushed = true
+                self.ref?.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.ref?.navigationController?.pushViewController(vc, animated: true)
+                self.dismiss(animated: true, completion: nil)
+            
+            default:
+                print("b")
+            }
         }
         else{
             switch indexPath.row {
