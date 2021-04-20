@@ -45,7 +45,6 @@
 		C96A0E022618EA56001435E6 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF02618EA56001435E6 /* Poppins-Light.ttf */; };
 		C96A0E032618EA56001435E6 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF12618EA56001435E6 /* Poppins-ExtraBold.ttf */; };
 		C96A0E042618EA56001435E6 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96A0DF22618EA56001435E6 /* Poppins-SemiBoldItalic.ttf */; };
-		C9700CF1262CA1990045A5AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9700CF0262CA1990045A5AE /* Main.storyboard */; };
 		C9700D3B262CA62B0045A5AE /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */; };
 		C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D3F262CA6350045A5AE /* WelcomeVc.swift */; };
 		C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D44262CA7BF0045A5AE /* LoginVc.swift */; };
@@ -61,6 +60,8 @@
 		C9AB9596262F75E700D8B77B /* MessageListVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB9595262F75E700D8B77B /* MessageListVc.swift */; };
 		C9AB959C262F77A800D8B77B /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB959B262F77A800D8B77B /* TableCell.swift */; };
 		C9AB95A1262F7C6900D8B77B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB95A0262F7C6800D8B77B /* Chat.swift */; };
+		C9AB95D1262F856000D8B77B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */; };
+		C9AB95D7262F85C200D8B77B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB95D5262F85C200D8B77B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +129,6 @@
 		C96A0DF02618EA56001435E6 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "Dream House/Poppins Font/Poppins-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		C96A0DF12618EA56001435E6 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "Dream House/Poppins Font/Poppins-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
 		C96A0DF22618EA56001435E6 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "Dream House/Poppins Font/Poppins-SemiBoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
-		C9700CF0262CA1990045A5AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		C9700D3F262CA6350045A5AE /* WelcomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVc.swift; sourceTree = "<group>"; };
 		C9700D44262CA7BF0045A5AE /* LoginVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVc.swift; sourceTree = "<group>"; };
@@ -145,6 +145,8 @@
 		C9AB959A262F774E00D8B77B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		C9AB959B262F77A800D8B77B /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		C9AB95A0262F7C6800D8B77B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9AB95D6262F85C200D8B77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../Dream House Complete 13-april 2/Dream House/View/Storyboards/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D2163251EFD5D5FED8AA3D72 /* Pods-Dream House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House.release.xcconfig"; path = "Target Support Files/Pods-Dream House/Pods-Dream House.release.xcconfig"; sourceTree = "<group>"; };
 		F10A965D620CE9329417450E /* Pods_Dream_House_Dream_HouseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream_House_Dream_HouseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7232B8958DB0C5B306FB3F8 /* Pods-Dream House-Dream HouseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House-Dream HouseUITests.release.xcconfig"; path = "Target Support Files/Pods-Dream House-Dream HouseUITests/Pods-Dream House-Dream HouseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,7 +235,6 @@
 				C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */,
 				C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */,
 				C96A0DAF2618AB8E001435E6 /* ViewController.swift */,
-				C9700CF0262CA1990045A5AE /* Main.storyboard */,
 				C96A0DB42618AB91001435E6 /* Assets.xcassets */,
 				C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */,
 				C96A0DB92618AB91001435E6 /* Info.plist */,
@@ -262,6 +263,8 @@
 		C96A0DDE2618EA30001435E6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9AB95D5262F85C200D8B77B /* Main.storyboard */,
+				C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */,
 				C956530D262E19B800BE7E7B /* HouseListModel.swift */,
 				C9565317262E1D5700BE7E7B /* AdvHomeDetailCollectionCell.swift */,
 				C9565321262E23FF00BE7E7B /* MenuVc.swift */,
@@ -454,7 +457,7 @@
 				C96A0DFD2618EA56001435E6 /* Poppins-Medium.ttf in Resources */,
 				C96A0DF62618EA56001435E6 /* Poppins-BlackItalic.ttf in Resources */,
 				C96A0DFC2618EA56001435E6 /* Poppins-BoldItalic.ttf in Resources */,
-				C9700CF1262CA1990045A5AE /* Main.storyboard in Resources */,
+				C9AB95D7262F85C200D8B77B /* Main.storyboard in Resources */,
 				C96A0DFE2618EA56001435E6 /* Poppins-MediumItalic.ttf in Resources */,
 				C96A0DF32618EA56001435E6 /* Poppins-SemiBold.ttf in Resources */,
 				C96A0DF42618EA56001435E6 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -470,6 +473,7 @@
 				C96A0E042618EA56001435E6 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				C96A0E012618EA56001435E6 /* Poppins-ThinItalic.ttf in Resources */,
 				C96A0DF82618EA56001435E6 /* Poppins-LightItalic.ttf in Resources */,
+				C9AB95D1262F856000D8B77B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +704,14 @@
 				C96A0DB72618AB91001435E6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C9AB95D5262F85C200D8B77B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9AB95D6262F85C200D8B77B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

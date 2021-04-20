@@ -8,7 +8,31 @@ import UIKit
 
 extension UIViewController {
 
-
+    func pushVc(storyboardId : String){
+        let vc = (self.storyboard?.instantiateViewController(withIdentifier: storyboardId))!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showAlert(title : String, message : String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func transitionVc(vc: UIViewController, duration: CFTimeInterval, type: CATransitionSubtype) {
+        let customVcTransition = vc
+        let transition = CATransition()
+        vc.modalPresentationStyle = .overFullScreen
+        transition.duration = duration
+        transition.type = CATransitionType.fade
+        transition.subtype = type
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        present(customVcTransition, animated: false, completion: nil)
+    }
+    
 
 }
 
