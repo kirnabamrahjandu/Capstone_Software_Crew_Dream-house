@@ -1635,6 +1635,81 @@
             </objects>
             <point key="canvasLocation" x="5029" y="826"/>
         </scene>
+        <!--Chat-->
+        <scene sceneID="um2-2I-IIB">
+            <objects>
+                <viewController storyboardIdentifier="ChatVC" title="Chat" id="7fV-4m-q8u" customClass="ChatVC" customModule="Dream_House" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7V-vX-Ura">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mT8-eS-05D">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OX-oe-ifL">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPb-3N-d1g">
+                                        <rect key="frame" x="20" y="10" width="284" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="aQH-9M-tGC"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMm-IN-Zxy">
+                                        <rect key="frame" x="324" y="10" width="70" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3O2-GY-hzM"/>
+                                            <constraint firstAttribute="width" constant="70" id="7kC-Iz-jEj"/>
+                                            <constraint firstAttribute="height" constant="40" id="JDE-Vr-3Od"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="7fV-4m-q8u" eventType="touchUpInside" id="3e7-4U-4k8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                                <constraints>
+                                    <constraint firstItem="uPb-3N-d1g" firstAttribute="leading" secondItem="9OX-oe-ifL" secondAttribute="leading" constant="20" id="IiW-OF-tls"/>
+                                    <constraint firstAttribute="height" constant="60" id="Oad-Dr-bT5"/>
+                                    <constraint firstAttribute="trailing" secondItem="sMm-IN-Zxy" secondAttribute="trailing" constant="20" id="X3M-t4-CRL"/>
+                                    <constraint firstItem="sMm-IN-Zxy" firstAttribute="leading" secondItem="uPb-3N-d1g" secondAttribute="trailing" constant="20" id="a4b-mJ-hxt"/>
+                                    <constraint firstAttribute="bottom" secondItem="uPb-3N-d1g" secondAttribute="bottom" constant="10" id="ltC-We-xOU"/>
+                                    <constraint firstItem="uPb-3N-d1g" firstAttribute="top" secondItem="9OX-oe-ifL" secondAttribute="top" constant="10" id="xf4-UI-QCJ"/>
+                                    <constraint firstItem="sMm-IN-Zxy" firstAttribute="centerY" secondItem="uPb-3N-d1g" secondAttribute="centerY" id="ysA-UW-Jkh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RbV-ud-p5X"/>
+                        <color key="backgroundColor" name="BrandPurple"/>
+                        <constraints>
+                            <constraint firstItem="9OX-oe-ifL" firstAttribute="leading" secondItem="RbV-ud-p5X" secondAttribute="leading" id="9MC-ub-vTt"/>
+                            <constraint firstItem="mT8-eS-05D" firstAttribute="trailing" secondItem="RbV-ud-p5X" secondAttribute="trailing" id="DIB-m3-F9F"/>
+                            <constraint firstItem="mT8-eS-05D" firstAttribute="leading" secondItem="RbV-ud-p5X" secondAttribute="leading" id="VXa-RW-Zv0"/>
+                            <constraint firstItem="mT8-eS-05D" firstAttribute="top" secondItem="RbV-ud-p5X" secondAttribute="top" id="ZYt-Ey-ncn"/>
+                            <constraint firstItem="RbV-ud-p5X" firstAttribute="bottom" secondItem="9OX-oe-ifL" secondAttribute="bottom" id="Zci-6w-1tH"/>
+                            <constraint firstItem="9OX-oe-ifL" firstAttribute="trailing" secondItem="RbV-ud-p5X" secondAttribute="trailing" id="rC0-W3-aMr"/>
+                            <constraint firstItem="9OX-oe-ifL" firstAttribute="top" secondItem="mT8-eS-05D" secondAttribute="bottom" id="yfX-F2-1bo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2lm-1I-oVC"/>
+                    <connections>
+                        <outlet property="messageTextfield" destination="uPb-3N-d1g" id="g4w-bo-Ole"/>
+                        <outlet property="sendBtn" destination="sMm-IN-Zxy" id="QU7-Rq-Swi"/>
+                        <outlet property="tableView" destination="mT8-eS-05D" id="Be3-3o-hYr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJw-dk-Mvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6020" y="839"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add profile" width="512" height="512"/>
@@ -1647,6 +1722,9 @@
         <image name="favourite" width="25" height="25"/>
         <image name="history" width="512" height="512"/>
         <image name="sort-down" width="30" height="30"/>
+        <namedColor name="BrandPurple">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Theme Color">
             <color red="0.0" green="0.47058823529411764" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1664,6 +1742,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
