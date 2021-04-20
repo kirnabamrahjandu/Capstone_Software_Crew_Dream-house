@@ -46,7 +46,16 @@ class HomeVc: UIViewController {
     }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
-
+        if sender.selectedSegmentIndex == 0 {
+            self.model.removeAll()
+            self.homeCollectionView.reloadData()
+            getFBdata(findBy: "House")
+        }
+        else{
+            self.model.removeAll()
+            self.homeCollectionView.reloadData()
+            getFBdata(findBy: "Room")
+        }
     }
     
     @IBAction func sortBtnAction(_ sender: Any) {
