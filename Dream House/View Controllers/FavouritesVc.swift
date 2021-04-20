@@ -41,6 +41,8 @@ extension FavouritesVc : UICollectionViewDelegate, UICollectionViewDataSource, U
         cell.ownerNameLabel1.text = fvtModel[indexPath.row].ownerName ?? "not found"
         cell.moneyPerMonthLabel1.text = "$" + (fvtModel[indexPath.row].rent ?? "") + " / Month"
         cell.cellBackView1.layer.cornerRadius = 10
+        cell.favouriteBtn1.addTarget(self, action: #selector(removeFav(sender:)), for: .touchUpInside)
+        cell.favouriteBtn1.tag = indexPath.row
          let postedImage = fvtThumbnail[indexPath.row]
                     let url = URL(string: postedImage)
                     URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
@@ -62,5 +64,12 @@ extension FavouritesVc : UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
 
-    
+    @objc func removeFav(sender: UIButton){
+        UIButton.animate(withDuration: 1) {
+            fvtModel.remove(at: sender.tag)
+            fvtThumbnail.remove(at: sender.tag)
+            self.wishListCollectionView.reloadData()
+        }
+
+    }
 }
