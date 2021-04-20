@@ -20,6 +20,7 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet var busStandLoc: UITextField!
     
     var contactNum = ""
+    var emailAdd = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
