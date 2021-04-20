@@ -37,7 +37,10 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func messageAction(_ sender: Any) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
+        vc.hidesBottomBarWhenPushed = true
+        vc.sendTo = emailAdd
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
