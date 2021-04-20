@@ -26,34 +26,50 @@ class HomeVc: UIViewController {
         super.viewDidLoad()
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
+        searchTFBackView.layer.cornerRadius = 10
+        searchTF.delegate = self
        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getFBdata()
-
+        getFBdata(findBy: "House")
+        self.menuIcon()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "Home"
     }
     
- 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.model.removeAll()
+    }
     @IBAction func searchLocationAction(_ sender: Any) {
     }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.model.removeAll()
+            self.homeCollectionView.reloadData()
+            getFBdata(findBy: "House")
+        }
+        else{
+            self.model.removeAll()
+            self.homeCollectionView.reloadData()
+            getFBdata(findBy: "Room")
+        }
     }
     
     @IBAction func sortBtnAction(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SortByVc") as! SortByVc
-       
+        vc.delegate = self
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
      }
     
-    func getFBdata(){
-    
+    func getFBdata(findBy : String){
+        SVProgressHUD.show()
           let ref = Database.database().reference().child("Rent")
-        ref.queryOrdered(byChild: "addType").queryEqual(toValue: "House").observe(.childAdded) { (DataSnapshot) in
+        ref.queryOrdered(byChild: "addType").queryEqual(toValue: findBy).observe(.childAdded) { (DataSnapshot) in
             if DataSnapshot.exists() {
-                
+                SVProgressHUD.dismiss()
                 print(DataSnapshot, "is data")
                 let data = DataSnapshot.value as! [String:Any]
                 let dummyModel = Rent()
@@ -65,19 +81,55 @@ class HomeVc: UIViewController {
                 dummyModel.locality = data["busStand"] as? String ?? ""
                 dummyModel.emailAddress = data["Email"] as? String ?? ""
                 dummyModel.contact = data["Phone"] as? String ?? ""
+                dummyModel.childId = data["randomId"] as? String ?? ""
                 let imgArray = data["HouseImages"] as! [String]
                 self.imgArray.append(imgArray)
                 self.model.append(dummyModel)
                 self.homeCollectionView.reloadData()
-                               
+                SVProgressHUD.dismiss()
+                
             }
             else{
-              
+                SVProgressHUD.dismiss()
             }
           }
-    
+        SVProgressHUD.dismiss()
       }
-  
+    
+    func searchFBdata(key : String, value : String){
+        SVProgressHUD.show()
+          let ref = Database.database().reference().child("Rent")
+          ref.queryOrdered(byChild: key).queryEqual(toValue: value).observeSingleEvent(of: .childAdded) { (DataSnapshot) in
+            if DataSnapshot.exists() {
+                SVProgressHUD.dismiss()
+                print(DataSnapshot, "is data")
+                
+                let data = DataSnapshot.value as! [String:Any]
+                let dummyModel = Rent()
+                dummyModel.ownerName = data["ownerName"] as? String ?? ""
+                dummyModel.rent = data["Rent"]  as? String ?? ""
+                dummyModel.locationHouse = data["Location"]  as? String ?? ""
+                dummyModel.rooms = data["totalRooms"] as? String ?? ""
+                dummyModel.floors = data["totalFloors"] as? String ?? ""
+                dummyModel.locality = data["busStand"] as? String ?? ""
+                dummyModel.contact = data["Phone"] as? String ?? ""
+                dummyModel.emailAddress = data["Email"] as? String ?? ""
+                let imgArray = data["HouseImages"] as! [String]
+                dummyModel.childId = data["randomId"] as? String ?? ""
+                self.imgArray.append(imgArray)
+                self.model.append(dummyModel)
+                self.homeCollectionView.reloadData()
+                SVProgressHUD.dismiss()
+                
+            }
+            else{
+                SVProgressHUD.dismiss()
+            }
+          }
+        SVProgressHUD.dismiss()
+      }
+    
+
 
 }
 
@@ -101,13 +153,13 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
                         return
                         }
                         DispatchQueue.main.async {
-                            cell.houseImage1?.image = UIImage(data: data!)
+                            cell.houseImage?.image = UIImage(data: data!)
                         }
                         }).resume()
      }
-        cell.locationAddressLabel1.text = model[indexPath.row].locationHouse
-        cell.favouriteBtn1.addTarget(self, action: #selector(favouriteTapped(sender:)), for: .touchUpInside)
-        cell.favouriteBtn1.tag = indexPath.row
+        cell.locationAddressLabel.text = model[indexPath.row].locationHouse
+        cell.favouriteBtn.addTarget(self, action: #selector(favouriteTapped(sender:)), for: .touchUpInside)
+        cell.favouriteBtn.tag = indexPath.row
         return cell
     }
     
@@ -115,6 +167,32 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (self.homeCollectionView.frame.width / 2) - (5), height: self.homeCollectionView.frame.height / 1.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AdvHomeDetailVc") as! AdvHomeDetailVc
+        vc.busStand = model[indexPath.row].locality ?? "" + " KM Away"
+        vc.imagesArray = self.imgArray[indexPath.row]
+        vc.totalFloors = self.model[indexPath.row].floors ?? ""
+        vc.rent = ("$ ") + (self.model[indexPath.row].rent ?? "")
+        vc.totalBed = self.model[indexPath.row].rooms ?? ""
+        vc.emailAdd = self.model[indexPath.row].emailAddress ?? ""
+        vc.contactNum = self.model[indexPath.row].contact ?? ""
+        vc.uidR = self.model[indexPath.row].childId ?? ""
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func menuIcon(){
+        let navBarPlusButton = UIBarButtonItem(image: UIImage(named:  "menu"),  style: .plain, target: self, action: #selector(tabNavigations))
+        navigationItem.leftBarButtonItem = navBarPlusButton
+    }
+    
+    @objc func tabNavigations(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuVc") as! MenuVc
+        vc.ref = self
+        
+        self.transitionVc(vc: vc, duration: 0.1, type: .fromLeft)
     }
     
     @objc func favouriteTapped(sender : UIButton){
@@ -132,8 +210,65 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             fvtThumbnail.append(img ?? "")
         }
     }
+    
 
 }
 
+extension HomeVc : UITextFieldDelegate{
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchVc") as! SearchVc
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.delegate = self
+        
+        self.navigationController?.present(vc, animated: true, completion: nil)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        var sa = [String]()
+        sa.append(textField.text ?? "")
+         UserDefaults.standard.setValue(sa, forKey: "search")
+        self.searchTF.resignFirstResponder()
+        self.hideViewDelegate?.hideView()
+        return true
+    }
+}
 
 
+extension HomeVc : hideTable{
+    
+    func hideTable(data: String) {
+        print("delegate hitted \(data) received")
+        self.searchTF.text = data
+        self.searchTF.resignFirstResponder()
+        self.searchFBdata(key: "Location", value: data)
+    }
+    
+    func sortListBy(key : String, value: String) {
+        self.sortedFBdata(key: key, value: value)
+    }
+    
+    func sortedFBdata(key : String, value : String){
+        
+        if key == "Location"{
+            var newRent = self.model
+            newRent.sort {(Int($0.locality ?? "") ?? 0) < (Int($1.locality ?? "") ?? 0)}
+            print(newRent)
+            self.model = newRent
+            self.homeCollectionView.reloadData()
+        }
+        else if value == "L2H"{
+            var newRent = self.model
+            newRent.sort {(Int($0.rent ?? "") ?? 0) < (Int($1.rent ?? "") ?? 0)}
+            print(newRent)
+            self.model = newRent
+            self.homeCollectionView.reloadData()
+        }
+        else if value == "H2L"{
+            var newRent = self.model
+            newRent.sort {(Int($0.rent ?? "") ?? 0) > (Int($1.rent ?? "") ?? 0)}
+            print(newRent)
+            self.model = newRent
+            self.homeCollectionView.reloadData()
+        }
+        
+    }
