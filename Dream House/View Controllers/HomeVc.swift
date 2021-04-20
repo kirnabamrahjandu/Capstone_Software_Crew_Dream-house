@@ -6,6 +6,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class HomeVc: UIViewController {
 
@@ -45,16 +46,7 @@ class HomeVc: UIViewController {
     }
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            self.model.removeAll()
-            self.homeCollectionView.reloadData()
-            getFBdata(findBy: "House")
-        }
-        else{
-            self.model.removeAll()
-            self.homeCollectionView.reloadData()
-            getFBdata(findBy: "Room")
-        }
+
     }
     
     @IBAction func sortBtnAction(_ sender: Any) {
@@ -81,7 +73,7 @@ class HomeVc: UIViewController {
                 dummyModel.locality = data["busStand"] as? String ?? ""
                 dummyModel.emailAddress = data["Email"] as? String ?? ""
                 dummyModel.contact = data["Phone"] as? String ?? ""
-                dummyModel.childId = data["randomId"] as? String ?? ""
+                dummyModel.childID = data["randomId"] as? String ?? ""
                 let imgArray = data["HouseImages"] as! [String]
                 self.imgArray.append(imgArray)
                 self.model.append(dummyModel)
@@ -115,7 +107,7 @@ class HomeVc: UIViewController {
                 dummyModel.contact = data["Phone"] as? String ?? ""
                 dummyModel.emailAddress = data["Email"] as? String ?? ""
                 let imgArray = data["HouseImages"] as! [String]
-                dummyModel.childId = data["randomId"] as? String ?? ""
+            dummyModel.childID = data["randomId"] as? String ?? ""
                 self.imgArray.append(imgArray)
                 self.model.append(dummyModel)
                 self.homeCollectionView.reloadData()
@@ -153,13 +145,13 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
                         return
                         }
                         DispatchQueue.main.async {
-                            cell.houseImage?.image = UIImage(data: data!)
+             cell.houseImage1?.image = UIImage(data: data!)
                         }
                         }).resume()
      }
-        cell.locationAddressLabel.text = model[indexPath.row].locationHouse
-        cell.favouriteBtn.addTarget(self, action: #selector(favouriteTapped(sender:)), for: .touchUpInside)
-        cell.favouriteBtn.tag = indexPath.row
+        cell.locationAddressLabel1.text = model[indexPath.row].locationHouse
+        cell.favouriteBtn1.addTarget(self, action: #selector(favouriteTapped(sender:)), for: .touchUpInside)
+        cell.favouriteBtn1.tag = indexPath.row
         return cell
     }
     

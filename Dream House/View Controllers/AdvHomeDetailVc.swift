@@ -19,8 +19,14 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var busStandLoc: UITextField!
     
+    var totalBed = ""
+    var totalFloors = ""
+    var rent = ""
+    var busStand = ""
+    var imagesArray = [String]()
     var contactNum = ""
     var emailAdd = ""
+    var uidR = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

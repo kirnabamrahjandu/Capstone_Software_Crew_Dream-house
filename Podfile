@@ -13,6 +13,7 @@ target 'Dream House' do
  pod 'Firebase/Auth'
  pod 'GoogleMaps'
  pod 'GooglePlaces'
+ pod 'SVProgressHUD'
   target 'Dream HouseTests' do
     inherit! :search_paths
     # Pods for testing
