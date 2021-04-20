@@ -11,7 +11,8 @@ class MenuVc: UIViewController {
     @IBOutlet var menuTableView: UITableView!
     
     var menuOptionUser = ["Home", "Chats", "Favourites", "My Profile", "Logout"]
-
+    var menuOptionProvider = ["Add Post", "Home", "Chats", "Favourites", "My Profile", "Logout"]
+    var type = ""
     var ref : UIViewController?
     
     override func viewDidLoad() {
@@ -32,20 +33,32 @@ class MenuVc: UIViewController {
 
 extension MenuVc : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        if userType == "user"{
             return menuOptionUser.count
-       
+        }
+        else{
+            return menuOptionProvider.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableCell") as! MenuTableCell
-
+        if userType == "user"{
             cell.menuOptionLabel.text = menuOptionUser[indexPath.row]
-                
+        }
+        else {
+            cell.menuOptionLabel.text = menuOptionProvider[indexPath.row]
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if userType == "provider"{
+         
+        }
+        else{
             switch indexPath.row {
             case 0:
                 self.selectIndex(index: 0)
@@ -69,7 +82,7 @@ extension MenuVc : UITableViewDelegate, UITableViewDataSource{
             default:
                 print("default")
             }
-        
+        }
     }
     
     @objc func dismissDetail() {

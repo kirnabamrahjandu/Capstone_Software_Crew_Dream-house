@@ -56,7 +56,7 @@ class LoginVc: UIViewController, GIDSignInDelegate {
         username = user.profile.name ?? ""
         email = user.profile.email ?? ""
         userProfileURL = String(describing: user.profile.imageURL(withDimension: 200*200) as URL)
-        self.pushVc(storyboardId: "MainTabBarVc")
+      //  self.pushVc(storyboardId: "MainTabBarVc")
           print(user.userID ?? 0 , user.profile.name ?? "", user.profile.email ?? "", user.profile.imageURL(withDimension: 200*200) as URL)
           
 //          gmailId = user.userID ?? ""
