@@ -1671,6 +1671,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="sendBtnAction:" destination="7fV-4m-q8u" eventType="touchUpInside" id="T3M-zW-US3"/>
                                             <action selector="sendPressed:" destination="7fV-4m-q8u" eventType="touchUpInside" id="3e7-4U-4k8"/>
                                         </connections>
                                     </button>
