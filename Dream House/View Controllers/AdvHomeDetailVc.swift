@@ -19,6 +19,7 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var busStandLoc: UITextField!
     
+    var contactNum = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,5 +55,13 @@ extension AdvHomeDetailVc : UICollectionViewDelegate, UICollectionViewDataSource
         return cell
     }
     
+    func callTapped() {
+        guard let number = contactNum as? String ,
+              let url = URL(string: "telprompt://\(number)") else{
+            print("Number failed")
+            return
+        }
+        UIApplication.shared.open(url)
+    }
     
 }
