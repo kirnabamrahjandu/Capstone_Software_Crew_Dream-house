@@ -42,8 +42,7 @@ class HomeVc: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.model.removeAll()
     }
-    @IBAction func searchLocationAction(_ sender: Any) {
-    }
+
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
