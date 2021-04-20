@@ -58,6 +58,7 @@
 		C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D7C262CC30A0045A5AE /* SearchVc.swift */; };
 		C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */; };
 		C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */; };
+		C9AB958E262F741600D8B77B /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB958D262F741600D8B77B /* ChatListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		C9700D7C262CC30A0045A5AE /* SearchVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVc.swift; sourceTree = "<group>"; };
 		C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseRoomVc.swift; sourceTree = "<group>"; };
+		C9AB958D262F741600D8B77B /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		D2163251EFD5D5FED8AA3D72 /* Pods-Dream House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House.release.xcconfig"; path = "Target Support Files/Pods-Dream House/Pods-Dream House.release.xcconfig"; sourceTree = "<group>"; };
 		F10A965D620CE9329417450E /* Pods_Dream_House_Dream_HouseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream_House_Dream_HouseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7232B8958DB0C5B306FB3F8 /* Pods-Dream House-Dream HouseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House-Dream HouseUITests.release.xcconfig"; path = "Target Support Files/Pods-Dream House-Dream HouseUITests/Pods-Dream House-Dream HouseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				C956531C262E22BF00BE7E7B /* UserProfileVc.swift */,
 				C9700D7C262CC30A0045A5AE /* SearchVc.swift */,
 				C9700D74262CC0F60045A5AE /* ChatVC.swift */,
+				C9AB958D262F741600D8B77B /* ChatListViewController.swift */,
 				C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */,
 				C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */,
 				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
@@ -644,6 +647,7 @@
 				C9700D70262CBD430045A5AE /* ChatListVc.swift in Sources */,
 				C9700D4F262CB6DD0045A5AE /* FavouritesVc.swift in Sources */,
 				C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */,
+				C9AB958E262F741600D8B77B /* ChatListViewController.swift in Sources */,
 				C9565313262E1C5600BE7E7B /* AdvHomeDetailVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
