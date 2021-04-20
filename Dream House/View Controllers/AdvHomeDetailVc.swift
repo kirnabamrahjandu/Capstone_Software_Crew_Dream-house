@@ -8,7 +8,7 @@ import UIKit
 import MessageUI
 
 class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
-
+    
     @IBOutlet var advHomeDetailCollectionView: UICollectionView!
     
     @IBOutlet var totalBedroomsTF: UITextField!
@@ -20,7 +20,7 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet var busStandLoc: UITextField!
     
     var contactNum = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         advHomeDetailCollectionView.delegate = self
@@ -29,19 +29,19 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     
     
     @IBAction func callAction(_ sender: Any) {
-    
+        callTapped()
     }
     
     @IBAction func emailAction(_ sender: Any) {
-        
+        sendEmail()
     }
     
     @IBAction func messageAction(_ sender: Any) {
-
+        
         
     }
     
- 
+    
 }
 
 extension AdvHomeDetailVc : UICollectionViewDelegate, UICollectionViewDataSource{
@@ -64,4 +64,17 @@ extension AdvHomeDetailVc : UICollectionViewDelegate, UICollectionViewDataSource
         UIApplication.shared.open(url)
     }
     
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([self.emailAdd])
+            mail.setMessageBody("<p>Hey! I m interested in your add</p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
 }
