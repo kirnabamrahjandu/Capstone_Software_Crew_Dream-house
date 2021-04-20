@@ -12,5 +12,9 @@ class MessageListVc: UIViewController {
     @IBOutlet weak var messageTextfield: UITextField!
     @IBOutlet weak var sendBtn: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
 }

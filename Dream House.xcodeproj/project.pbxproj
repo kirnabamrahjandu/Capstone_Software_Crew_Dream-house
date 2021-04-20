@@ -140,6 +140,7 @@
 		C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseRoomVc.swift; sourceTree = "<group>"; };
 		C9AB958D262F741600D8B77B /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		C9AB9595262F75E700D8B77B /* MessageListVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVc.swift; sourceTree = "<group>"; };
+		C9AB959A262F774E00D8B77B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		D2163251EFD5D5FED8AA3D72 /* Pods-Dream House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House.release.xcconfig"; path = "Target Support Files/Pods-Dream House/Pods-Dream House.release.xcconfig"; sourceTree = "<group>"; };
 		F10A965D620CE9329417450E /* Pods_Dream_House_Dream_HouseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream_House_Dream_HouseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7232B8958DB0C5B306FB3F8 /* Pods-Dream House-Dream HouseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House-Dream HouseUITests.release.xcconfig"; path = "Target Support Files/Pods-Dream House-Dream HouseUITests/Pods-Dream House-Dream HouseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +276,7 @@
 				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
 				C9700D3F262CA6350045A5AE /* WelcomeVc.swift */,
 				C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */,
+				C9AB959A262F774E00D8B77B /* MessageCell.xib */,
 				C95652EB262E168500BE7E7B /* AddHouseRoomCollectionCell.swift */,
 				C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */,
 				C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */,
