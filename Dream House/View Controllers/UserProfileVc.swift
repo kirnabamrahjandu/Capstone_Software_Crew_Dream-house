@@ -24,8 +24,14 @@ class UserProfileVc: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.eMailTF.text = Auth.auth().currentUser?.email
+        self.userNameTF.text = username
+        self.userTypeTF.text = userType
+     
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "My Profile"
     }
+
 
 
 
