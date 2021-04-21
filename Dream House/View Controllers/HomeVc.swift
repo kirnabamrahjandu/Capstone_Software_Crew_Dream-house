@@ -178,7 +178,7 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         vc.totalBed = self.model[indexPath.row].rooms ?? ""
         vc.emailAdd = self.model[indexPath.row].emailAddress ?? ""
         vc.contactNum = self.model[indexPath.row].contact ?? ""
-        vc.uidR = self.model[indexPath.row].childId ?? ""
+        vc.uidR = self.model[indexPath.row].childID ?? ""
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -272,3 +272,4 @@ extension HomeVc : hideTable{
         }
         
     }
+}

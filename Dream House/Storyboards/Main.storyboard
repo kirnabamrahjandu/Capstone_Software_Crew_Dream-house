@@ -655,7 +655,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqr-6A-Y9q" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="40" y="139.5" width="295" height="18.5"/>
+                                <rect key="frame" x="40" y="139.5" width="295" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -674,7 +674,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuo-cg-Gqk" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="40" y="208" width="295" height="17"/>
+                                <rect key="frame" x="40" y="228.5" width="295" height="39.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -687,7 +687,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zt0-89-GDk">
-                                <rect key="frame" x="40" y="302" width="295" height="60"/>
+                                <rect key="frame" x="40" y="308" width="295" height="60"/>
                                 <color key="backgroundColor" name="Theme Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="WdD-Nt-Uk5"/>
@@ -697,22 +697,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginBrnAction:" destination="n8q-xn-37L" eventType="touchUpInside" id="Kl5-oB-34Z"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-xL-xPW">
-                                <rect key="frame" x="40" y="240" width="295" height="32"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                                <state key="normal" title="Forgot Password?">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="forgotPasswordAction:" destination="n8q-xn-37L" eventType="touchUpInside" id="w8a-l2-Kx4"/>
+                                    <action selector="loginBrnAction:" destination="n8q-xn-37L" eventType="touchUpInside" id="0Ma-AN-TUW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO5-Rq-n2T">
-                                <rect key="frame" x="77.5" y="382" width="189.5" height="24"/>
+                                <rect key="frame" x="77.5" y="388" width="189.5" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="U8T-eP-aQZ"/>
                                 </constraints>
@@ -721,7 +710,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUD-rX-PI7">
-                                <rect key="frame" x="277" y="377.5" width="58" height="33"/>
+                                <rect key="frame" x="277" y="383.5" width="58" height="33"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
@@ -768,11 +757,11 @@
                         <viewLayoutGuide key="safeArea" id="scp-kh-sZ3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="P0R-xL-xPW" firstAttribute="trailing" secondItem="uuo-cg-Gqk" secondAttribute="trailing" id="0DN-4g-kqj"/>
                             <constraint firstItem="1ki-Nc-Hj9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oO5-Rq-n2T" secondAttribute="bottom" constant="20" id="7lG-5l-BEv"/>
                             <constraint firstItem="uuo-cg-Gqk" firstAttribute="top" secondItem="jqr-6A-Y9q" secondAttribute="bottom" constant="50" id="CeR-gd-dCV"/>
                             <constraint firstItem="XUD-rX-PI7" firstAttribute="leading" secondItem="oO5-Rq-n2T" secondAttribute="trailing" constant="10" id="CeS-m4-AHx"/>
                             <constraint firstItem="2Jm-zz-9va" firstAttribute="leading" secondItem="scp-kh-sZ3" secondAttribute="leading" constant="20" id="H71-67-n5L"/>
+                            <constraint firstItem="zt0-89-GDk" firstAttribute="top" secondItem="uuo-cg-Gqk" secondAttribute="bottom" constant="40" id="H7A-Sp-Otp"/>
                             <constraint firstItem="Oza-lJ-2uV" firstAttribute="top" secondItem="1ki-Nc-Hj9" secondAttribute="bottom" constant="40" id="JH5-VE-ywg"/>
                             <constraint firstItem="2Jm-zz-9va" firstAttribute="centerY" secondItem="1ki-Nc-Hj9" secondAttribute="centerY" id="JIh-Vi-NLz"/>
                             <constraint firstItem="scp-kh-sZ3" firstAttribute="trailing" secondItem="FSa-Si-7iG" secondAttribute="trailing" id="K1M-Ce-ONc"/>
@@ -791,22 +780,18 @@
                             <constraint firstItem="ms7-qZ-XXh" firstAttribute="top" secondItem="scp-kh-sZ3" secondAttribute="top" constant="50" id="a2c-He-WSL"/>
                             <constraint firstItem="FSa-Si-7iG" firstAttribute="leading" secondItem="scp-kh-sZ3" secondAttribute="leading" id="bNl-at-hsD"/>
                             <constraint firstItem="zt0-89-GDk" firstAttribute="trailing" secondItem="uuo-cg-Gqk" secondAttribute="trailing" id="cbK-Ad-SLF"/>
-                            <constraint firstItem="P0R-xL-xPW" firstAttribute="top" secondItem="uuo-cg-Gqk" secondAttribute="bottom" constant="15" id="d2S-dz-nHu"/>
                             <constraint firstItem="scp-kh-sZ3" firstAttribute="bottom" secondItem="Oza-lJ-2uV" secondAttribute="bottom" constant="40" id="dUB-Re-dnI"/>
                             <constraint firstItem="uuo-cg-Gqk" firstAttribute="leading" secondItem="scp-kh-sZ3" secondAttribute="leading" constant="40" id="eg4-yv-Sdw"/>
-                            <constraint firstItem="P0R-xL-xPW" firstAttribute="leading" secondItem="uuo-cg-Gqk" secondAttribute="leading" id="fX6-L2-3Q4"/>
                             <constraint firstAttribute="bottom" secondItem="FSa-Si-7iG" secondAttribute="bottom" id="hWc-3D-iQx"/>
                             <constraint firstItem="XUD-rX-PI7" firstAttribute="trailing" secondItem="zt0-89-GDk" secondAttribute="trailing" id="l0x-HS-cMh"/>
                             <constraint firstItem="Oza-lJ-2uV" firstAttribute="centerX" secondItem="FSa-Si-7iG" secondAttribute="centerX" id="ldo-sm-mJo"/>
                             <constraint firstItem="ms7-qZ-XXh" firstAttribute="leading" secondItem="scp-kh-sZ3" secondAttribute="leading" constant="40" id="oNb-he-NkI"/>
-                            <constraint firstItem="zt0-89-GDk" firstAttribute="top" secondItem="P0R-xL-xPW" secondAttribute="bottom" constant="30" id="r3E-cm-BlP"/>
                             <constraint firstItem="zt0-89-GDk" firstAttribute="leading" secondItem="uuo-cg-Gqk" secondAttribute="leading" id="vdh-Qq-3Ej"/>
                             <constraint firstItem="FSa-Si-7iG" firstAttribute="top" secondItem="zg6-G4-l9B" secondAttribute="top" id="xyR-Zd-Wae"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTF" destination="jqr-6A-Y9q" id="xoV-rC-PHU"/>
-                        <outlet property="forgotPasswordBtn" destination="P0R-xL-xPW" id="BUp-bD-XV8"/>
                         <outlet property="googleLoginBtn" destination="Oza-lJ-2uV" id="zm7-E8-9f5"/>
                         <outlet property="loginBtn" destination="zt0-89-GDk" id="uKf-7Y-jpo"/>
                         <outlet property="passwordTF" destination="uuo-cg-Gqk" id="Ese-eJ-jaT"/>
@@ -835,7 +820,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UF1-ew-4Ra" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="249.5" width="315" height="34"/>
+                                <rect key="frame" x="30" y="249.5" width="315" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -848,7 +833,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XF4-Q4-KKB" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="333.5" width="315" height="34"/>
+                                <rect key="frame" x="30" y="338.5" width="315" height="39.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
@@ -861,7 +846,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYm-Ll-rC5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="417.5" width="315" height="34"/>
+                                <rect key="frame" x="30" y="428" width="315" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -874,7 +859,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9i-ul-21v">
-                                <rect key="frame" x="30" y="501.5" width="315" height="60"/>
+                                <rect key="frame" x="30" y="517" width="315" height="60"/>
                                 <color key="backgroundColor" name="Theme Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Pvu-Fa-4UZ"/>
@@ -1307,12 +1292,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="cellBackView" destination="OGv-87-CZ0" id="hcB-Bg-iOf"/>
-                                            <outlet property="favouriteBtn" destination="CXZ-hy-vsf" id="yq8-tC-2d9"/>
-                                            <outlet property="houseImage" destination="UQy-PX-Kcy" id="15u-ik-62G"/>
-                                            <outlet property="locationAddressLabel" destination="par-4a-R3F" id="aZc-Pc-c9l"/>
-                                            <outlet property="moneyPerMonthLabel" destination="KTe-pX-PZ5" id="6DT-wC-zdK"/>
-                                            <outlet property="ownerNameLabel" destination="zjV-TW-cDS" id="q68-Ko-7d6"/>
+                                            <outlet property="cellBackView1" destination="OGv-87-CZ0" id="bxO-dy-BFY"/>
+                                            <outlet property="favouriteBtn1" destination="CXZ-hy-vsf" id="xcQ-9m-bd1"/>
+                                            <outlet property="houseImage1" destination="UQy-PX-Kcy" id="j6d-F3-533"/>
+                                            <outlet property="locationAddressLabel1" destination="par-4a-R3F" id="JDD-lY-Hay"/>
+                                            <outlet property="moneyPerMonthLabel1" destination="KTe-pX-PZ5" id="6gQ-QT-zdt"/>
+                                            <outlet property="ownerNameLabel1" destination="zjV-TW-cDS" id="Wmo-y4-TPt"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1552,7 +1537,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uih-Bg-5nd">
-                                        <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="10" width="375" height="708"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Prs-gO-n5y">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
@@ -1651,7 +1636,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CwD-IF-cHo">
-                                                <rect key="frame" x="10" y="612" width="355" height="50"/>
+                                                <rect key="frame" x="10" y="653" width="355" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zn-EJ-zXo">
                                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="50"/>
@@ -1701,7 +1686,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Rent Per Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-ul-ChR" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="30" y="455" width="315" height="18.5"/>
+                                                <rect key="frame" x="30" y="455" width="315" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1720,7 +1705,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bus Stand" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-2p-TER" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="30" y="513.5" width="315" height="18.5"/>
+                                                <rect key="frame" x="30" y="534" width="315" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1761,7 +1746,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPq-zK-JIX">
-                                                <rect key="frame" x="50" y="552" width="275" height="40"/>
+                                                <rect key="frame" x="50" y="593" width="275" height="40"/>
                                                 <color key="backgroundColor" name="Theme Color"/>
                                                 <state key="normal" title="Set Reminder For Meeting">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1986,7 +1971,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-DO-GIy" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="208" width="315" height="34"/>
+                                <rect key="frame" x="30" y="208" width="315" height="39"/>
                                 <color key="textColor" name="Theme Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2034,6 +2019,38 @@
             <point key="canvasLocation" x="12962" y="753"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="FDB-lr-agr">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="JRh-2p-TER">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="TYm-Ll-rC5">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="UF1-ew-4Ra">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="VDh-ul-ChR">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="XF4-Q4-KKB">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="hEG-DO-GIy">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="jqr-6A-Y9q">
+            <size key="intrinsicContentSize" width="295" height="39.220703125"/>
+        </designable>
+        <designable name="pDI-bA-NAp">
+            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+        </designable>
+        <designable name="uuo-cg-Gqk">
+            <size key="intrinsicContentSize" width="295" height="39.220703125"/>
+        </designable>
+    </designables>
     <resources>
         <image name="add profile" width="512" height="512"/>
         <image name="call" width="30" height="30"/>

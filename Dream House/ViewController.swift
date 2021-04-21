@@ -36,6 +36,16 @@ extension UIViewController {
 
 }
 
+
+extension UIButton{
+    
+    func setCornerRadius(){
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 10
+    }
+}
+
+
 @objc protocol hideTable {
     func hideTable(data : String)
     

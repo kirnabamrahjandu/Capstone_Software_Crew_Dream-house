@@ -35,6 +35,17 @@ class AddHouseRoomVc: UIViewController {
     var imageArray = [UIImage]()
     var imagesURLArray = [URL]()
     let autoComplete = GMSAutocompleteViewController()
+    var edit = ""
+    var userRef : DatabaseReference?
+    var uidRef = ""
+    var rent = ""
+    var imgArray = [UIImage]()
+    var bedRooms = ""
+    var floors = ""
+    var adType = ""
+    var locationTo = ""
+    var contactNum = ""
+    var locationArea = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
