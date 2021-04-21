@@ -2,7 +2,6 @@
 //  Chat.swift
 //  Dream House
 //
-//  Created by DreamHouseTeam on 13/04/21.
 //
 
 import Foundation

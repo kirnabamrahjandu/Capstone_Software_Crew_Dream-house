@@ -56,12 +56,12 @@
 		C9700D7D262CC30A0045A5AE /* SearchVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D7C262CC30A0045A5AE /* SearchVc.swift */; };
 		C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */; };
 		C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */; };
+		C99B5678263044D100EDDC72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99B5677263044D100EDDC72 /* Main.storyboard */; };
 		C9AB958E262F741600D8B77B /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB958D262F741600D8B77B /* ChatListViewController.swift */; };
 		C9AB9596262F75E700D8B77B /* MessageListVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB9595262F75E700D8B77B /* MessageListVc.swift */; };
 		C9AB959C262F77A800D8B77B /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB959B262F77A800D8B77B /* TableCell.swift */; };
 		C9AB95A1262F7C6900D8B77B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB95A0262F7C6800D8B77B /* Chat.swift */; };
 		C9AB95D1262F856000D8B77B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */; };
-		C9AB95D7262F85C200D8B77B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB95D5262F85C200D8B77B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,13 +140,13 @@
 		C9700D7C262CC30A0045A5AE /* SearchVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVc.swift; sourceTree = "<group>"; };
 		C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseRoomVc.swift; sourceTree = "<group>"; };
+		C99B5677263044D100EDDC72 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "Dream House/Storyboards/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		C9AB958D262F741600D8B77B /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		C9AB9595262F75E700D8B77B /* MessageListVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVc.swift; sourceTree = "<group>"; };
 		C9AB959A262F774E00D8B77B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		C9AB959B262F77A800D8B77B /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		C9AB95A0262F7C6800D8B77B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C9AB95D6262F85C200D8B77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../Dream House Complete 13-april 2/Dream House/View/Storyboards/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D2163251EFD5D5FED8AA3D72 /* Pods-Dream House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House.release.xcconfig"; path = "Target Support Files/Pods-Dream House/Pods-Dream House.release.xcconfig"; sourceTree = "<group>"; };
 		F10A965D620CE9329417450E /* Pods_Dream_House_Dream_HouseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream_House_Dream_HouseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7232B8958DB0C5B306FB3F8 /* Pods-Dream House-Dream HouseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House-Dream HouseUITests.release.xcconfig"; path = "Target Support Files/Pods-Dream House-Dream HouseUITests/Pods-Dream House-Dream HouseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 		C96A0DDE2618EA30001435E6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C9AB95D5262F85C200D8B77B /* Main.storyboard */,
+				C99B5677263044D100EDDC72 /* Main.storyboard */,
 				C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */,
 				C956530D262E19B800BE7E7B /* HouseListModel.swift */,
 				C9565317262E1D5700BE7E7B /* AdvHomeDetailCollectionCell.swift */,
@@ -457,7 +457,7 @@
 				C96A0DFD2618EA56001435E6 /* Poppins-Medium.ttf in Resources */,
 				C96A0DF62618EA56001435E6 /* Poppins-BlackItalic.ttf in Resources */,
 				C96A0DFC2618EA56001435E6 /* Poppins-BoldItalic.ttf in Resources */,
-				C9AB95D7262F85C200D8B77B /* Main.storyboard in Resources */,
+				C99B5678263044D100EDDC72 /* Main.storyboard in Resources */,
 				C96A0DFE2618EA56001435E6 /* Poppins-MediumItalic.ttf in Resources */,
 				C96A0DF32618EA56001435E6 /* Poppins-SemiBold.ttf in Resources */,
 				C96A0DF42618EA56001435E6 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -704,14 +704,6 @@
 				C96A0DB72618AB91001435E6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		C9AB95D5262F85C200D8B77B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9AB95D6262F85C200D8B77B /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
