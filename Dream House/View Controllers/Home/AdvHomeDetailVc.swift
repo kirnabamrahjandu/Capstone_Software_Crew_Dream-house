@@ -7,6 +7,7 @@
 import UIKit
 import MessageUI
 import FirebaseAuth
+import FirebaseDatabase
 
 class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     
@@ -33,7 +34,9 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     var contactNum = ""
     var emailAdd = ""
     var uidR = ""
-    
+    var locationArea = ""
+    var addType = ""
+    var houseNo = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +60,8 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func deleteAction(_ sender: Any) {
+        Database.database().reference().child("Rent").child(self.uidR).removeValue()
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func callAction(_ sender: Any) {
@@ -76,30 +81,29 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     
     
     @IBAction func editAction(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "") as! AddHouseRoomVc
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddHouseRoomVc") as! AddHouseRoomVc
         vc.edit = "1"
         vc.uidRef = uidR
         vc.rent = rent
-        
+        vc.houseNo = self.houseNo
         var tempArray = [UIImage]()
         for i in 0..<(imagesArray.count){
             let immg = self.loadImge(withUrl: URL(string: imagesArray[i])!)
             tempArray.append(immg)
         }
         vc.imgArray = tempArray
-        vc.bedRooms = ""
-        vc.floors = ""
-        vc.adType = ""
-        vc.locationTo = ""
-        vc.contactNum = ""
-        vc.locationArea = ""
+        vc.bedRooms = self.totalBed
+        vc.floors = self.totalFloors
+        vc.adType = self.addType
+        vc.locationTo = self.busStand
+        vc.contactNum = self.contactNum
+        vc.locationArea = self.locationArea
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func setReminderAction(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReminderVc") as! ReminderVc
-        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -171,6 +175,6 @@ extension UIViewController {
                    }
                }
            }
-        return retImg!
+        return retImg ?? #imageLiteral(resourceName: "dream")
        }
 }

@@ -11,7 +11,7 @@ import GooglePlaces
 import AVFoundation
 import MobileCoreServices
 import FirebaseAuth
-
+import SVProgressHUD
 class AddHouseRoomVc: UIViewController {
     
     @IBOutlet weak var postBtn: UIButton!
@@ -46,6 +46,7 @@ class AddHouseRoomVc: UIViewController {
     var locationTo = ""
     var contactNum = ""
     var locationArea = ""
+    var houseNo = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,20 @@ class AddHouseRoomVc: UIViewController {
         imagePicker.delegate = self
         self.selectVideoBtn.layer.cornerRadius = 10
         self.selectImageBtn.layer.cornerRadius = self.selectImageBtn.layer.frame.height / 2
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if edit == "1"{
+            self.houseNoTF.text = self.houseNo
+            self.addressTF.text = self.locationArea
+            self.numberOfFloors.text = self.floors
+            self.numberOfRooms.text = self.bedRooms
+            self.imageArray = imgArray
+            self.rentLabel.text = self.rent
+            self.locationToBusStandTF.text = self.locationTo
+            self.contactNumber.text = contactNum
+            self.imagesCollectionView.reloadData()
+        }
     }
     
     
@@ -81,7 +96,7 @@ class AddHouseRoomVc: UIViewController {
     }
     
     @IBAction func postAction(_ sender: Any) {
-         
+        SVProgressHUD.show()
             print(imageArray.count, "is slec")
             for i in 0..<imageArray.count{
                 self.uploadImage(imageArray[i]) { (urrl) in
@@ -164,15 +179,23 @@ class AddHouseRoomVc: UIViewController {
             let str = String(describing:houseImage[i])
             hImageArray.append(str)
         }
-        let dict = ["ownerName": username, "Email": email, "Type": "Provider" ,"ProfilePic": userProfileURL, "Rent" : self.rentLabel.text, "Location": self.addressTF.text, "Phone": self.contactNumber.text, "busStand": self.locationToBusStandTF.text, "HouseImages": hImageArray, "userId": Auth.auth().currentUser?.uid ?? "", "addType": self.roomHouse, "totalRooms":self.numberOfRooms.text, "totalFloors": self.numberOfFloors.text] as [String : Any]
+
+        let dict = ["ownerName": username,"houseNo": self.houseNoTF.text ,"Email": email, "Type": "Provider" ,"ProfilePic": userProfileURL, "Rent" : self.rentLabel.text, "Location": self.addressTF.text, "Phone": self.contactNumber.text, "busStand": self.locationToBusStandTF.text, "HouseImages": hImageArray, "userId": Auth.auth().currentUser?.uid ?? "", "addType": self.roomHouse, "totalRooms":self.numberOfRooms.text, "totalFloors": self.numberOfFloors.text] as [String : Any]
         
-        let userRef = Database.database().reference().child("Rent").childByAutoId()
-        userRef.updateChildValues(dict, withCompletionBlock: { (err, ref) in
+        if edit == "1"{
+            self.userRef = Database.database().reference().child("Rent").child(self.uidRef)
+        }
+        else{
+            self.userRef = Database.database().reference().child("Rent").childByAutoId()
+        }
+        
+       // let userRef
+        userRef?.updateChildValues(dict, withCompletionBlock: { (err, ref) in
             if err != nil{
                 print(err!)
                 return
             }
-            
+            SVProgressHUD.dismiss()
             let alert = UIAlertController(title: "Congratulations", message: "Yeah!, \n Your Add for \(self.roomHouse) is posted successfully. We will let you know, when someone interested in your Advertisement", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Login", style: .default, handler: {(UIAlertAction) in
             }
@@ -219,10 +242,15 @@ extension AddHouseRoomVc : UICollectionViewDelegate, UICollectionViewDataSource{
         cell.advImageView.layer.borderWidth = 1
         cell.advImageView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cell.advImageView.image = imageArray[indexPath.row]
+        cell.deleteBtn.addTarget(self, action: #selector(deleteIMg), for: .touchUpInside)
+        cell.deleteBtn.tag = indexPath.row
         return cell
     }
-
- 
+    
+    @objc func deleteIMg(sender:UIButton){
+        self.imageArray.remove(at: sender.tag)
+        self.imagesCollectionView.reloadData()
+    }
     
 }
 
@@ -233,11 +261,7 @@ extension AddHouseRoomVc :GMSAutocompleteViewControllerDelegate, GMSAutocomplete
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         print("original lat", place.coordinate.latitude)
         print("original long", place.coordinate.longitude)
-//        self.latitude = Double(place.coordinate.latitude)
-//        self.langtitude = Double(place.coordinate.longitude)
-//        UserDefaults.standard.set(self.latitude, forKey: "lat")
-//        UserDefaults.standard.set(self.langtitude, forKey: "long")
-//        let location = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.langtitude)
+
         
         autoComplete.dismiss(animated: true, completion: nil)
     }

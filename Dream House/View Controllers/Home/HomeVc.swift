@@ -82,7 +82,9 @@ class HomeVc: UIViewController {
                 dummyModel.emailAddress = data["Email"] as? String ?? ""
                 dummyModel.contact = data["Phone"] as? String ?? ""
                 dummyModel.childID = data["randomId"] as? String ?? ""
+                dummyModel.userType = data["addType"] as? String ?? ""
                 let imgArray = data["HouseImages"] as! [String]
+                dummyModel.houseNo = data["houseNo"] as? String ?? ""
                 self.imgArray.append(imgArray)
                 self.model.append(dummyModel)
                 self.homeCollectionView.reloadData()
@@ -116,6 +118,8 @@ class HomeVc: UIViewController {
                 dummyModel.emailAddress = data["Email"] as? String ?? ""
                 let imgArray = data["HouseImages"] as! [String]
             dummyModel.childID = data["randomId"] as? String ?? ""
+                dummyModel.userType = data["addType"] as? String ?? ""
+                dummyModel.houseNo = data["houseNo"] as? String ?? ""
                 self.imgArray.append(imgArray)
                 self.model.append(dummyModel)
                 self.homeCollectionView.reloadData()
@@ -179,6 +183,9 @@ extension HomeVc : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         vc.emailAdd = self.model[indexPath.row].emailAddress ?? ""
         vc.contactNum = self.model[indexPath.row].contact ?? ""
         vc.uidR = self.model[indexPath.row].childID ?? ""
+        vc.locationArea = self.model[indexPath.row].locationHouse ?? ""
+        vc.addType = model[indexPath.row].userType ?? ""
+        
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

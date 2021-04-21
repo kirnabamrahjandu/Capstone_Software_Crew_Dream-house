@@ -142,7 +142,7 @@
 		C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseRoomVc.swift; sourceTree = "<group>"; };
 		C99B5677263044D100EDDC72 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "Dream House/Storyboards/Main.storyboard"; sourceTree = SOURCE_ROOT; };
-		C99B567C2630463400EDDC72 /* ReminderVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVc.swift; sourceTree = "<group>"; };
+		C99B567C2630463400EDDC72 /* ReminderVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReminderVc.swift; path = "Dream House/View Controllers/ReminderVc.swift"; sourceTree = SOURCE_ROOT; };
 		C9AB958D262F741600D8B77B /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		C9AB9595262F75E700D8B77B /* MessageListVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVc.swift; sourceTree = "<group>"; };
 		C9AB959A262F774E00D8B77B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -230,16 +230,12 @@
 		C96A0DAA2618AB8E001435E6 /* Dream House */ = {
 			isa = PBXGroup;
 			children = (
+				C99B56F22630608300EDDC72 /* Assets */,
+				C99B56CD26305FD900EDDC72 /* Plists */,
 				C96A0E092618EA68001435E6 /* Delegates */,
 				C96A0E082618EA5F001435E6 /* Storyboards */,
 				C96A0DDF2618EA39001435E6 /* Utility */,
 				C96A0DDE2618EA30001435E6 /* View Controllers */,
-				C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */,
-				C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */,
-				C96A0DAF2618AB8E001435E6 /* ViewController.swift */,
-				C96A0DB42618AB91001435E6 /* Assets.xcassets */,
-				C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */,
-				C96A0DB92618AB91001435E6 /* Info.plist */,
 			);
 			path = "Dream House";
 			sourceTree = "<group>";
@@ -265,35 +261,15 @@
 		C96A0DDE2618EA30001435E6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C99B5677263044D100EDDC72 /* Main.storyboard */,
-				C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */,
-				C956530D262E19B800BE7E7B /* HouseListModel.swift */,
-				C9565317262E1D5700BE7E7B /* AdvHomeDetailCollectionCell.swift */,
-				C9565321262E23FF00BE7E7B /* MenuVc.swift */,
-				C9565326262E24E900BE7E7B /* MenuTableCell.swift */,
-				C9565312262E1C5500BE7E7B /* AdvHomeDetailVc.swift */,
-				C956528D262E102200BE7E7B /* SortByVc.swift */,
-				C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */,
-				C9565283262E096500BE7E7B /* HomeVc.swift */,
-				C9565288262E0BBF00BE7E7B /* HomeCollectionCell.swift */,
-				C956531C262E22BF00BE7E7B /* UserProfileVc.swift */,
-				C9700D7C262CC30A0045A5AE /* SearchVc.swift */,
-				C9700D74262CC0F60045A5AE /* ChatVC.swift */,
-				C9AB958D262F741600D8B77B /* ChatListViewController.swift */,
-				C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */,
-				C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */,
-				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
-				C9700D3F262CA6350045A5AE /* WelcomeVc.swift */,
-				C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */,
-				C9AB959A262F774E00D8B77B /* MessageCell.xib */,
-				C9AB95A0262F7C6800D8B77B /* Chat.swift */,
-				C95652EB262E168500BE7E7B /* AddHouseRoomCollectionCell.swift */,
-				C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */,
-				C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */,
-				C9700D49262CA8210045A5AE /* SignupVc.swift */,
-				C9AB959B262F77A800D8B77B /* TableCell.swift */,
-				C9AB9595262F75E700D8B77B /* MessageListVc.swift */,
-				C99B567C2630463400EDDC72 /* ReminderVc.swift */,
+				C99B56EB2630607300EDDC72 /* Reminder */,
+				C99B56CF2630600F00EDDC72 /* Profile */,
+				C99B56CE26305FF700EDDC72 /* Sidebar */,
+				C99B56CC26305FC600EDDC72 /* Home */,
+				C99B56CB26305FBF00EDDC72 /* Chat */,
+				C99B56CA26305FB700EDDC72 /* WishList */,
+				C99B56C926305FAF00EDDC72 /* Search */,
+				C99B56C826305FA600EDDC72 /* Create Listing */,
+				C99B56C326305D6700EDDC72 /* Login and Signup */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -301,6 +277,7 @@
 		C96A0DDF2618EA39001435E6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C96A0DAF2618AB8E001435E6 /* ViewController.swift */,
 				C96A0DE02618EA44001435E6 /* Fonts */,
 			);
 			path = Utility;
@@ -334,6 +311,8 @@
 		C96A0E082618EA5F001435E6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C96A0DB62618AB91001435E6 /* LaunchScreen.storyboard */,
+				C99B5677263044D100EDDC72 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -341,8 +320,117 @@
 		C96A0E092618EA68001435E6 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				C96A0DAB2618AB8E001435E6 /* AppDelegate.swift */,
+				C96A0DAD2618AB8E001435E6 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C99B56C326305D6700EDDC72 /* Login and Signup */ = {
+			isa = PBXGroup;
+			children = (
+				C9700D3F262CA6350045A5AE /* WelcomeVc.swift */,
+				C9700D3A262CA62B0045A5AE /* LaunchScreen.swift */,
+				C9700D44262CA7BF0045A5AE /* LoginVc.swift */,
+				C9700D49262CA8210045A5AE /* SignupVc.swift */,
+			);
+			path = "Login and Signup";
+			sourceTree = "<group>";
+		};
+		C99B56C826305FA600EDDC72 /* Create Listing */ = {
+			isa = PBXGroup;
+			children = (
+				C95652EB262E168500BE7E7B /* AddHouseRoomCollectionCell.swift */,
+				C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */,
+			);
+			path = "Create Listing";
+			sourceTree = "<group>";
+		};
+		C99B56C926305FAF00EDDC72 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */,
+				C9700D7C262CC30A0045A5AE /* SearchVc.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C99B56CA26305FB700EDDC72 /* WishList */ = {
+			isa = PBXGroup;
+			children = (
+				C9700D4E262CB6DD0045A5AE /* FavouritesVc.swift */,
+				C9AB959B262F77A800D8B77B /* TableCell.swift */,
+				C9700D53262CB8420045A5AE /* FavouriteCollectionCell.swift */,
+			);
+			path = WishList;
+			sourceTree = "<group>";
+		};
+		C99B56CB26305FBF00EDDC72 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB9595262F75E700D8B77B /* MessageListVc.swift */,
+				C9AB95A0262F7C6800D8B77B /* Chat.swift */,
+				C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */,
+				C9AB959A262F774E00D8B77B /* MessageCell.xib */,
+				C9AB958D262F741600D8B77B /* ChatListViewController.swift */,
+				C9700D74262CC0F60045A5AE /* ChatVC.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C99B56CC26305FC600EDDC72 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C956530D262E19B800BE7E7B /* HouseListModel.swift */,
+				C9565312262E1C5500BE7E7B /* AdvHomeDetailVc.swift */,
+				C9565317262E1D5700BE7E7B /* AdvHomeDetailCollectionCell.swift */,
+				C9565288262E0BBF00BE7E7B /* HomeCollectionCell.swift */,
+				C956528D262E102200BE7E7B /* SortByVc.swift */,
+				C9565283262E096500BE7E7B /* HomeVc.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C99B56CD26305FD900EDDC72 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0DB92618AB91001435E6 /* Info.plist */,
+				C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		C99B56CE26305FF700EDDC72 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				C9565321262E23FF00BE7E7B /* MenuVc.swift */,
+				C9565326262E24E900BE7E7B /* MenuTableCell.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		C99B56CF2630600F00EDDC72 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C956531C262E22BF00BE7E7B /* UserProfileVc.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C99B56EB2630607300EDDC72 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				C99B567C2630463400EDDC72 /* ReminderVc.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		C99B56F22630608300EDDC72 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C96A0DB42618AB91001435E6 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
