@@ -58,10 +58,11 @@
 		C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */; };
 		C99B5678263044D100EDDC72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99B5677263044D100EDDC72 /* Main.storyboard */; };
 		C99B567D2630463400EDDC72 /* ReminderVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B567C2630463400EDDC72 /* ReminderVc.swift */; };
+		C99B570B263066C400EDDC72 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9AB959A262F774E00D8B77B /* MessageCell.xib */; };
 		C9AB958E262F741600D8B77B /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB958D262F741600D8B77B /* ChatListViewController.swift */; };
 		C9AB9596262F75E700D8B77B /* MessageListVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB9595262F75E700D8B77B /* MessageListVc.swift */; };
 		C9AB959C262F77A800D8B77B /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB959B262F77A800D8B77B /* TableCell.swift */; };
-		C9AB95A1262F7C6900D8B77B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB95A0262F7C6800D8B77B /* Chat.swift */; };
+		C9AB95A1262F7C6900D8B77B /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB95A0262F7C6800D8B77B /* ChatModel.swift */; };
 		C9AB95D1262F856000D8B77B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -147,7 +148,7 @@
 		C9AB9595262F75E700D8B77B /* MessageListVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVc.swift; sourceTree = "<group>"; };
 		C9AB959A262F774E00D8B77B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		C9AB959B262F77A800D8B77B /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
-		C9AB95A0262F7C6800D8B77B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		C9AB95A0262F7C6800D8B77B /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		C9AB95D0262F856000D8B77B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D2163251EFD5D5FED8AA3D72 /* Pods-Dream House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House.release.xcconfig"; path = "Target Support Files/Pods-Dream House/Pods-Dream House.release.xcconfig"; sourceTree = "<group>"; };
 		F10A965D620CE9329417450E /* Pods_Dream_House_Dream_HouseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream_House_Dream_HouseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -369,7 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				C9AB9595262F75E700D8B77B /* MessageListVc.swift */,
-				C9AB95A0262F7C6800D8B77B /* Chat.swift */,
+				C9AB95A0262F7C6800D8B77B /* ChatModel.swift */,
 				C9700D67262CBAEB0045A5AE /* ChatListTableCell.swift */,
 				C9AB959A262F774E00D8B77B /* MessageCell.xib */,
 				C9AB958D262F741600D8B77B /* ChatListViewController.swift */,
@@ -565,6 +566,7 @@
 				C96A0E012618EA56001435E6 /* Poppins-ThinItalic.ttf in Resources */,
 				C96A0DF82618EA56001435E6 /* Poppins-LightItalic.ttf in Resources */,
 				C9AB95D1262F856000D8B77B /* GoogleService-Info.plist in Resources */,
+				C99B570B263066C400EDDC72 /* MessageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,7 +737,7 @@
 				C956530E262E19B800BE7E7B /* HouseListModel.swift in Sources */,
 				C9700D40262CA6350045A5AE /* WelcomeVc.swift in Sources */,
 				C9565327262E24E900BE7E7B /* MenuTableCell.swift in Sources */,
-				C9AB95A1262F7C6900D8B77B /* Chat.swift in Sources */,
+				C9AB95A1262F7C6900D8B77B /* ChatModel.swift in Sources */,
 				C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */,
 				C956528E262E102200BE7E7B /* SortByVc.swift in Sources */,
 				C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */,
@@ -925,7 +927,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P8MTHFFBL;
-				INFOPLIST_FILE = "Dream House/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Dream House/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -945,7 +947,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P8MTHFFBL;
-				INFOPLIST_FILE = "Dream House/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Dream House/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

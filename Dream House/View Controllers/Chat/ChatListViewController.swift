@@ -24,7 +24,21 @@ class ChatListVc: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getFireBaseData1()
+        menuIcon()
     }
+    
+    
+    func menuIcon(){
+        let navBarPlusButton = UIBarButtonItem(image: UIImage(named:  "menu"),  style: .plain, target: self, action: #selector(tabNavigations))
+        navigationItem.leftBarButtonItem = navBarPlusButton
+    }
+    
+    @objc func tabNavigations(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuVc") as! MenuVc
+        vc.ref = self
+        self.transitionVc(vc: vc, duration: 0.1, type: .fromLeft)
+    }
+    
     
     func getFireBaseData1() {
         let userId = Auth.auth().currentUser?.email ?? ""

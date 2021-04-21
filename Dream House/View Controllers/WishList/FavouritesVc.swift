@@ -21,18 +21,28 @@ class FavouritesVc: UIViewController {
         wishListCollectionView.delegate = self
         wishListCollectionView.dataSource = self
         self.wishListCollectionView.reloadData()
+        menuIcon()
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "Favourites"
     }
     
-
+    func menuIcon(){
+        let navBarPlusButton = UIBarButtonItem(image: UIImage(named:  "menu"),  style: .plain, target: self, action: #selector(tabNavigations))
+        navigationItem.leftBarButtonItem = navBarPlusButton
+    }
+    
+    @objc func tabNavigations(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MenuVc") as! MenuVc
+        vc.ref = self
+        self.transitionVc(vc: vc, duration: 0.1, type: .fromLeft)
+    }
 
 }
 
 extension FavouritesVc : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return fvtModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

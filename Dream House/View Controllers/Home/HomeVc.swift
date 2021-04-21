@@ -35,6 +35,7 @@ class HomeVc: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         getFBdata(findBy: "House")
         self.menuIcon()
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "Home"
     }

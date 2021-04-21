@@ -117,7 +117,7 @@ class AddHouseRoomVc: UIViewController {
     }
     
     @IBAction func skipAction(_ sender: Any) {
-       
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func locationBtnAction(_ sender: Any) {

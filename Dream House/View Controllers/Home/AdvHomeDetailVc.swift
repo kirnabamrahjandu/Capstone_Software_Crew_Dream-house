@@ -49,14 +49,22 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if Auth.auth().currentUser?.email == self.emailAdd{
-            self.editBtn.isHidden = false
-            self.deleteBtn.isHidden = false
+        if userType == "user"{
+            self.editBtn.isHidden = true
+            self.editBtn.isHidden = true
         }
         else{
-            self.editBtn.isHidden = true
-            self.editBtn.isHidden = true
+            if Auth.auth().currentUser?.email == self.emailAdd{
+                self.editBtn.isHidden = false
+                self.deleteBtn.isHidden = false
+            }
+            else{
+                self.editBtn.isHidden = true
+                self.editBtn.isHidden = true
+            }
         }
+        
+
     }
     
     @IBAction func deleteAction(_ sender: Any) {
