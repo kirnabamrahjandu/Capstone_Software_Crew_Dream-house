@@ -57,6 +57,7 @@
 		C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */; };
 		C9700D87262CC6A10045A5AE /* AddHouseRoomVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */; };
 		C99B5678263044D100EDDC72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99B5677263044D100EDDC72 /* Main.storyboard */; };
+		C99B567D2630463400EDDC72 /* ReminderVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B567C2630463400EDDC72 /* ReminderVc.swift */; };
 		C9AB958E262F741600D8B77B /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB958D262F741600D8B77B /* ChatListViewController.swift */; };
 		C9AB9596262F75E700D8B77B /* MessageListVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB9595262F75E700D8B77B /* MessageListVc.swift */; };
 		C9AB959C262F77A800D8B77B /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB959B262F77A800D8B77B /* TableCell.swift */; };
@@ -141,6 +142,7 @@
 		C9700D81262CC3CC0045A5AE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		C9700D86262CC6A10045A5AE /* AddHouseRoomVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseRoomVc.swift; sourceTree = "<group>"; };
 		C99B5677263044D100EDDC72 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "Dream House/Storyboards/Main.storyboard"; sourceTree = SOURCE_ROOT; };
+		C99B567C2630463400EDDC72 /* ReminderVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVc.swift; sourceTree = "<group>"; };
 		C9AB958D262F741600D8B77B /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		C9AB9595262F75E700D8B77B /* MessageListVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVc.swift; sourceTree = "<group>"; };
 		C9AB959A262F774E00D8B77B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				C9700D49262CA8210045A5AE /* SignupVc.swift */,
 				C9AB959B262F77A800D8B77B /* TableCell.swift */,
 				C9AB9595262F75E700D8B77B /* MessageListVc.swift */,
+				C99B567C2630463400EDDC72 /* ReminderVc.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				C9700D4A262CA8210045A5AE /* SignupVc.swift in Sources */,
 				C9700D45262CA7BF0045A5AE /* LoginVc.swift in Sources */,
 				C9565289262E0BBF00BE7E7B /* HomeCollectionCell.swift in Sources */,
+				C99B567D2630463400EDDC72 /* ReminderVc.swift in Sources */,
 				C96A0DB02618AB8E001435E6 /* ViewController.swift in Sources */,
 				C9700D54262CB8420045A5AE /* FavouriteCollectionCell.swift in Sources */,
 				C9AB9596262F75E700D8B77B /* MessageListVc.swift in Sources */,
