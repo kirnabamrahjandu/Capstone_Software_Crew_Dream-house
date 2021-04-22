@@ -24,14 +24,24 @@ class LoginVc: UIViewController, GIDSignInDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginBtn.setCornerRadius()
-        self.emailTF.text = "abc@gmail.com"
-        self.passwordTF.text = "123456"
         self.googleLoginBtn.layer.cornerRadius = 40
         GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     @IBAction func loginBrnAction(_ sender: Any) {
-        self.loginAction()
+        
+        if self.emailTF.text?.replacingOccurrences(of: " ", with: "") == "" {
+            self.showAlert(title: "Please Check", message: "Email Cannot be blank")
+            return
+        }
+        else if self.passwordTF.text?.replacingOccurrences(of: " ", with: "") == "" {
+        self.showAlert(title: "Please Check", message: "Password Cannot be blank")
+            return
+        }
+        else{
+            self.loginAction()
+        }
+        
     }
 
     
@@ -75,17 +85,16 @@ class LoginVc: UIViewController, GIDSignInDelegate {
         SVProgressHUD.show()
         Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!, completion: {
                (user, error) in
-            if Auth.auth().currentUser != nil {
-                
+            SVProgressHUD.dismiss()
+            if error == nil{
                 email = Auth.auth().currentUser?.email ?? ""
                 self.logbye()
-               }
-                   else{
-                       SVProgressHUD.dismiss()
-                    self.showAlert(title: "ERROR", message: error!.localizedDescription)
-                   }
-                   
-                   
+            }
+            else{
+                SVProgressHUD.dismiss()
+             self.showAlert(title: "ERROR", message: error!.localizedDescription)
+            }
+        
            }
        ) }
     
@@ -99,6 +108,9 @@ class LoginVc: UIViewController, GIDSignInDelegate {
                 username = dictonary["username"] as! String
                 SVProgressHUD.dismiss()
                 self.pushVc(storyboardId: "MainTabBarVc")
+            }
+            else{
+                self.showAlert(title: "Error", message: "User Not Exists")
             }
         } ,withCancel: nil)
         

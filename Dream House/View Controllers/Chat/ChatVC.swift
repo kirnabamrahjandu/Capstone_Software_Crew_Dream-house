@@ -63,6 +63,10 @@ class ChatVC: UIViewController {
     
     @IBAction func sendPressed(_ sender: UIButton) {
         
+        if self.messageTextfield.text?.replacingOccurrences(of: " ", with: "") == "" {
+            self.showAlert(title: "Please Check", message: "Message Cannot be blank")
+            
+        }
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField: messageSender,

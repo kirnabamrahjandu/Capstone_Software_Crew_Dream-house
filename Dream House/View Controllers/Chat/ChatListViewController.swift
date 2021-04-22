@@ -41,6 +41,7 @@ class ChatListVc: UIViewController {
     
     
     func getFireBaseData1() {
+        var tempArray = [String]()
         let userId = Auth.auth().currentUser?.email ?? ""
         Firestore.firestore().collection("messages").whereField("sender", isEqualTo: userId).getDocuments { (snapShot, err) in
                  if let err = err {
@@ -52,13 +53,26 @@ class ChatListVc: UIViewController {
                      for document in snapShot!.documents {
                          print("\(document.documentID) => \(document.data())")
                         self.recNameArray.append((document.data())["receiver"] as? String ?? "")
-                        
-                        let filtered = self.recNameArray.filter{$0 != Auth.auth().currentUser?.email}
-                        self.recNameArray = filtered
-                        let unique = self.recNameArray.orderedSet
-                        
-                        print(unique, "is array value")
-                        self.recNameArray = unique
+                        self.recNameArray.removeDuplicates()
+                        self.chatListTableView.reloadData()
+                     }
+                     
+                 }
+             }
+        getFireBaseData2()
+      }
+    
+    func getFireBaseData2() {
+        let userId = Auth.auth().currentUser?.email ?? ""
+        Firestore.firestore().collection("messages").whereField("receiver", isEqualTo: userId).getDocuments { (snapShot, err) in
+                 if let err = err {
+                     print("Error getting documents: \(err)")
+                 } else {
+                    var tempArray = [String]()
+                     for document in snapShot!.documents {
+                         print("\(document.documentID) => \(document.data())")
+                        self.recNameArray.append((document.data())["sender"] as? String ?? "")
+                        self.recNameArray.removeDuplicates()
                         self.chatListTableView.reloadData()
                      }
                      

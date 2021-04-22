@@ -15,7 +15,8 @@ class WelcomeVc: UIViewController {
     //MARK:- VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.HouseProviderBtn.setCornerRadius()
+        self.userBtn.setCornerRadius()
     }
     
     //MARK:- IBACTIONS

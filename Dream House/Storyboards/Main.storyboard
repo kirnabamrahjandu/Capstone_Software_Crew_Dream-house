@@ -288,8 +288,11 @@
                                                 <rect key="frame" x="20" y="750" width="335" height="150"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQR-ng-qqW">
-                                                        <rect key="frame" x="112" y="60" width="111" height="30"/>
+                                                        <rect key="frame" x="102.5" y="60" width="130" height="30"/>
                                                         <color key="backgroundColor" name="Theme Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="130" id="RR9-od-u5i"/>
+                                                        </constraints>
                                                         <state key="normal" title="   Select Video   ">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -655,7 +658,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqr-6A-Y9q" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="40" y="139.5" width="295" height="39"/>
+                                <rect key="frame" x="40" y="139.5" width="295" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -674,7 +677,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuo-cg-Gqk" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="40" y="228.5" width="295" height="39.5"/>
+                                <rect key="frame" x="40" y="208" width="295" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -687,7 +690,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zt0-89-GDk">
-                                <rect key="frame" x="40" y="308" width="295" height="60"/>
+                                <rect key="frame" x="40" y="265" width="295" height="60"/>
                                 <color key="backgroundColor" name="Theme Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="WdD-Nt-Uk5"/>
@@ -701,7 +704,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO5-Rq-n2T">
-                                <rect key="frame" x="77.5" y="388" width="189.5" height="24"/>
+                                <rect key="frame" x="77.5" y="345" width="189.5" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="U8T-eP-aQZ"/>
                                 </constraints>
@@ -710,7 +713,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUD-rX-PI7">
-                                <rect key="frame" x="277" y="383.5" width="58" height="33"/>
+                                <rect key="frame" x="277" y="340.5" width="58" height="33"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
@@ -820,7 +823,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UF1-ew-4Ra" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="249.5" width="315" height="39"/>
+                                <rect key="frame" x="30" y="249.5" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -833,7 +836,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XF4-Q4-KKB" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="338.5" width="315" height="39.5"/>
+                                <rect key="frame" x="30" y="333.5" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
@@ -846,7 +849,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYm-Ll-rC5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="428" width="315" height="39"/>
+                                <rect key="frame" x="30" y="417.5" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -859,7 +862,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9i-ul-21v">
-                                <rect key="frame" x="30" y="517" width="315" height="60"/>
+                                <rect key="frame" x="30" y="501.5" width="315" height="60"/>
                                 <color key="backgroundColor" name="Theme Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Pvu-Fa-4UZ"/>
@@ -931,21 +934,21 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="70e-AO-Zaz">
-                                    <size key="itemSize" width="267" height="265"/>
+                                    <size key="itemSize" width="267" height="257"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavouriteCollectionCell" id="WbZ-1f-clQ" customClass="FavouriteCollectionCell" customModule="Dream_House" customModuleProvider="target">
-                                        <rect key="frame" x="54" y="0.0" width="267" height="265"/>
+                                        <rect key="frame" x="54" y="0.0" width="267" height="257"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lQo-xs-mMM">
-                                            <rect key="frame" x="0.0" y="0.0" width="267" height="265"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="257"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x06-ic-R9s">
-                                                    <rect key="frame" x="10" y="10" width="247" height="245"/>
+                                                    <rect key="frame" x="10" y="10" width="247" height="237"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Njz-SQ-XtV">
                                                             <rect key="frame" x="10" y="10" width="227" height="130"/>
@@ -965,13 +968,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Location Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-7Q-1oL">
-                                                            <rect key="frame" x="10" y="174" width="227" height="20"/>
+                                                            <rect key="frame" x="10" y="174" width="227" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 150 / Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqP-mL-TCb">
-                                                            <rect key="frame" x="10" y="199" width="227" height="36"/>
+                                                            <rect key="frame" x="10" y="195.5" width="227" height="31.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1032,7 +1035,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecx-3g-WLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7865" y="797"/>
+            <point key="canvasLocation" x="7864.8000000000002" y="796.55172413793105"/>
         </scene>
         <!--User Profile Vc-->
         <scene sceneID="BDF-9J-jqw">
@@ -1060,7 +1063,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add profile" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-2h-0kW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add profile" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-2h-0kW">
                                 <rect key="frame" x="137.5" y="84" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="JYW-aM-NeO"/>
@@ -1166,8 +1169,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="historyImage" destination="ec9-Sx-xWr" id="OxR-om-kjv"/>
-                                            <outlet property="historyLabel" destination="vZF-gb-NCe" id="EkK-7f-XEG"/>
+                                            <outlet property="seachIMageIcon" destination="ec9-Sx-xWr" id="9JW-NI-gMW"/>
+                                            <outlet property="searchHistoryLabel" destination="vZF-gb-NCe" id="qjc-XS-x4A"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1213,7 +1216,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hMf-j0-UAO">
-                                <rect key="frame" x="0.0" y="194" width="375" height="414"/>
+                                <rect key="frame" x="0.0" y="240" width="375" height="368"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YVp-eM-Yel">
                                     <size key="itemSize" width="267" height="265"/>
@@ -1306,7 +1309,7 @@
                                 </connections>
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kug-1s-E2r">
-                                <rect key="frame" x="10" y="104" width="355" height="51"/>
+                                <rect key="frame" x="10" y="150" width="355" height="51"/>
                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M2q-tv-L3s"/>
@@ -1340,6 +1343,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxH-07-uQy">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="searchAction:" destination="mAH-EF-xfl" eventType="touchUpInside" id="Irs-Eo-jL6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -1350,6 +1361,20 @@
                                     <constraint firstAttribute="bottom" secondItem="Kj6-o5-qHx" secondAttribute="bottom" constant="5" id="yBf-e9-FUS"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yc-OK-6cB">
+                                <rect key="frame" x="40" y="107" width="295" height="35"/>
+                                <color key="backgroundColor" name="Theme Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cVE-Mq-Smg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <state key="normal" title="Reset Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetSearchAction:" destination="mAH-EF-xfl" eventType="touchUpInside" id="XXu-i0-h93"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A2U-hV-cGh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1361,9 +1386,12 @@
                             <constraint firstItem="kug-1s-E2r" firstAttribute="leading" secondItem="A2U-hV-cGh" secondAttribute="leading" constant="10" id="QvJ-vO-vnV"/>
                             <constraint firstItem="e5f-Lj-kYR" firstAttribute="leading" secondItem="fGx-Oz-iAy" secondAttribute="leading" constant="5" id="TWy-ev-WLP"/>
                             <constraint firstItem="A2U-hV-cGh" firstAttribute="trailing" secondItem="kug-1s-E2r" secondAttribute="trailing" constant="10" id="aOq-5P-kuU"/>
+                            <constraint firstItem="kug-1s-E2r" firstAttribute="top" secondItem="7yc-OK-6cB" secondAttribute="bottom" constant="8" id="bkY-Ms-ezR"/>
                             <constraint firstItem="A2U-hV-cGh" firstAttribute="trailing" secondItem="hMf-j0-UAO" secondAttribute="trailing" id="cFW-3P-frx"/>
+                            <constraint firstItem="7yc-OK-6cB" firstAttribute="top" secondItem="e5f-Lj-kYR" secondAttribute="bottom" constant="8" id="cFf-PM-u3b"/>
+                            <constraint firstItem="A2U-hV-cGh" firstAttribute="trailing" secondItem="7yc-OK-6cB" secondAttribute="trailing" constant="40" id="f4h-fS-uN0"/>
                             <constraint firstItem="e5f-Lj-kYR" firstAttribute="top" secondItem="A2U-hV-cGh" secondAttribute="top" constant="5" id="g0l-0c-Ocf"/>
-                            <constraint firstItem="kug-1s-E2r" firstAttribute="top" secondItem="e5f-Lj-kYR" secondAttribute="bottom" constant="5" id="kYI-Av-hT4"/>
+                            <constraint firstItem="7yc-OK-6cB" firstAttribute="leading" secondItem="A2U-hV-cGh" secondAttribute="leading" constant="40" id="sNi-XT-ypa"/>
                             <constraint firstItem="A2U-hV-cGh" firstAttribute="trailing" secondItem="eTo-TY-BoF" secondAttribute="trailing" constant="20" id="usq-5O-7yi"/>
                             <constraint firstItem="A2U-hV-cGh" firstAttribute="bottom" secondItem="hMf-j0-UAO" secondAttribute="bottom" constant="10" id="vfJ-Xi-Zsg"/>
                         </constraints>
@@ -1372,6 +1400,9 @@
                     <connections>
                         <outlet property="homeCollectionView" destination="hMf-j0-UAO" id="xRY-UE-LWq"/>
                         <outlet property="houseRoomSegmentBtn" destination="kug-1s-E2r" id="obd-go-UCb"/>
+                        <outlet property="resetSearchBtn" destination="7yc-OK-6cB" id="Jll-EU-M1p"/>
+                        <outlet property="resetSearchConstant" destination="cVE-Mq-Smg" id="PAB-12-hUu"/>
+                        <outlet property="searchLocationBtn" destination="GxH-07-uQy" id="nph-oq-5iD"/>
                         <outlet property="searchTF" destination="Kj6-o5-qHx" id="x40-sd-J1f"/>
                         <outlet property="searchTFBackView" destination="e5f-Lj-kYR" id="c2J-ah-CK3"/>
                     </connections>
@@ -1536,7 +1567,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uih-Bg-5nd">
-                                        <rect key="frame" x="0.0" y="10" width="375" height="708"/>
+                                        <rect key="frame" x="0.0" y="10" width="375" height="907"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Prs-gO-n5y">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
@@ -1591,7 +1622,7 @@
                                                 </cells>
                                             </collectionView>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Total Rooms" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDI-bA-NAp" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="30" y="307" width="315" height="34"/>
+                                                <rect key="frame" x="30" y="547" width="315" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Dnl-AB-wtO"/>
                                                 </constraints>
@@ -1613,7 +1644,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Total Floors" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDB-lr-agr" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="30" y="381" width="315" height="34"/>
+                                                <rect key="frame" x="30" y="621" width="315" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Zv6-xD-IwQ"/>
                                                 </constraints>
@@ -1635,7 +1666,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CwD-IF-cHo">
-                                                <rect key="frame" x="10" y="653" width="355" height="50"/>
+                                                <rect key="frame" x="10" y="852" width="355" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zn-EJ-zXo">
                                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="50"/>
@@ -1685,7 +1716,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Rent Per Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-ul-ChR" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="30" y="455" width="315" height="39"/>
+                                                <rect key="frame" x="30" y="695" width="315" height="18.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1704,7 +1735,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bus Stand" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-2p-TER" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="30" y="534" width="315" height="39"/>
+                                                <rect key="frame" x="30" y="753.5" width="315" height="18.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1745,13 +1776,31 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPq-zK-JIX">
-                                                <rect key="frame" x="50" y="593" width="275" height="40"/>
+                                                <rect key="frame" x="50" y="792" width="275" height="40"/>
                                                 <color key="backgroundColor" name="Theme Color"/>
                                                 <state key="normal" title="Set Reminder For Meeting">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setReminderAction:" destination="afY-OG-ETZ" eventType="touchUpInside" id="xxb-dq-5k2"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfY-RM-JVT" customClass="AvpVideoPlayer" customModule="Dream_House" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="307" width="275" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="vi6-df-d6o"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AK-cL-2E7">
+                                                <rect key="frame" x="170" y="389.5" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="X9B-W6-Es8"/>
+                                                    <constraint firstAttribute="height" constant="35" id="jhW-a2-70k"/>
+                                                </constraints>
+                                                <state key="normal" image="play"/>
+                                                <connections>
+                                                    <action selector="playBtnAction:" destination="afY-OG-ETZ" eventType="touchUpInside" id="kbJ-4F-hCk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1763,6 +1812,7 @@
                                             <constraint firstItem="CwD-IF-cHo" firstAttribute="leading" secondItem="Uih-Bg-5nd" secondAttribute="leading" constant="10" id="5C6-fm-ZVT"/>
                                             <constraint firstItem="FDB-lr-agr" firstAttribute="top" secondItem="pDI-bA-NAp" secondAttribute="bottom" constant="40" id="5lL-4R-KB8"/>
                                             <constraint firstItem="pDI-bA-NAp" firstAttribute="leading" secondItem="Uih-Bg-5nd" secondAttribute="leading" constant="30" id="7fc-vf-VOE"/>
+                                            <constraint firstItem="2AK-cL-2E7" firstAttribute="centerY" secondItem="CfY-RM-JVT" secondAttribute="centerY" id="A1t-tc-JUz"/>
                                             <constraint firstItem="FDB-lr-agr" firstAttribute="leading" secondItem="pDI-bA-NAp" secondAttribute="leading" id="DI1-bu-ITc"/>
                                             <constraint firstItem="kgd-5K-tFf" firstAttribute="trailing" secondItem="Prs-gO-n5y" secondAttribute="trailing" constant="-80" id="J3a-TI-U8f"/>
                                             <constraint firstItem="9cK-Wx-xOz" firstAttribute="centerY" secondItem="kgd-5K-tFf" secondAttribute="centerY" id="JpO-kJ-mSc"/>
@@ -1770,12 +1820,14 @@
                                             <constraint firstItem="VDh-ul-ChR" firstAttribute="leading" secondItem="FDB-lr-agr" secondAttribute="leading" id="L1x-KL-pus"/>
                                             <constraint firstItem="VDh-ul-ChR" firstAttribute="top" secondItem="FDB-lr-agr" secondAttribute="bottom" constant="40" id="L9i-8R-NaV"/>
                                             <constraint firstItem="VDh-ul-ChR" firstAttribute="trailing" secondItem="FDB-lr-agr" secondAttribute="trailing" id="LOk-Z1-OWd"/>
-                                            <constraint firstItem="pDI-bA-NAp" firstAttribute="top" secondItem="Prs-gO-n5y" secondAttribute="bottom" constant="40" id="N4d-Aw-25N"/>
                                             <constraint firstItem="CwD-IF-cHo" firstAttribute="top" secondItem="WPq-zK-JIX" secondAttribute="bottom" constant="20" id="NLx-uh-Yxf"/>
+                                            <constraint firstItem="CfY-RM-JVT" firstAttribute="top" secondItem="Prs-gO-n5y" secondAttribute="bottom" constant="40" id="OVr-fS-cw6"/>
                                             <constraint firstItem="Prs-gO-n5y" firstAttribute="top" secondItem="Uih-Bg-5nd" secondAttribute="top" id="SZ4-CU-gGc"/>
+                                            <constraint firstItem="pDI-bA-NAp" firstAttribute="top" secondItem="CfY-RM-JVT" secondAttribute="bottom" constant="40" id="VCa-9a-p3C"/>
                                             <constraint firstAttribute="trailing" secondItem="WPq-zK-JIX" secondAttribute="trailing" constant="50" id="Vk7-Mo-y8i"/>
                                             <constraint firstItem="JRh-2p-TER" firstAttribute="top" secondItem="VDh-ul-ChR" secondAttribute="bottom" constant="40" id="VlK-dl-vll"/>
                                             <constraint firstItem="CwD-IF-cHo" firstAttribute="top" secondItem="JRh-2p-TER" secondAttribute="bottom" constant="80" id="YDs-Jf-2Gn"/>
+                                            <constraint firstAttribute="trailing" secondItem="CfY-RM-JVT" secondAttribute="trailing" constant="50" id="e2L-BF-K8b"/>
                                             <constraint firstItem="FDB-lr-agr" firstAttribute="trailing" secondItem="pDI-bA-NAp" secondAttribute="trailing" id="eJG-jq-x40"/>
                                             <constraint firstItem="WPq-zK-JIX" firstAttribute="top" secondItem="JRh-2p-TER" secondAttribute="bottom" constant="20" id="eiM-vs-fTM"/>
                                             <constraint firstItem="Prs-gO-n5y" firstAttribute="leading" secondItem="Uih-Bg-5nd" secondAttribute="leading" id="hm5-bY-RIZ"/>
@@ -1784,6 +1836,8 @@
                                             <constraint firstAttribute="trailing" secondItem="CwD-IF-cHo" secondAttribute="trailing" constant="10" id="mjq-Mu-BBL"/>
                                             <constraint firstItem="9cK-Wx-xOz" firstAttribute="trailing" secondItem="Prs-gO-n5y" secondAttribute="trailing" constant="-10" id="n8r-3c-H75"/>
                                             <constraint firstItem="JRh-2p-TER" firstAttribute="leading" secondItem="VDh-ul-ChR" secondAttribute="leading" id="orX-p3-suZ"/>
+                                            <constraint firstItem="CfY-RM-JVT" firstAttribute="leading" secondItem="Uih-Bg-5nd" secondAttribute="leading" constant="50" id="poS-AS-Yop"/>
+                                            <constraint firstItem="2AK-cL-2E7" firstAttribute="centerX" secondItem="CfY-RM-JVT" secondAttribute="centerX" id="rX3-2s-hgN"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1811,9 +1865,12 @@
                         <outlet property="busStandLoc" destination="JRh-2p-TER" id="qul-1w-WXR"/>
                         <outlet property="deleteBtn" destination="9cK-Wx-xOz" id="0ze-8N-g3v"/>
                         <outlet property="editBtn" destination="kgd-5K-tFf" id="Zar-Ch-iDh"/>
+                        <outlet property="messageBtn" destination="bu1-BE-Umi" id="RCk-KY-0YW"/>
+                        <outlet property="playBtn" destination="2AK-cL-2E7" id="a4y-RH-KFG"/>
                         <outlet property="rentPerMonth" destination="VDh-ul-ChR" id="19Y-az-yju"/>
                         <outlet property="totalBedroomsTF" destination="pDI-bA-NAp" id="ztc-2f-mlx"/>
                         <outlet property="totalFloorsTF" destination="FDB-lr-agr" id="KMl-o3-7wm"/>
+                        <outlet property="videoView" destination="CfY-RM-JVT" id="CJc-6w-oeY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU1-YK-Vir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1970,7 +2027,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-DO-GIy" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="208" width="315" height="39"/>
+                                <rect key="frame" x="30" y="208" width="315" height="34"/>
                                 <color key="textColor" name="Theme Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2020,34 +2077,34 @@
     </scenes>
     <designables>
         <designable name="FDB-lr-agr">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="75" height="18.5"/>
         </designable>
         <designable name="JRh-2p-TER">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="66" height="18.5"/>
         </designable>
         <designable name="TYm-Ll-rC5">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="90.5" height="34"/>
         </designable>
         <designable name="UF1-ew-4Ra">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="94" height="34"/>
         </designable>
         <designable name="VDh-ul-ChR">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="100" height="18.5"/>
         </designable>
         <designable name="XF4-Q4-KKB">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="hEG-DO-GIy">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="167.5" height="34"/>
         </designable>
         <designable name="jqr-6A-Y9q">
-            <size key="intrinsicContentSize" width="295" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="121.5" height="18.5"/>
         </designable>
         <designable name="pDI-bA-NAp">
-            <size key="intrinsicContentSize" width="315" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="79.5" height="18.5"/>
         </designable>
         <designable name="uuo-cg-Gqk">
-            <size key="intrinsicContentSize" width="295" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="62.5" height="17"/>
         </designable>
     </designables>
     <resources>
@@ -2064,6 +2121,7 @@
         <image name="google" width="128" height="128"/>
         <image name="history" width="512" height="512"/>
         <image name="home" width="25" height="25"/>
+        <image name="play" width="512" height="512"/>
         <image name="profile" width="25" height="25"/>
         <image name="search" width="25" height="25"/>
         <image name="sort-down" width="30" height="30"/>

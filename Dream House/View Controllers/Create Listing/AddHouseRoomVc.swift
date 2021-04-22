@@ -12,6 +12,7 @@ import AVFoundation
 import MobileCoreServices
 import FirebaseAuth
 import SVProgressHUD
+
 class AddHouseRoomVc: UIViewController {
     
     @IBOutlet weak var postBtn: UIButton!
@@ -47,6 +48,7 @@ class AddHouseRoomVc: UIViewController {
     var contactNum = ""
     var locationArea = ""
     var houseNo = ""
+    var videoUrl = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,10 +100,12 @@ class AddHouseRoomVc: UIViewController {
     @IBAction func postAction(_ sender: Any) {
         SVProgressHUD.show()
             print(imageArray.count, "is slec")
+        if self.imageArray.count != 0 {
             for i in 0..<imageArray.count{
                 self.uploadImage(imageArray[i]) { (urrl) in
                     self.imagesURLArray.append(urrl!)
                     print(urrl, "is appended in array")
+                    
                     if self.imageArray.count == self.imagesURLArray.count{
                         print("serivce hitted")
                         self.uploadData(houseImage: self.imagesURLArray)
@@ -112,6 +116,11 @@ class AddHouseRoomVc: UIViewController {
                 }
             }
             print("loop exited")
+        }
+        else{
+            self.uploadData(houseImage: self.imagesURLArray)
+        }
+
         
 
     }
@@ -180,14 +189,25 @@ class AddHouseRoomVc: UIViewController {
             hImageArray.append(str)
         }
 
-        let dict = ["ownerName": username,"houseNo": self.houseNoTF.text ,"Email": email, "Type": "Provider" ,"ProfilePic": userProfileURL, "Rent" : self.rentLabel.text, "Location": self.addressTF.text, "Phone": self.contactNumber.text, "busStand": self.locationToBusStandTF.text, "HouseImages": hImageArray, "userId": Auth.auth().currentUser?.uid ?? "", "addType": self.roomHouse, "totalRooms":self.numberOfRooms.text, "totalFloors": self.numberOfFloors.text] as [String : Any]
+        var tempId = ""
+       
         
         if edit == "1"{
-            self.userRef = Database.database().reference().child("Rent").child(self.uidRef)
+            self.userRef = Database.database().reference().child("Rent").child(uidRef)
+            
         }
         else{
             self.userRef = Database.database().reference().child("Rent").childByAutoId()
+            uidRef = (String(describing: userRef!)).replacingOccurrences(of: "https://dream-house-340cb-default-rtdb.firebaseio.com/Rent/", with: "")
         }
+        
+        var filteredRent = self.rentLabel.text
+        if ((filteredRent?.contains("$")) != nil){
+            filteredRent = rentLabel.text?.replacingOccurrences(of: "$", with: "")
+        }
+        
+         
+        let dict = ["ownerName": username, "Email": email, "Type": "Provider" ,"ProfilePic": userProfileURL, "Rent" : filteredRent!, "Location": self.addressTF.text!, "Phone": self.contactNumber.text!, "busStand": self.locationToBusStandTF.text!, "HouseImages": hImageArray, "userId": Auth.auth().currentUser?.uid ?? "", "addType": self.roomHouse, "totalRooms":self.numberOfRooms.text!, "totalFloors": self.numberOfFloors.text!, "randomId": uidRef, "houseNo" : self.houseNoTF.text!, "video":videoUrl] as [String : Any]
         
        // let userRef
         userRef?.updateChildValues(dict, withCompletionBlock: { (err, ref) in
@@ -198,6 +218,7 @@ class AddHouseRoomVc: UIViewController {
             SVProgressHUD.dismiss()
             let alert = UIAlertController(title: "Congratulations", message: "Yeah!, \n Your Add for \(self.roomHouse) is posted successfully. We will let you know, when someone interested in your Advertisement", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Login", style: .default, handler: {(UIAlertAction) in
+                self.navigationController?.popViewController(animated: true)
             }
             )
             alert.addAction(restartAction)
@@ -216,6 +237,41 @@ extension AddHouseRoomVc : UIImagePickerControllerDelegate , UINavigationControl
         if info[UIImagePickerController.InfoKey.mediaType] as! String == "public.movie"{
             self.selectVideoBtn.setTitle("Video Selected", for: .normal)
             self.selectVideoBtn.isUserInteractionEnabled = false
+            do {
+                let videoUrl1: URL = info[UIImagePickerController.InfoKey.mediaURL] as! URL
+                
+                let urlString = videoUrl1.relativeString
+                
+                let urlSlices = urlString.split(separator: ".")
+                
+                //Create a temp directory using the file name
+                
+                let tempDirectoryURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+                
+                let targetURL = tempDirectoryURL.appendingPathComponent(String(urlSlices[1])).appendingPathExtension(String(urlSlices.first!))
+                
+                
+                
+                //Copy the video over
+                
+                try FileManager.default.copyItem(at: videoUrl1, to: targetURL)
+                
+                
+                if let videoData =  NSData(contentsOf: videoUrl1 as URL){
+                                        
+                    self.uploadDataToFirebase(videoData: videoData)
+                    
+                }
+                
+                
+            }catch{
+                
+                
+                
+                print(error.localizedDescription)
+                
+            }
+            
         }
         else{
             self.imageArray.append(info[UIImagePickerController.InfoKey.editedImage] as! UIImage)
@@ -261,8 +317,6 @@ extension AddHouseRoomVc :GMSAutocompleteViewControllerDelegate, GMSAutocomplete
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         print("original lat", place.coordinate.latitude)
         print("original long", place.coordinate.longitude)
-
-        
         autoComplete.dismiss(animated: true, completion: nil)
     }
     
@@ -284,6 +338,7 @@ extension AddHouseRoomVc :GMSAutocompleteViewControllerDelegate, GMSAutocomplete
                            didFailAutocompleteWithError error: Error){
         print("Error: ", error.localizedDescription)
     }
+    
     func viewController(_ viewController: GMSAutocompleteViewController, didSelect prediction: GMSAutocompletePrediction) -> Bool {
         print(prediction.attributedFullText, "did selected")
         addressTF.text = prediction.attributedFullText.string
@@ -291,6 +346,61 @@ extension AddHouseRoomVc :GMSAutocompleteViewControllerDelegate, GMSAutocomplete
         return true
     }
     
+       
+    func uploadDataToFirebase(videoData: NSData){
+        
+        self.uploadVideoToFirebase(videoData) { (url) in
+            
+            
+            if url != nil{
+                print("Video URL", url!)
+                self.videoUrl = String(describing: url!)
+            }
+                
+            else{
+                print("video not uploaded.")
+            }
+        }
+}
+
+    func uploadVideoToFirebase(_ video:NSData, completion: @escaping ((_ url: URL?) ->())){
+        
+        let storageRefs = Storage.storage().reference().child("videos/\(Auth.auth().currentUser?.uid)")
+        
+        let metaData = StorageMetadata()
+        
+        metaData.contentType = "video/mp4"
+        
+        storageRefs.putData(video as Data, metadata: metaData) { (metadata, error) in
+            
+            if error == nil {
+                
+                print("sucess")
+                
+                storageRefs.downloadURL(completion: { (url, error) in
+                    
+                    if let videoUrl = url{
+                        
+                        completion(videoUrl)
+                        
+                    }
+                    
+                })
+                
+            }
+                
+            else {
+                
+                print(error?.localizedDescription, "is errrrr")
+                
+                print("error in saving image to firebase")
+                
+                completion(nil)
+                
+            }
+            
+        }
+        
+    }
     
 }
-    

@@ -32,9 +32,7 @@ class UserProfileVc: UIViewController {
         self.navigationItem.title = "My Profile"
     }
 
-
     func menuIcon(){
-        
         let dp = userProfileURL
         let postedImage = dp
         let url = URL(string: postedImage)

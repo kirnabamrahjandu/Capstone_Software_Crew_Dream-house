@@ -8,6 +8,7 @@ import UIKit
 import MessageUI
 import FirebaseAuth
 import FirebaseDatabase
+import SVProgressHUD
 
 class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     
@@ -25,6 +26,11 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var deleteBtn: UIButton!
     
+    @IBOutlet var messageBtn: UIButton!
+    
+    @IBOutlet var playBtn: UIButton!
+    
+    @IBOutlet var videoView: AvpVideoPlayer!
     
     var totalBed = ""
     var totalFloors = ""
@@ -37,6 +43,9 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     var locationArea = ""
     var addType = ""
     var houseNo = ""
+    var refImgArray = [UIImage]()
+    var username = ""
+    var videoURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,23 +53,27 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
         self.totalFloorsTF.text = totalFloors
         self.rentPerMonth.text = rent
         self.busStandLoc.text = busStand
+        self.videoView.configure(url: videoURL)
         advHomeDetailCollectionView.delegate = self
         advHomeDetailCollectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.playBtn.setImage(UIImage(named: "play"), for: .normal)
         if userType == "user"{
             self.editBtn.isHidden = true
-            self.editBtn.isHidden = true
+            self.deleteBtn.isHidden = true
         }
         else{
             if Auth.auth().currentUser?.email == self.emailAdd{
                 self.editBtn.isHidden = false
                 self.deleteBtn.isHidden = false
+                self.messageBtn.isHidden = true
             }
             else{
                 self.editBtn.isHidden = true
-                self.editBtn.isHidden = true
+                self.deleteBtn.isHidden = true
+                self.messageBtn.isHidden = false
             }
         }
         
@@ -81,38 +94,52 @@ class AdvHomeDetailVc: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func messageAction(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatVC") as! ChatListVc
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
         vc.hidesBottomBarWhenPushed = true
-       // vc.sendTo = emailAdd
+        vc.sendTo = emailAdd
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
     @IBAction func editAction(_ sender: Any) {
+        SVProgressHUD.show()
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddHouseRoomVc") as! AddHouseRoomVc
         vc.edit = "1"
         vc.uidRef = uidR
         vc.rent = rent
         vc.houseNo = self.houseNo
-        var tempArray = [UIImage]()
-        for i in 0..<(imagesArray.count){
-            let immg = self.loadImge(withUrl: URL(string: imagesArray[i])!)
-            tempArray.append(immg)
-        }
-        vc.imgArray = tempArray
+        vc.imgArray = refImgArray
         vc.bedRooms = self.totalBed
         vc.floors = self.totalFloors
         vc.adType = self.addType
         vc.locationTo = self.busStand
         vc.contactNum = self.contactNum
         vc.locationArea = self.locationArea
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            SVProgressHUD.dismiss()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+
     }
     
     @IBAction func setReminderAction(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReminderVc") as! ReminderVc
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func playBtnAction(_ sender: UIButton) {
+        if sender.currentImage == UIImage(named: "play"){
+            self.videoView.play()
+            self.playBtn.setImage(UIImage(named: "pause"), for: .normal)
+        }
+        else{
+            self.videoView.pause()
+            self.playBtn.setImage(UIImage(named: "play"), for: .normal)
+        }
     }
     
     func callTapped() {
@@ -161,28 +188,34 @@ extension AdvHomeDetailVc : UICollectionViewDelegate, UICollectionViewDataSource
             }
             DispatchQueue.main.async {
                 cell.advImageView?.image = UIImage(data: data!)
+                self.refImgArray.append(cell.advImageView.image!)
             }
         }).resume()
         
         return cell
     }
     
+    func loadImge(urrl : String?){
+        
+        var retImg : UIImage?
+        
+        if let postedImage = urrl{
+                    let url = URL(string: postedImage)
+                    URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
+                        if error != nil {
+                            print(error!)
+                        return
+                        }
+                        DispatchQueue.main.async {
+                            print("images added in ret" ,(UIImage(data: data!)))
+                             UIImage(data: data!)
+                            
+                        }
+                        }).resume()
+     }
+        print(retImg, "is imagerRR")
+        
+    }
     
 }
 
-
-extension UIViewController {
-    func loadImge(withUrl url: URL) -> UIImage {
-        var retImg : UIImage?
-           DispatchQueue.global().async { [weak self] in
-               if let imageData = try? Data(contentsOf: url) {
-                   if let image = UIImage(data: imageData) {
-                       DispatchQueue.main.async {
-                           retImg = image
-                       }
-                   }
-               }
-           }
-        return retImg ?? #imageLiteral(resourceName: "dream")
-       }
-}

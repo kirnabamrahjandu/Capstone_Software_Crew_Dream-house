@@ -5,11 +5,13 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
-class SearchVc: UIViewController{
+class SearchVc: UIViewController, UITextFieldDelegate{
 
     @IBOutlet var searchTableView: UITableView!
-
+    @IBOutlet var searchTF: UITextField!
+    
     var searchArray = [""]
     var delegate : hideTable?
     var hideV : dismissView?
@@ -18,15 +20,17 @@ class SearchVc: UIViewController{
         super.viewDidLoad()
         searchTableView.delegate = self
         searchTableView.dataSource = self
+        searchTF.delegate = self
+        
         menuIcon()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let array = UserDefaults.standard.value(forKey: "search") as! [String]
+        let array = UserDefaults.standard.value(forKey: "search") as? [String] ?? [""]
         self.searchArray = array
+        searchTF.becomeFirstResponder()
         searchTableView.reloadData()
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeVc") as! HomeVc
-        vc.hideViewDelegate = self
+        self.searchTF.keyboardToolbar.doneBarButton.setTarget(self, action: #selector(doneTapped))
     }
     
     func menuIcon(){
@@ -41,6 +45,17 @@ class SearchVc: UIViewController{
     }
 
     @IBAction func dismissBtnAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        self.delegate?.hideTable(data: textField.text!)
+        self.dismiss(animated: true, completion: nil)
+        return true
+    }
+    
+    @objc func doneTapped(){
+        self.delegate?.hideTable(data: searchTF.text!)
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -63,12 +78,3 @@ extension SearchVc :  UITableViewDataSource, UITableViewDelegate {
     
 }
 
-
-extension SearchVc : dismissView{
-    func hideView() {
-        print("protocol called")
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-}

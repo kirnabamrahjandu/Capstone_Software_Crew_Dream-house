@@ -70,7 +70,7 @@ extension FavouritesVc : UICollectionViewDelegate, UICollectionViewDataSource, U
 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.wishListCollectionView.frame.width / 2 - 10 , height: self.wishListCollectionView.frame.height / 3)
+        return CGSize(width: self.wishListCollectionView.frame.width / 2 - 10 , height: 257)
     }
     
 

@@ -52,7 +52,7 @@ extension UIButton{
     func sortListBy(key : String, value : String)
 }
 
-protocol dismissView {
+@objc protocol dismissView {
     func hideView()
 }
 
@@ -83,3 +83,5 @@ struct K {
         static let receiver = "receiver"
     }
 }
+
+var editPostArray = [UIImage]()

@@ -10,6 +10,7 @@
 		176D9E83E9D32C060E561664 /* Pods_Dream_House.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07052D7C36E1D9BAFAC62DEC /* Pods_Dream_House.framework */; };
 		459AF2F0C1EE620692542834 /* Pods_Dream_HouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F7F5936D3C54A48CA8C44A /* Pods_Dream_HouseTests.framework */; };
 		61B14A53FCAE74BED960A4C9 /* Pods_Dream_House_Dream_HouseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10A965D620CE9329417450E /* Pods_Dream_House_Dream_HouseUITests.framework */; };
+		C951EA12263188DD00AB95E9 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C951EA11263188DD00AB95E9 /* VideoPlayer.swift */; };
 		C9565284262E096500BE7E7B /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565283262E096500BE7E7B /* HomeVc.swift */; };
 		C9565289262E0BBF00BE7E7B /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565288262E0BBF00BE7E7B /* HomeCollectionCell.swift */; };
 		C956528E262E102200BE7E7B /* SortByVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C956528D262E102200BE7E7B /* SortByVc.swift */; };
@@ -90,6 +91,7 @@
 		5B358B3329C27B5D26508775 /* Pods-Dream House-Dream HouseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream House-Dream HouseUITests.debug.xcconfig"; path = "Target Support Files/Pods-Dream House-Dream HouseUITests/Pods-Dream House-Dream HouseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		75F7F5936D3C54A48CA8C44A /* Pods_Dream_HouseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream_HouseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAABAB4F2170B71E8CA95532 /* Pods-Dream HouseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream HouseTests.release.xcconfig"; path = "Target Support Files/Pods-Dream HouseTests/Pods-Dream HouseTests.release.xcconfig"; sourceTree = "<group>"; };
+		C951EA11263188DD00AB95E9 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		C9565283262E096500BE7E7B /* HomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
 		C9565288262E0BBF00BE7E7B /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		C956528D262E102200BE7E7B /* SortByVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByVc.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				C96A0DAF2618AB8E001435E6 /* ViewController.swift */,
 				C96A0DE02618EA44001435E6 /* Fonts */,
+				C951EA11263188DD00AB95E9 /* VideoPlayer.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				C9700D68262CBAEB0045A5AE /* ChatListTableCell.swift in Sources */,
 				C9700D82262CC3CC0045A5AE /* SearchTableCell.swift in Sources */,
 				C9700D4F262CB6DD0045A5AE /* FavouritesVc.swift in Sources */,
+				C951EA12263188DD00AB95E9 /* VideoPlayer.swift in Sources */,
 				C96A0DAE2618AB8E001435E6 /* SceneDelegate.swift in Sources */,
 				C9AB958E262F741600D8B77B /* ChatListViewController.swift in Sources */,
 				C9565313262E1C5600BE7E7B /* AdvHomeDetailVc.swift in Sources */,
